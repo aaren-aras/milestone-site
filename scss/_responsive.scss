@@ -1,18 +1,17 @@
 @include media-xs {
     /* main.scss */ 
-    body {
-        left: 3em;
-    }
-    header { top: 1.5em !important; }
+    body { left: 3em; }
     .logo { 
-        top: -1.35em;
-        left: -3.125em;
+        top: 0;
+        left: -2.5em;
     }
     nav { visibility: hidden; }
+    // nav a { position: absolute; }
     .burger-btn { visibility: visible; }
     footer { font-size: 0.7rem !important; bottom: -29em !important; }
 
     /* _about.scss */ 
+    .about { margin-top: 2em; }
     .about__top { gap: 15em; }
     .about__top--slogan { 
         top: -125px;

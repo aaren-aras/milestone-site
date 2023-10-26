@@ -80,23 +80,22 @@ body {
         background-color: rgba($primary-color, 0.8);
         padding: 0.8em;
         position: absolute;
-        // top: -15px;
-        right: -500px;
+        top: 0;
+        right: 0;
         visibility: visible;
-        overflow: hidden !important;
         @include transition-ease;
-      
-        a:active, a:focus-visible {
-          color: $primary-color;
+
+        a:hover, a:focus-visible {
+          color: $accent-color;
         } 
       }
     }
 
     .burger-btn {
-      position: absolute;
-      top: .2em;
-      right: 0em;
-      cursor: pointer;
+      position: relative;
+      top: -0.3em;
+      right: 0.2em;
+      cursor: pointer; 
     }
 
     &.js-header-bkgd {

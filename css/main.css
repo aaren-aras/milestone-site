@@ -696,12 +696,9 @@ a {
   body {
     left: 3em;
   }
-  header {
-    top: 1.5em !important;
-  }
   .logo {
-    top: -1.35em;
-    left: -3.125em;
+    top: 0;
+    left: -2.5em;
   }
   nav {
     visibility: hidden;
@@ -714,6 +711,9 @@ a {
     bottom: -29em !important;
   }
   /* _about.scss */
+  .about {
+    margin-top: 2em;
+  }
   .about__top {
     gap: 15em;
   }
@@ -1474,18 +1474,18 @@ body header nav.js-open-nav {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 0.8em;
   position: absolute;
-  right: -500px;
+  top: 0;
+  right: 0;
   visibility: visible;
-  overflow: hidden !important;
   transition: all 0.2s ease-in-out;
 }
-body header nav.js-open-nav a:active, body header nav.js-open-nav a:focus-visible {
-  color: white;
+body header nav.js-open-nav a:hover, body header nav.js-open-nav a:focus-visible {
+  color: rgb(180, 50, 50);
 }
 body header .burger-btn {
-  position: absolute;
-  top: 0.2em;
-  right: 0em;
+  position: relative;
+  top: -0.3em;
+  right: 0.2em;
   cursor: pointer;
 }
 body header.js-header-bkgd {

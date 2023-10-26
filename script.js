@@ -1,27 +1,30 @@
 /* Navbar Responsive Menu */ 
 const burgerBtnElement = document.querySelector('.burger-btn');
 const navElement = document.querySelector('nav');
+const anchorTags = navElement.querySelectorAll('a');
 let showMenu = false;
+
+hideNav(); // Initial state 
 
 burgerBtnElement.addEventListener('click', (e) => {
   // Stops ln 19-24 when burger button is clicked 
   e.stopPropagation();
   toggleMenu();
-  // document.body.classList.toggle('js-open-nav', toggleMenu);
-
 });
 
 document.body.addEventListener('click', () => {
-  if (showMenu) toggleMenu();
-  // if (showMenu) {
-  //   navElement.classList.remove('js-open-nav');
-  //   showMenu = false;
-  // } else return;
+  // if (showMenu) toggleMenu();
+  if (showMenu) {
+    navElement.classList.remove('js-open-nav');
+    hideNav();
+    showMenu = false;
+  } else return;
 });
 
 window.addEventListener('resize', () => {
-    if (window.innerWidth >= 720) {
+    if (window.innerWidth >= 768) {
       navElement.classList.remove('js-open-nav');
+      hideNav();
       showMenu = false;
     }
 });
@@ -29,12 +32,26 @@ window.addEventListener('resize', () => {
 function toggleMenu() {
   if (!showMenu) {
     navElement.classList.add('js-open-nav');
+    showNav();
     showMenu = true;
   } 
   else {
     navElement.classList.remove('js-open-nav');
+    hideNav();
     showMenu = false;
   }
+}
+
+function hideNav() {
+  anchorTags.forEach((anchor) => {
+    anchor.style.display = 'none';
+  });
+}
+
+function showNav() {
+  anchorTags.forEach((anchor) => {
+    anchor.style.display = 'flex';
+  });
 }
 
 /* Navbar Jump Links (JS alternative) */
@@ -57,7 +74,7 @@ document.querySelector('.js-contact').addEventListener('click', (e) => {
 addHeaderBkgd();
 window.addEventListener('resize', addHeaderBkgd);
 function addHeaderBkgd() {
-    if (window.innerWidth >= 720) {
+    if (window.innerWidth >= 768) {
         const headerElement = document.querySelector('header');
         window.addEventListener('scroll', () => {
             if (window.scrollY >= 30) headerElement.classList.add('js-header-bkgd');
