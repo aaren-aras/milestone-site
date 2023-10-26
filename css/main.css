@@ -1,0 +1,1503 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  scroll-behavior: smooth;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.about {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.about__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 16.5em;
+  position: relative;
+}
+.about__top--slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 40%;
+  position: relative;
+  inset: 3rem;
+}
+.about__top--slogan__small-text {
+  font-size: 3rem;
+  color: rgb(45, 45, 45);
+  list-style-type: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__top--slogan__small-text:hover {
+  background-image: linear-gradient(90deg, rgb(180, 50, 50), white);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about__top--slogan__small-text li:nth-child(2) {
+  margin-top: -0.3em;
+  margin-bottom: -0.1em;
+}
+.about__top--slogan__running-man {
+  position: absolute;
+  top: 4.25em;
+  left: 0.2em;
+}
+.about__top--slogan__flag {
+  position: absolute;
+  top: 4.25em;
+  left: 7.9em;
+}
+.about__top--slogan__line {
+  width: 30em;
+  min-height: 0.5em;
+  background-color: rgb(45, 45, 45);
+  margin-top: 3em;
+  margin-bottom: 0.5em;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__top--slogan__line--red::after {
+  width: 10%;
+  height: 100%;
+  content: "";
+  background-color: rgb(180, 50, 50);
+  z-index: 1;
+  position: absolute;
+  right: 0;
+}
+.about__top--slogan__line:hover {
+  background-color: white;
+}
+.about__top--slogan__big-text {
+  font-size: 6rem;
+  color: rgb(45, 45, 45);
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.about__top--slogan__big-text:hover {
+  background-image: linear-gradient(90deg, rgb(180, 50, 50), white);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about__top--accordion {
+  z-index: 1;
+  position: relative;
+  top: 2.5em;
+}
+.about__top--accordion__1 {
+  width: 50em;
+  font-size: 0.7rem;
+  background-color: rgba(180, 50, 50, 0.95);
+  color: rgb(45, 45, 45);
+  padding: 1em;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__top--accordion__1 i {
+  color: white;
+  margin: 0 0.75em;
+}
+.about__top--accordion__1:hover {
+  filter: grayscale(20%);
+  filter: saturate(50%);
+}
+.about__top--accordion__2 {
+  width: 50em;
+  font-size: 0.7rem;
+  background-color: rgba(180, 50, 50, 0.75);
+  color: rgb(45, 45, 45);
+  padding: 1em;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__top--accordion__2 i {
+  color: white;
+  margin: 0 0.75em;
+}
+.about__top--accordion__2:hover {
+  filter: grayscale(20%);
+  filter: saturate(50%);
+}
+.about__top--accordion__3 {
+  width: 50em;
+  font-size: 0.7rem;
+  background-color: rgba(180, 50, 50, 0.55);
+  color: rgb(45, 45, 45);
+  padding: 1em;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__top--accordion__3 i {
+  color: white;
+  margin: 0 0.75em;
+}
+.about__top--accordion__3:hover {
+  filter: grayscale(20%);
+  filter: saturate(50%);
+}
+.about__top--accordion__4 {
+  width: 50em;
+  font-size: 0.7rem;
+  background-color: rgba(180, 50, 50, 0.35);
+  color: rgb(45, 45, 45);
+  padding: 1em;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__top--accordion__4 i {
+  color: white;
+  margin: 0 0.75em;
+}
+.about__top--accordion__4:hover {
+  filter: grayscale(20%);
+  filter: saturate(50%);
+}
+.about__top--accordion__5 {
+  width: 50em;
+  font-size: 0.7rem;
+  background-color: rgba(180, 50, 50, 0.15);
+  color: rgb(45, 45, 45);
+  padding: 1em;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__top--accordion__5 i {
+  color: white;
+  margin: 0 0.75em;
+}
+.about__top--accordion__5:hover {
+  filter: grayscale(20%);
+  filter: saturate(50%);
+}
+.about__bot {
+  position: relative;
+}
+.about__bot--motto {
+  width: 15em;
+  font-size: 1rem;
+  text-align: center;
+  color: rgb(45, 45, 45);
+  position: relative;
+  top: 40px;
+  right: 340px;
+}
+.about__bot--motto span {
+  background-image: linear-gradient(90deg, rgb(180, 50, 50), white);
+  background-size: 0% 5px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__bot--motto span:hover {
+  background-size: 100% 5px;
+  color: transparent;
+}
+.about__bot--dropdown {
+  position: relative;
+  margin-top: 5em;
+}
+.about__bot--dropdown__1 {
+  width: 11em;
+  font-size: 0.8rem;
+  background-color: rgba(180, 50, 50, 0.95);
+  color: rgb(45, 45, 45);
+  padding: 0.8em;
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__bot--dropdown__1 i {
+  color: white;
+  margin: 0 0.75em;
+}
+.about__bot--dropdown__1:hover {
+  filter: grayscale(25%);
+  filter: saturate(55%);
+}
+.about__bot--dropdown__2 {
+  width: 11em;
+  font-size: 0.8rem;
+  background-color: rgba(180, 50, 50, 0.75);
+  color: rgb(45, 45, 45);
+  padding: 0.8em;
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__bot--dropdown__2 i {
+  color: white;
+  margin: 0 0.75em;
+}
+.about__bot--dropdown__2:hover {
+  filter: grayscale(25%);
+  filter: saturate(55%);
+}
+.about__bot--dropdown__3 {
+  width: 11em;
+  font-size: 0.8rem;
+  background-color: rgba(180, 50, 50, 0.55);
+  color: rgb(45, 45, 45);
+  padding: 0.8em;
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__bot--dropdown__3 i {
+  color: white;
+  margin: 0 0.75em;
+}
+.about__bot--dropdown__3:hover {
+  filter: grayscale(25%);
+  filter: saturate(55%);
+}
+.about__bot--dropdown__4 {
+  width: 11em;
+  font-size: 0.8rem;
+  background-color: rgba(180, 50, 50, 0.35);
+  color: rgb(45, 45, 45);
+  padding: 0.8em;
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__bot--dropdown__4 i {
+  color: white;
+  margin: 0 0.75em;
+}
+.about__bot--dropdown__4:hover {
+  filter: grayscale(25%);
+  filter: saturate(55%);
+}
+.about__bot--dropdown__5 {
+  width: 11em;
+  font-size: 0.8rem;
+  background-color: rgba(180, 50, 50, 0.15);
+  color: rgb(45, 45, 45);
+  padding: 0.8em;
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about__bot--dropdown__5 i {
+  color: white;
+  margin: 0 0.75em;
+}
+.about__bot--dropdown__5:hover {
+  filter: grayscale(25%);
+  filter: saturate(55%);
+}
+.about__bot--drawing-2 {
+  display: inline-block;
+  position: absolute;
+  top: 325px;
+  left: 250px;
+}
+
+.js-open-accordion:nth-child(1) {
+  padding-bottom: 1.5em;
+}
+.js-open-accordion:nth-child(1):hover {
+  filter: none;
+}
+.js-open-accordion:nth-child(1)::after {
+  content: "Let us become your supplier of Industrial Controls and Special Purpose Equipment!";
+}
+.js-open-accordion:nth-child(2) {
+  padding-bottom: 1.5em;
+}
+.js-open-accordion:nth-child(2):hover {
+  filter: none;
+}
+.js-open-accordion:nth-child(2)::after {
+  content: "Not familiar with our company? First contact with us is online? We would be pleased to hear from you! Let us know your needs and questions, we are more than happy to help.";
+}
+.js-open-accordion:nth-child(3) {
+  padding-bottom: 1.5em;
+}
+.js-open-accordion:nth-child(3):hover {
+  filter: none;
+}
+.js-open-accordion:nth-child(3)::after {
+  content: "We can supply you with turn-key equipment or modify existing equipment, based on your needs and preferences.";
+}
+.js-open-accordion:nth-child(4) {
+  padding-bottom: 1.5em;
+}
+.js-open-accordion:nth-child(4):hover {
+  filter: none;
+}
+.js-open-accordion:nth-child(4)::after {
+  content: "Service is a significant part of our business. We provide service for most common brands of PLC's, CNC's, and hard-wired equipment.";
+}
+.js-open-accordion:nth-child(5) {
+  padding-bottom: 1.5em;
+}
+.js-open-accordion:nth-child(5):hover {
+  filter: none;
+}
+.js-open-accordion:nth-child(5)::after {
+  content: "We also have an in-house machine shop, which allows us to manufacture spare/consumable parts quickly, while maintaining high quality at low prices.";
+}
+
+.js-open-dropdown:nth-child(1) {
+  width: 13em;
+  padding-bottom: 1.5em;
+  z-index: 5;
+}
+.js-open-dropdown:nth-child(1):hover {
+  filter: none;
+}
+.js-open-dropdown:nth-child(1)::after {
+  content: "If you are in the market to have equipment fabricated, or controls retrofitted on existing equipment, it would be our pleasure to assist you with your requirements";
+}
+.js-open-dropdown:nth-child(2) {
+  width: 13em;
+  padding-bottom: 1.5em;
+  z-index: 5;
+}
+.js-open-dropdown:nth-child(2):hover {
+  filter: none;
+}
+.js-open-dropdown:nth-child(2)::after {
+  content: "Our activities can be summarized by a plaque found at the train station in Kleinburg, Ontario. It has been accepted as the company motto.";
+}
+.js-open-dropdown:nth-child(3) {
+  width: 13em;
+  padding-bottom: 1.5em;
+  z-index: 5;
+}
+.js-open-dropdown:nth-child(3):hover {
+  filter: none;
+}
+.js-open-dropdown:nth-child(3)::after {
+  content: "Our efforts in the fabrication of dedicated industrial equipment have increased our scope of customers to include almost all industrial sectors.";
+}
+.js-open-dropdown:nth-child(4) {
+  width: 13em;
+  padding-bottom: 1.5em;
+  z-index: 5;
+}
+.js-open-dropdown:nth-child(4):hover {
+  filter: none;
+}
+.js-open-dropdown:nth-child(4)::after {
+  content: "Over the years, our customer base evolved to industries ranging from automotive to pharmaceutical.";
+}
+.js-open-dropdown:nth-child(5) {
+  width: 13em;
+  padding-bottom: 1.5em;
+  z-index: 5;
+}
+.js-open-dropdown:nth-child(5):hover {
+  filter: none;
+}
+.js-open-dropdown:nth-child(5)::after {
+  content: "Milestone Automation Solutions Inc. was incorporated in 2000.";
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.projects__top {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+.projects__top--1 {
+  background-color: rgba(180, 50, 50, 0.95);
+  position: relative;
+  overflow-y: hidden;
+}
+.projects__top--1__indic button {
+  position: relative;
+  top: 1em;
+}
+.projects__top--1 img {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  width: 100%;
+  height: 200px !important;
+}
+.projects__top--1 h5 {
+  display: inline-block;
+  font-size: 0.8rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: -5.25em;
+}
+.projects__top--1 p {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.6rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: 5em;
+  right: 0.75em;
+}
+.projects__top--2 {
+  background-color: rgba(180, 50, 50, 0.75);
+  position: relative;
+  overflow-y: hidden;
+}
+.projects__top--2__indic button {
+  position: relative;
+  top: 1em;
+}
+.projects__top--2 img {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  width: 100%;
+  height: 200px !important;
+}
+.projects__top--2 h5 {
+  display: inline-block;
+  font-size: 0.8rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: -5.25em;
+}
+.projects__top--2 p {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.6rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: 5em;
+  right: 0.75em;
+}
+.projects__top--3 {
+  background-color: rgba(180, 50, 50, 0.55);
+  position: relative;
+  overflow-y: hidden;
+}
+.projects__top--3__indic button {
+  position: relative;
+  top: 1em;
+}
+.projects__top--3 img {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  width: 100%;
+  height: 200px !important;
+}
+.projects__top--3 h5 {
+  display: inline-block;
+  font-size: 0.8rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: -5.25em;
+}
+.projects__top--3 p {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.6rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: 5em;
+  right: 0.75em;
+}
+.projects__top--4 {
+  background-color: rgba(180, 50, 50, 0.35);
+  position: relative;
+  overflow-y: hidden;
+}
+.projects__top--4__indic button {
+  position: relative;
+  top: 1em;
+}
+.projects__top--4 img {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  width: 100%;
+  height: 200px !important;
+}
+.projects__top--4 h5 {
+  display: inline-block;
+  font-size: 0.8rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: -5.25em;
+}
+.projects__top--4 p {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.6rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: 5em;
+  right: 0.75em;
+}
+.projects__top--5 {
+  background-color: rgba(180, 50, 50, 0.15);
+  position: relative;
+  overflow-y: hidden;
+}
+.projects__top--5__indic button {
+  position: relative;
+  top: 1em;
+}
+.projects__top--5 img {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  width: 100%;
+  height: 200px !important;
+}
+.projects__top--5 h5 {
+  display: inline-block;
+  font-size: 0.8rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: -5.25em;
+}
+.projects__top--5 p {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.6rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: 5em;
+  right: 0.75em;
+}
+.projects__bot {
+  margin-top: 25em;
+  margin-bottom: 20em;
+  position: relative;
+}
+.projects__bot--6 {
+  background-color: rgba(45, 45, 45, 0.95);
+}
+.projects__bot--6__indic button {
+  position: relative;
+  top: 0.6em;
+}
+.projects__bot--6 video {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.projects__bot--6 h5 {
+  display: inline-block;
+  font-size: 1.6rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  position: relative;
+  top: -12em;
+}
+.projects__bot--6 p {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  padding: 0.3em;
+  margin: auto auto;
+  position: relative;
+  top: 2em;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  color: rgb(45, 45, 45);
+  position: relative;
+  bottom: 5rem;
+}
+.contact__left, .contact__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 1em;
+}
+.contact__left--phone, .contact__left--email, .contact__left--linkedin, .contact__left--address, .contact__right--phone, .contact__right--email, .contact__right--linkedin, .contact__right--address {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.contact__left--phone i, .contact__left--email i, .contact__left--linkedin i, .contact__left--address i, .contact__right--phone i, .contact__right--email i, .contact__right--linkedin i, .contact__right--address i {
+  font-size: 1.1rem;
+  margin-right: 0.5em;
+}
+.contact__left--phone ul, .contact__left--email ul, .contact__left--linkedin ul, .contact__left--address ul, .contact__right--phone ul, .contact__right--email ul, .contact__right--linkedin ul, .contact__right--address ul {
+  list-style-type: none;
+  line-height: 1.25em;
+  padding: 0;
+  margin: 0 3em 0 0;
+}
+.contact__left--phone, .contact__left--linkedin, .contact__right--phone, .contact__right--linkedin {
+  margin-right: 1.5em;
+}
+.contact__img {
+  border: 0.3em solid white;
+}
+
+@media screen and (max-width: 502px) {
+  /* main.scss */
+  body {
+    left: 3em;
+  }
+  header {
+    top: 1.5em !important;
+  }
+  .logo {
+    top: -1.35em;
+    left: -3.125em;
+  }
+  nav {
+    visibility: hidden;
+  }
+  .burger-btn {
+    visibility: visible;
+  }
+  footer {
+    font-size: 0.7rem !important;
+    bottom: -29em !important;
+  }
+  /* _about.scss */
+  .about__top {
+    gap: 15em;
+  }
+  .about__top--slogan {
+    top: -125px;
+    left: 30px;
+    transform: scale(0.4);
+  }
+  .about__top--slogan__running-man {
+    font-size: 3.5rem;
+    top: 200px;
+  }
+  .about__top--slogan__flag {
+    font-size: 3.5rem;
+    top: 200px;
+    left: 440px;
+  }
+  .about__top--slogan__big-text {
+    width: 5.5em;
+  }
+  .about__top--accordion {
+    top: 0;
+    right: 5em;
+  }
+  .about__top--accordion__1 {
+    width: 18em;
+    font-size: 0.6rem;
+  }
+  .about__top--accordion__2 {
+    width: 18em;
+    font-size: 0.6rem;
+  }
+  .about__top--accordion__3 {
+    width: 18em;
+    font-size: 0.6rem;
+  }
+  .about__top--accordion__4 {
+    width: 18em;
+    font-size: 0.6rem;
+  }
+  .about__top--accordion__5 {
+    width: 18em;
+    font-size: 0.6rem;
+  }
+  .about__bot--motto {
+    font-size: 0.7rem;
+    top: -85px;
+    right: 115px;
+  }
+  .about__bot--dropdown__1 {
+    top: -200px;
+    right: -85px;
+  }
+  .about__bot--dropdown__2 {
+    top: -120px;
+    right: -35px;
+  }
+  .about__bot--dropdown__3 {
+    top: -40px;
+    right: 15px;
+  }
+  .about__bot--dropdown__4 {
+    top: 40px;
+    right: 65px;
+  }
+  .about__bot--dropdown__5 {
+    top: 120px;
+    right: 115px;
+  }
+  .about__bot--drawing-2 {
+    width: 170px;
+    height: 170px;
+    top: 270px;
+    left: 120px;
+  }
+  /* _projects.scss */
+  .projects {
+    height: 1500px;
+    top: 28em;
+  }
+  .projects__top {
+    gap: 20px;
+  }
+  .projects__top--1 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--2 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--3 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--4 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--5 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__bot {
+    width: 350px;
+    margin-top: 2em;
+    margin-bottom: 25em;
+  }
+  .projects__bot--6 {
+    height: 250px;
+  }
+  .projects__bot--6 video {
+    width: 350px;
+    height: 215px;
+  }
+  /* _contact.scss */
+  .contact {
+    gap: 1em;
+    bottom: -17em;
+    left: 1em;
+    transform: scale(0.7);
+  }
+}
+@media screen and (min-width: 503px) {
+  /* main.scss */
+  body {
+    overflow-x: hidden;
+    left: 10px;
+  }
+  nav {
+    visibility: hidden;
+  }
+  .burger-btn {
+    visibility: visible;
+  }
+  footer {
+    bottom: -29em;
+  }
+  /* _about.scss */
+  .about {
+    top: 1em;
+  }
+  .about__top {
+    gap: 13em;
+  }
+  .about__top--slogan {
+    top: -110px;
+    left: 30px;
+    transform: scale(0.5);
+  }
+  .about__top--slogan__running-man {
+    font-size: 3.5rem;
+    top: 200px;
+  }
+  .about__top--slogan__flag {
+    font-size: 3.5rem;
+    top: 200px;
+    left: 440px;
+  }
+  .about__top--slogan__big-text {
+    width: 5.5em;
+  }
+  .about__top--accordion {
+    top: 0;
+    right: 5em;
+  }
+  .about__top--accordion__1 {
+    width: 23em;
+    font-size: 0.6rem;
+  }
+  .about__top--accordion__2 {
+    width: 23em;
+    font-size: 0.6rem;
+  }
+  .about__top--accordion__3 {
+    width: 23em;
+    font-size: 0.6rem;
+  }
+  .about__top--accordion__4 {
+    width: 23em;
+    font-size: 0.6rem;
+  }
+  .about__top--accordion__5 {
+    width: 23em;
+    font-size: 0.6rem;
+  }
+  .about__bot--motto {
+    font-size: 0.8rem;
+    top: -60px;
+    right: 125px;
+  }
+  .about__bot--dropdown__1 {
+    top: -200px;
+    right: -160px;
+  }
+  .about__bot--dropdown__2 {
+    top: -120px;
+    right: -80px;
+  }
+  .about__bot--dropdown__3 {
+    top: -40px;
+    right: 0px;
+  }
+  .about__bot--dropdown__4 {
+    top: 40px;
+    right: 80px;
+  }
+  .about__bot--dropdown__5 {
+    top: 120px;
+    right: 160px;
+  }
+  .about__bot--drawing-2 {
+    width: 210px;
+    height: 210px;
+    top: 275px;
+    left: 120px;
+  }
+  /* _projects.scss */
+  .projects {
+    height: 1000px;
+    top: 30em;
+  }
+  .projects__top {
+    gap: 20px;
+  }
+  .projects__top--1 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--2 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--3 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--4 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--5 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__bot {
+    width: 450px;
+    margin-top: 2em;
+    margin-bottom: 25em;
+  }
+  .projects__bot--6 {
+    height: 250px;
+  }
+  .projects__bot--6 video {
+    width: 450px;
+    height: 215px;
+  }
+  /* _contact.scss */
+  .contact {
+    gap: 1em;
+    bottom: -20em;
+    left: 1em;
+    transform: scale(0.7);
+  }
+  .contact img {
+    visibility: hidden;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* main.scss */
+  body {
+    overflow-x: hidden;
+    left: 10px;
+  }
+  nav {
+    visibility: visible;
+  }
+  nav a {
+    font-size: 0.7rem;
+  }
+  .burger-btn {
+    visibility: hidden;
+  }
+  footer {
+    margin: 0 auto;
+  }
+  /* _about.scss */
+  .about {
+    top: 3em;
+  }
+  .about__top {
+    gap: 13em;
+  }
+  .about__top--slogan {
+    top: -90px;
+    left: 30px;
+    transform: scale(0.6);
+  }
+  .about__top--slogan__running-man {
+    font-size: 3.5rem;
+    top: 200px;
+  }
+  .about__top--slogan__flag {
+    font-size: 3.5rem;
+    top: 200px;
+    left: 440px;
+  }
+  .about__top--slogan__big-text {
+    width: 5.5em;
+  }
+  .about__top--accordion {
+    top: 0;
+    right: 5em;
+  }
+  .about__top--accordion__1 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__2 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__3 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__4 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__5 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__bot--motto {
+    font-size: 1rem;
+    top: -20px;
+    right: 230px;
+  }
+  .about__bot--dropdown__1 {
+    top: -200px;
+    right: -250px;
+  }
+  .about__bot--dropdown__2 {
+    top: -120px;
+    right: -110px;
+  }
+  .about__bot--dropdown__3 {
+    top: -40px;
+    right: 30px;
+  }
+  .about__bot--dropdown__4 {
+    top: 40px;
+    right: 170px;
+  }
+  .about__bot--dropdown__5 {
+    top: 120px;
+    right: 310px;
+  }
+  .about__bot--drawing-2 {
+    width: 250px;
+    height: 250px;
+    top: 280px;
+    left: 250px;
+  }
+  /* _projects.scss */
+  .projects {
+    height: 1000px;
+    top: 25em;
+  }
+  .projects__top {
+    gap: 20px;
+  }
+  .projects__top--1 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--2 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--3 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--4 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__top--5 {
+    width: 250px;
+    height: 225px;
+  }
+  .projects__bot {
+    width: 650px;
+    margin-top: 3em;
+    margin-bottom: 25em;
+  }
+  .projects__bot--6 {
+    height: 250px;
+  }
+  .projects__bot--6 video {
+    width: 650px;
+    height: 400px;
+  }
+  /* _contact.scss */
+  .contact {
+    gap: 1em;
+  }
+  .contact img {
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* main.scss */
+  nav {
+    visibility: visible;
+  }
+  nav a {
+    font-size: 0.7rem;
+  }
+  .burger-btn {
+    visibility: hidden;
+  }
+  footer {
+    font-size: 0.7rem !important;
+    bottom: -37em !important;
+  }
+  /* _about.scss */
+  .about {
+    top: 3em;
+  }
+  .about__top {
+    gap: 8em;
+  }
+  .about__top--slogan {
+    top: -90px;
+    left: 30px;
+    transform: scale(0.6);
+  }
+  .about__top--slogan__running-man {
+    font-size: 3.5rem;
+    top: 200px;
+  }
+  .about__top--slogan__flag {
+    font-size: 3.5rem;
+    top: 200px;
+    left: 440px;
+  }
+  .about__top--slogan__big-text {
+    width: 5.5em;
+  }
+  .about__top--accordion {
+    top: 0;
+    right: 5em;
+  }
+  .about__top--accordion__1 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__2 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__3 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__4 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__5 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__bot--motto {
+    font-size: 1rem;
+    top: -20px;
+    right: 230px;
+  }
+  .about__bot--dropdown__1 {
+    top: -220px;
+    right: -345px;
+  }
+  .about__bot--dropdown__2 {
+    top: -140px;
+    right: -165px;
+  }
+  .about__bot--dropdown__3 {
+    top: -60px;
+    right: 15px;
+  }
+  .about__bot--dropdown__4 {
+    top: 20px;
+    right: 195px;
+  }
+  .about__bot--dropdown__5 {
+    top: 100px;
+    right: 375px;
+  }
+  .about__bot--drawing-2 {
+    width: 300px;
+    height: 300px;
+    top: 260px;
+    left: 250px;
+  }
+  /* _projects.scss */
+  .projects {
+    max-height: 1000px;
+    top: 35em;
+  }
+  .projects__top {
+    gap: 40px;
+  }
+  .projects__top--1 {
+    width: 350px;
+    height: 225px;
+  }
+  .projects__top--2 {
+    width: 350px;
+    height: 225px;
+  }
+  .projects__top--3 {
+    width: 350px;
+    height: 225px;
+  }
+  .projects__top--4 {
+    width: 350px;
+    height: 225px;
+  }
+  .projects__top--5 {
+    width: 350px;
+    height: 225px;
+  }
+  .projects__bot {
+    width: 850px;
+    margin-top: 3em;
+    margin-bottom: 25em;
+  }
+  .projects__bot--6 {
+    height: 485px;
+  }
+  .projects__bot--6 video {
+    width: 850px;
+    height: 450px;
+  }
+  /* _contact.scss */
+  .contact {
+    gap: 1em;
+    bottom: -25em;
+  }
+  .contact img {
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* main.scss */
+  nav {
+    visibility: visible;
+  }
+  nav a {
+    font-size: 0.7rem;
+  }
+  .burger-btn {
+    visibility: hidden;
+  }
+  footer {
+    bottom: -35em;
+  }
+  /* _about.scss */
+  .about {
+    top: 3em;
+  }
+  .about__top {
+    gap: 8em;
+  }
+  .about__top--slogan {
+    top: -90px;
+    left: 30px;
+    transform: scale(0.6);
+  }
+  .about__top--slogan__running-man {
+    font-size: 3.5rem;
+    top: 200px;
+  }
+  .about__top--slogan__flag {
+    font-size: 3.5rem;
+    top: 200px;
+    left: 440px;
+  }
+  .about__top--slogan__big-text {
+    width: 5.5em;
+  }
+  .about__top--accordion {
+    top: 0;
+    right: 5em;
+  }
+  .about__top--accordion__1 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__2 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__3 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__4 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__top--accordion__5 {
+    width: 30em;
+    font-size: 0.8rem;
+  }
+  .about__bot--motto {
+    font-size: 1rem;
+    top: -20px;
+    right: 230px;
+  }
+  .about__bot--dropdown__1 {
+    top: -220px;
+    right: -345px;
+  }
+  .about__bot--dropdown__2 {
+    top: -140px;
+    right: -165px;
+  }
+  .about__bot--dropdown__3 {
+    top: -60px;
+    right: 15px;
+  }
+  .about__bot--dropdown__4 {
+    top: 20px;
+    right: 195px;
+  }
+  .about__bot--dropdown__5 {
+    top: 100px;
+    right: 375px;
+  }
+  .about__bot--drawing-2 {
+    width: 300px;
+    height: 300px;
+    top: 260px;
+    left: 250px;
+  }
+  /* _projects.scss */
+  .projects {
+    height: 1000px;
+    top: 35em;
+  }
+  .projects__top {
+    gap: 40px;
+  }
+  .projects__top--1 {
+    width: 425px;
+    height: 225px;
+  }
+  .projects__top--2 {
+    width: 425px;
+    height: 225px;
+  }
+  .projects__top--3 {
+    width: 425px;
+    height: 225px;
+  }
+  .projects__top--4 {
+    width: 425px;
+    height: 225px;
+  }
+  .projects__top--5 {
+    width: 425px;
+    height: 225px;
+  }
+  .projects__bot {
+    width: 850px;
+    margin-top: 5em;
+    margin-bottom: 25em;
+  }
+  .projects__bot--6 {
+    height: 485px;
+  }
+  .projects__bot--6 video {
+    width: 850px;
+    height: 450px;
+  }
+  /* _contact.scss */
+  .contact {
+    gap: 1em;
+    bottom: -25em;
+  }
+  .contact img {
+    visibility: visible;
+  }
+}
+body {
+  font-family: Anybody, Verdana, Arial, Helvetica, sans-serif;
+  position: relative;
+}
+body .bkgd {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, white, rgba(180, 50, 50, 0.2)), url(../img/bkgd/eng-draw.png);
+  background-size: contain;
+  background-position: 400px 50%;
+  filter: grayscale(20%);
+  opacity: 0.3;
+  z-index: -1;
+  position: fixed;
+  inset: 0;
+}
+body header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0;
+  z-index: 50;
+  position: sticky;
+  top: 0.8rem;
+}
+body header .logo {
+  max-width: 30%;
+  max-height: 2.5em;
+  margin-left: 2em;
+  position: relative;
+}
+body header nav {
+  display: flex;
+  flex-direction: row;
+  gap: 2.2em;
+  margin-right: 2em;
+}
+body header nav a {
+  font-size: 0.9rem;
+  color: rgb(45, 45, 45);
+  scroll-margin-top: 500px !important;
+  transition: all 0.2s ease-in-out;
+}
+body header nav a i {
+  margin-right: 0.3em;
+}
+body header nav a:hover, body header nav a:focus-visible {
+  color: rgb(180, 50, 50);
+}
+body header nav a:active {
+  opacity: 0.5;
+}
+body header nav.js-open-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2em;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.8em;
+  position: absolute;
+  right: -500px;
+  visibility: visible;
+  overflow: hidden !important;
+  transition: all 0.2s ease-in-out;
+}
+body header nav.js-open-nav a:active, body header nav.js-open-nav a:focus-visible {
+  color: white;
+}
+body header .burger-btn {
+  position: absolute;
+  top: 0.2em;
+  right: 0em;
+  cursor: pointer;
+}
+body header.js-header-bkgd {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5em;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+}
+body footer {
+  font-size: 0.8rem;
+  text-align: center;
+  color: rgb(45, 45, 45);
+  position: absolute;
+  inset: auto 0 1rem 0;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,50 @@
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    font-size: 1rem;
+    color: $secondary-color;
+    position: relative;
+    bottom: 5rem;
+
+    &__left, &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        gap: 1em;
+
+        &--phone, &--email, &--linkedin, &--address {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+
+            i {
+                font-size: 1.1rem;
+                margin-right: 0.5em;
+            }
+
+            ul {
+                list-style-type: none; 
+                line-height: 1.25em;
+                // font-size: 0.9rem;
+                padding: 0;
+                margin: 0 3em 0 0;
+            }
+            
+        }
+
+        &--phone, &--linkedin {
+            margin-right: 1.5em;
+        }
+    }
+
+    &__img {
+        border: 0.3em solid $primary-color;
+    }
+}

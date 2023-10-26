@@ -1,0 +1,562 @@
+@include media-xs {
+    /* main.scss */ 
+    body {
+        left: 3em;
+    }
+    header { top: 1.5em !important; }
+    .logo { 
+        top: -1.35em;
+        left: -3.125em;
+    }
+    nav { visibility: hidden; }
+    .burger-btn { visibility: visible; }
+    footer { font-size: 0.7rem !important; bottom: -29em !important; }
+
+    /* _about.scss */ 
+    .about__top { gap: 15em; }
+    .about__top--slogan { 
+        top: -125px;
+        left: 30px;
+        transform: scale(0.4);
+
+        &__running-man {
+            font-size: 3.5rem;
+            top: 200px;
+        }
+
+        &__flag {
+            font-size: 3.5rem;
+            top: 200px;
+            left: 440px;
+        }
+
+        &__big-text { width: 5.5em; }
+    }
+
+    .about__top--accordion { 
+        top: 0;
+        right: 5em;
+
+        @for $i from 1 through 5 {
+            &__#{$i} { 
+                width: 18em;
+                font-size: 0.6rem;
+            }
+        }
+    }
+
+    .about__bot--motto {
+        font-size: 0.7rem;
+        top: -85px;
+        right: 115px;
+    }
+
+    .about__bot--dropdown {
+        @for $i from 1 through 5 {
+
+            &__#{$i} { 
+                $top: -280px + (80px * $i);
+                $right: -135px + (50px * $i);
+                top: $top;
+                right: $right;
+            }
+        }
+    }
+
+    .about__bot--drawing-2 {
+        width: 170px;
+        height: 170px;
+        top: 270px;
+        left: 120px;
+    }
+
+    /* _projects.scss */
+    .projects {
+        height: 1500px;
+        top: 28em; 
+    }
+    .projects__top { 
+        gap: 20px;
+
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                width: 250px;
+                height: 225px;
+
+                // h5 { 
+
+                // }
+            }
+        }
+    }
+
+    .projects__bot {
+        width: 350px;
+        margin-top: 2em;
+        margin-bottom: 25em;
+
+        &--6 {
+            height: 250px;
+
+            video {
+                width: 350px;
+                height: 215px;
+            }
+        }
+    }
+    
+    /* _contact.scss */
+    .contact {
+        gap: 1em;
+        bottom: -17em;
+        left: 1em;
+        transform: scale(0.7);
+    }
+}
+
+@include media-sm {
+    /* main.scss */ 
+    body { 
+        overflow-x: hidden; 
+        left: 10px;
+    }
+    .logo { 
+        // transform: scale(0.7);
+        // transform-origin: -5px -5px;
+    }
+    nav { visibility: hidden; }
+    .burger-btn { visibility: visible; }
+    footer { 
+        bottom: -29em;
+    }
+
+    /* _about.scss */ 
+    .about { top: 1em; }
+    .about__top { gap: 13em; }
+    .about__top--slogan { 
+        top: -110px;
+        left: 30px;
+        transform: scale(0.5);
+
+        &__running-man {
+            font-size: 3.5rem;
+            top: 200px;
+        }
+
+        &__flag {
+            font-size: 3.5rem;
+            top: 200px;
+            left: 440px;
+        }
+
+        &__big-text { width: 5.5em; }
+    }
+
+    .about__top--accordion { 
+        top: 0;
+        right: 5em;
+
+        @for $i from 1 through 5 {
+            &__#{$i} { 
+                width: 23em;
+                font-size: 0.6rem;
+            }
+        }
+    }
+
+    .about__bot--motto {
+        font-size: 0.8rem;
+        top: -60px;
+        right: 125px;
+    }
+
+    .about__bot--dropdown {
+        @for $i from 1 through 5 {
+
+            &__#{$i} { 
+                $top: -280px + (80px * $i);
+                $right: -240px + (80px * $i);
+                top: $top;
+                right: $right;
+            }
+        }
+    }
+
+    .about__bot--drawing-2 {
+        width: 210px;
+        height: 210px;
+        top: 275px;
+        left: 120px;
+    }
+
+    /* _projects.scss */
+    .projects {
+        height: 1000px;
+        top: 30em; 
+    }
+    .projects__top { 
+        gap: 20px;
+
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                width: 250px;
+                height: 225px;
+
+                // h5 { 
+
+                // }
+            }
+        }
+    }
+
+    .projects__bot {
+        width: 450px;
+        margin-top: 2em;
+        margin-bottom: 25em;
+
+        &--6 {
+            height: 250px;
+
+            video {
+                width: 450px;
+                height: 215px;
+            }
+        }
+    }
+    
+    /* _contact.scss */
+    .contact {
+        gap: 1em;
+        bottom: -20em;
+        left: 1em;
+        transform: scale(0.7);
+
+        img { visibility: hidden; }
+    }
+}
+
+@include media-md {
+    /* main.scss */ 
+    body { 
+        overflow-x: hidden; 
+        left: 10px;
+    }
+    .logo { 
+        // transform: scale(0.7);
+        // transform-origin: -5px -5px;
+    }
+    nav { visibility: visible; }
+    nav a { font-size: 0.7rem; }
+    .burger-btn { visibility: hidden; }
+    footer { margin: 0 auto;}
+
+    /* _about.scss */ 
+    .about { top: 3em; }
+    .about__top { gap: 13em; }
+    .about__top--slogan { 
+        top: -90px;
+        left: 30px;
+        transform: scale(0.6);
+
+        &__running-man {
+            font-size: 3.5rem;
+            top: 200px;
+        }
+
+        &__flag {
+            font-size: 3.5rem;
+            top: 200px;
+            left: 440px;
+        }
+
+        &__big-text { width: 5.5em; }
+    }
+
+    .about__top--accordion { 
+        top: 0;
+        right: 5em;
+
+        @for $i from 1 through 5 {
+            &__#{$i} { 
+                width: 30em;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .about__bot--motto {
+        font-size: 1rem;
+        top: -20px;
+        right: 230px;
+    }
+
+    .about__bot--dropdown {
+        @for $i from 1 through 5 {
+
+            &__#{$i} { 
+                $top: -280px + (80px * $i);
+                $right: -390px + (140px * $i);
+                top: $top;
+                right: $right;
+            }
+        }
+    }
+
+    .about__bot--drawing-2 {
+        width: 250px;
+        height: 250px;
+        top: 280px;
+        left: 250px;
+    }
+
+    /* _projects.scss */
+    .projects {
+        height: 1000px;
+        top: 25em; 
+    }
+    .projects__top { 
+        gap: 20px;
+
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                width: 250px;
+                height: 225px;
+            }
+        }
+    }
+
+    .projects__bot {
+        width: 650px;
+        margin-top: 3em;
+        margin-bottom: 25em;
+
+        &--6 {
+            height: 250px;
+
+            video {
+                width: 650px;
+                height: 400px;
+            }
+        }
+    }
+    
+    /* _contact.scss */
+    .contact {
+        gap: 1em;
+        // bottom: -13em;
+
+        img { visibility: visible; }
+    }
+}
+
+@include media-lg {
+    /* main.scss */ 
+    nav { visibility: visible; }
+    nav a { font-size: 0.7rem; }
+    .burger-btn { visibility: hidden; }
+    footer { font-size: 0.7rem !important; bottom: -37em !important; }
+
+    /* _about.scss */ 
+    .about { top: 3em; }
+    .about__top { gap: 8em; }
+    .about__top--slogan { 
+        top: -90px;
+        left: 30px;
+        transform: scale(0.6);
+
+        &__running-man {
+            font-size: 3.5rem;
+            top: 200px;
+        }
+
+        &__flag {
+            font-size: 3.5rem;
+            top: 200px;
+            left: 440px;
+        }
+
+        &__big-text { width: 5.5em; }
+    }
+
+    .about__top--accordion { 
+        top: 0;
+        right: 5em;
+
+        @for $i from 1 through 5 {
+            &__#{$i} { 
+                width: 30em;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .about__bot--motto {
+        font-size: 1rem;
+        top: -20px;
+        right: 230px;
+    }
+
+    .about__bot--dropdown {
+        @for $i from 1 through 5 {
+
+            &__#{$i} { 
+                $top: -300px + (80px * $i);
+                $right: -525px + (180px * $i);
+                top: $top;
+                right: $right;
+            }
+        }
+    }
+
+    .about__bot--drawing-2 {
+        width: 300px;
+        height: 300px;
+        top: 260px;
+        left: 250px;
+    }
+
+    /* _projects.scss */
+    .projects {
+        max-height: 1000px;
+        top: 35em;
+    }
+    .projects__top { 
+        gap: 40px;
+
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                width: 350px;
+                height: 225px;
+            }
+        }
+    }
+
+    .projects__bot {
+        width: 850px;
+        margin-top: 3em;
+        margin-bottom: 25em;
+
+        &--6 {
+            height: 485px;
+
+            video {
+                width: 850px;
+                height: 450px;
+            }
+        }
+    }
+    
+    /* _contact.scss */
+    .contact {
+        gap: 1em;
+        bottom: -25em;
+
+        img { visibility: visible; }
+    }
+}
+
+@include media-xl {
+    /* main.scss */ 
+    nav { visibility: visible; }
+    nav a { font-size: 0.7rem; }
+    .burger-btn { visibility: hidden; }
+    footer { bottom: -35em; }
+
+    /* _about.scss */ 
+    .about { top: 3em; }
+    .about__top { gap: 8em; }
+    .about__top--slogan { 
+        top: -90px;
+        left: 30px;
+        transform: scale(0.6);
+
+        &__running-man {
+            font-size: 3.5rem;
+            top: 200px;
+        }
+
+        &__flag {
+            font-size: 3.5rem;
+            top: 200px;
+            left: 440px;
+        }
+
+        &__big-text { width: 5.5em; }
+    }
+
+    .about__top--accordion { 
+        top: 0;
+        right: 5em;
+
+        @for $i from 1 through 5 {
+            &__#{$i} { 
+                width: 30em;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .about__bot--motto {
+        font-size: 1rem;
+        top: -20px;
+        right: 230px;
+    }
+
+    .about__bot--dropdown {
+        @for $i from 1 through 5 {
+
+            &__#{$i} { 
+                $top: -300px + (80px * $i);
+                $right: -525px + (180px * $i);
+                top: $top;
+                right: $right;
+            }
+        }
+    }
+
+    .about__bot--drawing-2 {
+        width: 300px;
+        height: 300px;
+        top: 260px;
+        left: 250px;
+    }
+
+    /* _projects.scss */
+    .projects {
+        height: 1000px;
+        top: 35em;
+    }
+    .projects__top { 
+        gap: 40px;
+
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                width: 425px;
+                height: 225px;
+            }
+        }
+    }
+
+    .projects__bot {
+        width: 850px;
+        margin-top: 5em;
+        margin-bottom: 25em;
+
+        &--6 {
+            height: 485px;
+
+            video {
+                width: 850px;
+                height: 450px;
+            }
+        }
+    }
+    
+    /* _contact.scss */
+    .contact {
+        gap: 1em;
+        bottom: -25em;
+
+        img { visibility: visible; }
+    }
+}

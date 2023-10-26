@@ -1,0 +1,56 @@
+$primary-color: white;
+$secondary-color: rgb(45, 45, 45);
+$accent-color: rgb(180, 50, 50);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    scroll-behavior: smooth;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit;
+}
+
+@mixin transition-ease {
+    transition: all 0.2s ease-in-out;
+}
+
+@mixin media-xs {
+    @media screen and (max-width: 502px) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media screen and (min-width: 503px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1440px) {
+        @content;
+    }
+}
