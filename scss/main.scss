@@ -33,7 +33,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0.2rem 0;
-    z-index: 50;
+    z-index: 5;
     position: sticky;
     top: 0.8rem;
 
@@ -79,9 +79,9 @@ body {
         gap: 1.2em;
         background-color: rgba($primary-color, 0.8);
         padding: 0.8em;
-        position: absolute;
-        top: 0;
-        right: 0;
+        position: fixed;
+        top: 1em;
+        right: 1.75em;
         visibility: visible;
         @include transition-ease;
 
@@ -92,9 +92,12 @@ body {
     }
 
     .burger-btn {
-      position: relative;
-      top: -0.3em;
-      right: 0.2em;
+      background-color: rgba($primary-color, 0.4);
+      color: $secondary-color;
+      padding: 0.3em;
+      position: fixed;
+      top: 0.85em;
+      right: 1.8em;
       cursor: pointer; 
     }
 

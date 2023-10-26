@@ -61,11 +61,13 @@ a {
   margin-bottom: -0.1em;
 }
 .about__top--slogan__running-man {
+  color: rgb(45, 45, 45);
   position: absolute;
   top: 4.25em;
   left: 0.2em;
 }
 .about__top--slogan__flag {
+  color: rgb(45, 45, 45);
   position: absolute;
   top: 4.25em;
   left: 7.9em;
@@ -380,7 +382,7 @@ a {
 .js-open-dropdown:nth-child(1) {
   width: 13em;
   padding-bottom: 1.5em;
-  z-index: 5;
+  z-index: 1;
 }
 .js-open-dropdown:nth-child(1):hover {
   filter: none;
@@ -391,7 +393,7 @@ a {
 .js-open-dropdown:nth-child(2) {
   width: 13em;
   padding-bottom: 1.5em;
-  z-index: 5;
+  z-index: 1;
 }
 .js-open-dropdown:nth-child(2):hover {
   filter: none;
@@ -402,7 +404,7 @@ a {
 .js-open-dropdown:nth-child(3) {
   width: 13em;
   padding-bottom: 1.5em;
-  z-index: 5;
+  z-index: 1;
 }
 .js-open-dropdown:nth-child(3):hover {
   filter: none;
@@ -413,7 +415,7 @@ a {
 .js-open-dropdown:nth-child(4) {
   width: 13em;
   padding-bottom: 1.5em;
-  z-index: 5;
+  z-index: 1;
 }
 .js-open-dropdown:nth-child(4):hover {
   filter: none;
@@ -424,7 +426,7 @@ a {
 .js-open-dropdown:nth-child(5) {
   width: 13em;
   padding-bottom: 1.5em;
-  z-index: 5;
+  z-index: 1;
 }
 .js-open-dropdown:nth-child(5):hover {
   filter: none;
@@ -691,14 +693,18 @@ a {
   border: 0.3em solid white;
 }
 
-@media screen and (max-width: 502px) {
+@media screen and (max-width: 425px) {
   /* main.scss */
   body {
     left: 3em;
   }
+  header {
+    position: relative !important;
+  }
   .logo {
+    position: absolute;
     top: 0;
-    left: -2.5em;
+    left: -3.75em;
   }
   nav {
     visibility: hidden;
@@ -837,7 +843,7 @@ a {
     transform: scale(0.7);
   }
 }
-@media screen and (min-width: 503px) {
+@media screen and (min-width: 425px) {
   /* main.scss */
   body {
     overflow-x: hidden;
@@ -1434,7 +1440,7 @@ body header {
   justify-content: space-between;
   align-items: center;
   padding: 0.2rem 0;
-  z-index: 50;
+  z-index: 5;
   position: sticky;
   top: 0.8rem;
 }
@@ -1473,9 +1479,9 @@ body header nav.js-open-nav {
   gap: 1.2em;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 0.8em;
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 1em;
+  right: 1.75em;
   visibility: visible;
   transition: all 0.2s ease-in-out;
 }
@@ -1483,9 +1489,12 @@ body header nav.js-open-nav a:hover, body header nav.js-open-nav a:focus-visible
   color: rgb(180, 50, 50);
 }
 body header .burger-btn {
-  position: relative;
-  top: -0.3em;
-  right: 0.2em;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgb(45, 45, 45);
+  padding: 0.3em;
+  position: fixed;
+  top: 0.85em;
+  right: 1.8em;
   cursor: pointer;
 }
 body header.js-header-bkgd {

@@ -1,12 +1,13 @@
 @include media-xs {
     /* main.scss */ 
     body { left: 3em; }
+    header { position: relative !important; }
     .logo { 
+        position: absolute;
         top: 0;
-        left: -2.5em;
+        left: -3.75em;
     }
     nav { visibility: hidden; }
-    // nav a { position: absolute; }
     .burger-btn { visibility: visible; }
     footer { font-size: 0.7rem !important; bottom: -29em !important; }
 

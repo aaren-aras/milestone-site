@@ -26,13 +26,13 @@ a {
 }
 
 @mixin media-xs {
-    @media screen and (max-width: 502px) {
+    @media screen and (max-width: 425px) {
         @content;
     }
 }
 
 @mixin media-sm {
-    @media screen and (min-width: 503px) {
+    @media screen and (min-width: 425px) {
         @content;
     }
 }

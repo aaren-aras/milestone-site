@@ -4,7 +4,7 @@ const navElement = document.querySelector('nav');
 const anchorTags = navElement.querySelectorAll('a');
 let showMenu = false;
 
-hideNav(); // Initial state 
+if (window.innerWidth < 768) hideNav(); // Initial state 
 
 burgerBtnElement.addEventListener('click', (e) => {
   // Stops ln 19-24 when burger button is clicked 
@@ -24,7 +24,7 @@ document.body.addEventListener('click', () => {
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 768) {
       navElement.classList.remove('js-open-nav');
-      hideNav();
+      // hideNav();
       showMenu = false;
     }
 });
