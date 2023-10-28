@@ -1057,7 +1057,7 @@ a {
   .about__bot--motto {
     font-size: 1rem;
     top: -20px;
-    right: 230px;
+    right: 235px !important;
   }
   .about__bot--dropdown__1 {
     top: -200px;
@@ -1089,7 +1089,7 @@ a {
   .projects {
     height: 1000px;
     top: 25em;
-    margin-top: 8em;
+    margin-top: 18em;
   }
   .projects__top {
     gap: 20px;
@@ -1115,20 +1115,21 @@ a {
     height: 225px;
   }
   .projects__bot {
-    width: 650px;
+    width: 550px;
     margin-top: 3em;
-    margin-bottom: 25em;
+    margin-bottom: 45em !important;
   }
   .projects__bot--6 {
     height: 250px;
   }
   .projects__bot--6 video {
-    width: 650px;
+    width: 550px;
     height: 400px;
   }
   /* _contact.scss */
   .contact {
     gap: 1em;
+    margin-left: -1em;
   }
   .contact img {
     visibility: visible;
