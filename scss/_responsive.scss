@@ -313,6 +313,7 @@
     .projects {
         height: 1000px;
         top: 25em; 
+        margin-top: 8em;
     }
     .projects__top { 
         gap: 20px;
@@ -351,8 +352,9 @@
 
 @include media-lg {
     /* main.scss */ 
+    .logo { width: 8.5rem; }
     nav { visibility: visible; }
-    nav a { font-size: 0.7rem; }
+    nav a { font-size: 0.75rem !important; }
     .burger-btn { visibility: hidden; }
     footer { font-size: 0.7rem !important; bottom: -37em !important; }
 
@@ -384,7 +386,7 @@
 
         @for $i from 1 through 5 {
             &__#{$i} { 
-                width: 30em;
+                width: 35em;
                 font-size: 0.8rem;
             }
         }
@@ -393,7 +395,7 @@
     .about__bot--motto {
         font-size: 1rem;
         top: -20px;
-        right: 230px;
+        right: 260px;
     }
 
     .about__bot--dropdown {
@@ -523,16 +525,22 @@
 
     /* _projects.scss */
     .projects {
-        height: 1000px;
-        top: 35em;
+        max-height: 1000px;
+        margin-top: 5em;
+        top: 40em;
     }
     .projects__top { 
         gap: 40px;
 
         @for $i from 1 through 5 {
             &--#{$i} {
-                width: 425px;
-                height: 225px;
+                // width: 450px;
+                // height: 225px;
+                flex: 0 0 calc(25% - 10px);
+
+                // &:nth-child(n + 4) {
+                //     order: 2;
+                // }
             }
         }
     }
@@ -540,7 +548,7 @@
     .projects__bot {
         width: 850px;
         margin-top: 5em;
-        margin-bottom: 25em;
+        margin-bottom: 45em;
 
         &--6 {
             height: 485px;

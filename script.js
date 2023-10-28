@@ -90,8 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   accordionSections.forEach((section) => {
     section.addEventListener('click', () => {
-      section.classList.toggle('js-open-accordion');
+      // Close other sections (if open)
+      accordionSections.forEach((otherSection) => {
+        if (otherSection !== section) {
+          otherSection.classList.remove('js-open-accordion');
+          const icon = otherSection.querySelector('i.fa-solid');
+          if (icon) {
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-right');
+          }
+        }
+      });
 
+      section.classList.toggle('js-open-accordion');
       const icon = section.querySelector('i.fa-solid');
       if (icon) {
         icon.classList.toggle('fa-chevron-right');
@@ -102,8 +113,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   dropdownSections.forEach((section) => {
     section.addEventListener('click', () => {
-      section.classList.toggle('js-open-dropdown'); 
+      // Close other sections (if open)
+      dropdownSections.forEach((otherSection) => {
+        if (otherSection !== section) {
+          otherSection.classList.remove('js-open-dropdown');
+          const icon = otherSection.querySelector('i.fa-solid');
+          if (icon) {
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-right');
+          }
+        }
+      });
 
+      section.classList.toggle('js-open-dropdown'); 
       const icon = section.querySelector('i.fa-solid');
       if (icon) {
         icon.classList.toggle('fa-chevron-right');
