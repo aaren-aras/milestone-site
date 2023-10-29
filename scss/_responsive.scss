@@ -1,6 +1,6 @@
 @include media-xs {
     /* main.scss */ 
-    body { left: 3em; }
+    body { left: 2.5em; }
     header { position: relative !important; }
     .logo { 
         position: absolute;
@@ -117,26 +117,26 @@
 @include media-sm {
     /* main.scss */ 
     body { 
-        overflow-x: hidden; 
-        left: 10px;
+        left: 2em;
     }
     .logo { 
-        // transform: scale(0.7);
-        // transform-origin: -5px -5px;
+        left: -2.25em;
+
     }
     nav { visibility: hidden; }
-    .burger-btn { visibility: visible; }
+    .burger-btn { margin-right: -0.5em; visibility: visible; }
     footer { 
-        bottom: -29em;
+        margin-bottom: -4em;
+        bottom: -26em !important;
     }
 
     /* _about.scss */ 
     .about { top: 1em; }
-    .about__top { gap: 13em; }
+    .about__top { gap: 15em; }
     .about__top--slogan { 
         top: -110px;
-        left: 30px;
-        transform: scale(0.5);
+        left: 2em;
+        transform: scale(0.45);
 
         &__running-man {
             font-size: 3.5rem;
@@ -158,7 +158,7 @@
 
         @for $i from 1 through 5 {
             &__#{$i} { 
-                width: 23em;
+                width: 18em;
                 font-size: 0.6rem;
             }
         }
@@ -167,7 +167,7 @@
     .about__bot--motto {
         font-size: 0.8rem;
         top: -60px;
-        right: 125px;
+        right: 105px;
     }
 
     .about__bot--dropdown {
@@ -175,7 +175,7 @@
 
             &__#{$i} { 
                 $top: -280px + (80px * $i);
-                $right: -240px + (80px * $i);
+                $right: -160px + (60px * $i);
                 top: $top;
                 right: $right;
             }
@@ -183,16 +183,17 @@
     }
 
     .about__bot--drawing-2 {
-        width: 210px;
-        height: 210px;
+        width: 200px;
+        height: 200px;
         top: 275px;
-        left: 120px;
+        left: 110px;
     }
 
     /* _projects.scss */
     .projects {
         height: 1000px;
         top: 30em; 
+        margin-top: 34em;
     }
     .projects__top { 
         gap: 20px;
@@ -201,24 +202,20 @@
             &--#{$i} {
                 width: 250px;
                 height: 225px;
-
-                // h5 { 
-
-                // }
             }
         }
     }
 
     .projects__bot {
-        width: 450px;
+        width: 350px;
         margin-top: 2em;
-        margin-bottom: 25em;
+        margin-bottom: 62em;
 
         &--6 {
             height: 250px;
 
             video {
-                width: 450px;
+                width: 350px;
                 height: 215px;
             }
         }
@@ -227,9 +224,7 @@
     /* _contact.scss */
     .contact {
         gap: 1em;
-        bottom: -20em;
         left: 1em;
-        transform: scale(0.7);
 
         img { visibility: hidden; }
     }
@@ -238,17 +233,15 @@
 @include media-md {
     /* main.scss */ 
     body { 
-        overflow-x: hidden; 
-        left: 10px;
+        left: 0px;
     }
     .logo { 
-        // transform: scale(0.7);
-        // transform-origin: -5px -5px;
+        left: 0em;
     }
-    nav { visibility: visible; }
+    nav { margin-right: 2em !important; visibility: visible; }
     nav a { font-size: 0.7rem; }
     .burger-btn { visibility: hidden; }
-    footer { margin: 0 auto;}
+    footer { margin-bottom: -50em; bottom: 50em !important; }
 
     /* _about.scss */ 
     .about { top: 3em; }
@@ -278,7 +271,7 @@
 
         @for $i from 1 through 5 {
             &__#{$i} { 
-                width: 30em;
+                width: 28em;
                 font-size: 0.8rem;
             }
         }
@@ -287,7 +280,7 @@
     .about__bot--motto {
         font-size: 1rem;
         top: -20px;
-        right: 235px !important;
+        right: 200px !important;
     }
 
     .about__bot--dropdown {
@@ -295,7 +288,7 @@
 
             &__#{$i} { 
                 $top: -280px + (80px * $i);
-                $right: -390px + (140px * $i);
+                $right: -330px + (120px * $i);
                 top: $top;
                 right: $right;
             }
@@ -306,14 +299,14 @@
         width: 250px;
         height: 250px;
         top: 280px;
-        left: 250px;
+        left: 210px;
     }
 
     /* _projects.scss */
     .projects {
-        height: 1000px;
         top: 25em; 
-        margin-top: 18em;
+        margin-top: 40em;
+        // margin-bottom: -50em;
     }
     .projects__top { 
         gap: 20px;
@@ -329,14 +322,14 @@
     .projects__bot {
         width: 550px;
         margin-top: 3em;
-        margin-bottom: 45em !important;
+        margin-bottom: 80em !important;
 
         &--6 {
-            height: 250px;
+            height: 385px;
 
             video {
                 width: 550px;
-                height: 400px;
+                height: 350px;
             }
         }
     }
@@ -344,7 +337,9 @@
     /* _contact.scss */
     .contact {
         gap: 1em;
+        font-size: 0.8rem;
         margin-left: -1em;
+        // margin-bottom: -35em !important;
         // bottom: -35em;
 
         img { visibility: visible; }
@@ -353,11 +348,11 @@
 
 @include media-lg {
     /* main.scss */ 
-    .logo { width: 8.5rem; }
+    .logo { width: 8.5rem; left: 1em; }
     nav { visibility: visible; }
     nav a { font-size: 0.75rem !important; }
     .burger-btn { visibility: hidden; }
-    footer { font-size: 0.7rem !important; bottom: -37em !important; }
+    footer { font-size: 0.7rem !important; bottom: -40em !important; }
 
     /* _about.scss */ 
     .about { top: 3em; }
@@ -460,18 +455,15 @@
 
 @include media-xl {
     /* main.scss */ 
-    nav { visibility: visible; }
-    nav a { font-size: 0.7rem; }
+    nav a { font-size: 0.9rem; }
     .burger-btn { visibility: hidden; }
-    footer { bottom: -35em; }
+    // footer { bottom: -35em; }
 
     /* _about.scss */ 
-    .about { top: 3em; }
-    .about__top { gap: 8em; }
     .about__top--slogan { 
-        top: -90px;
-        left: 30px;
-        transform: scale(0.6);
+        top: -50px;
+        left: 50px;
+        transform: scale(0.8);
 
         &__running-man {
             font-size: 3.5rem;
@@ -493,28 +485,34 @@
 
         @for $i from 1 through 5 {
             &__#{$i} { 
-                width: 30em;
-                font-size: 0.8rem;
+                width: 35em;
+                font-size: 1rem;
             }
         }
     }
 
     .about__bot--motto {
-        font-size: 1rem;
-        top: -20px;
-        right: 230px;
+        width: 17em;
+        font-size: 1.5rem;
+        top: 3.2em;
+        right: 13em;
     }
 
     .about__bot--dropdown {
         @for $i from 1 through 5 {
-
             &__#{$i} { 
-                $top: -300px + (80px * $i);
-                $right: -525px + (180px * $i);
+                width: 11em;
+                font-size: 1rem;
+                $top: -18.75em + (6.25em * $i);
+                $right: -35em + (12.5em * $i);
                 top: $top;
                 right: $right;
             }
         }
+    }
+
+    .about__bot--drawing-1 {
+
     }
 
     .about__bot--drawing-2 {
@@ -526,8 +524,9 @@
 
     /* _projects.scss */
     .projects {
-        max-height: 1000px;
-        margin-top: 5em;
+        // max-height: 1000px;
+        // margin-top: 5em;
+        margin-bottom: 5em;
         top: 40em;
     }
     .projects__top { 
@@ -538,10 +537,6 @@
                 // width: 450px;
                 // height: 225px;
                 flex: 0 0 calc(25% - 10px);
-
-                // &:nth-child(n + 4) {
-                //     order: 2;
-                // }
             }
         }
     }
@@ -549,7 +544,7 @@
     .projects__bot {
         width: 850px;
         margin-top: 5em;
-        margin-bottom: 45em;
+        // margin-bottom: 45em;
 
         &--6 {
             height: 485px;
@@ -564,7 +559,7 @@
     /* _contact.scss */
     .contact {
         gap: 1em;
-        bottom: -25em;
+        // bottom: -25em;
 
         img { visibility: visible; }
     }

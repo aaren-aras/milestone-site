@@ -26,31 +26,32 @@ a {
 }
 
 @mixin media-xs {
-    @media screen and (max-width: 425px) {
+    @media only screen and (max-width: 425px) {
         @content;
     }
 }
 
 @mixin media-sm {
-    @media screen and (min-width: 425px) {
+    @media only screen and (min-width: 426px) and (max-width: 767px) {
         @content;
     }
 }
 
 @mixin media-md {
-    @media screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         @content;
     }
 }
 
 @mixin media-lg {
-    @media screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1024px) and (max-width: 1439px) {
         @content;
     }
 }
 
 @mixin media-xl {
-    @media screen and (min-width: 1440px) {
+    @media only screen and (min-width: 1440px) {
         @content;
     }
 }
+

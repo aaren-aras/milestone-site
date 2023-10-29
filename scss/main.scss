@@ -14,18 +14,18 @@ body {
     ), 
     url(../img/bkgd/eng-draw.png);
     background-size: contain;
-    background-position: 400px 50%;
     filter: grayscale(20%);
     opacity: 0.3;
     z-index: -1;
     position: fixed;
     inset: 0;
-    // animation: bg-animation 50s infinite alternate !important; 
-    // @keyframes bg-animation {
-    //   0% { background-position: top; }
-    //   100% { background-position: bottom; }
-    // }
+    // animation: bg-animation 100s infinite alternate; 
   }
+
+  // @keyframes bg-animation {
+  //   0% { background-position: bottom; }
+  //   100% { background-position: top; }
+  // }
 
   header {
     display: flex;
@@ -51,7 +51,6 @@ body {
       margin-right: 3em;
 
       a {
-        font-size: 0.9rem;
         color: $secondary-color;
         // padding: 0.5em;
         // border: 1.5px solid $secondary-color;

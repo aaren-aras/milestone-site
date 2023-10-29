@@ -23,12 +23,13 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 3em;
 }
 .about__top {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  gap: 8em;
   width: 100%;
   height: 16.5em;
   position: relative;
@@ -207,13 +208,9 @@ a {
   position: relative;
 }
 .about__bot--motto {
-  width: 15em;
-  font-size: 1rem;
   text-align: center;
   color: rgb(45, 45, 45);
   position: relative;
-  top: 40px;
-  right: 340px;
 }
 .about__bot--motto span {
   background-image: linear-gradient(90deg, rgb(180, 50, 50), white);
@@ -232,8 +229,6 @@ a {
   margin-top: 5em;
 }
 .about__bot--dropdown__1 {
-  width: 11em;
-  font-size: 0.8rem;
   background-color: rgba(180, 50, 50, 0.95);
   color: rgb(45, 45, 45);
   padding: 0.8em;
@@ -251,8 +246,6 @@ a {
   filter: saturate(55%);
 }
 .about__bot--dropdown__2 {
-  width: 11em;
-  font-size: 0.8rem;
   background-color: rgba(180, 50, 50, 0.75);
   color: rgb(45, 45, 45);
   padding: 0.8em;
@@ -270,8 +263,6 @@ a {
   filter: saturate(55%);
 }
 .about__bot--dropdown__3 {
-  width: 11em;
-  font-size: 0.8rem;
   background-color: rgba(180, 50, 50, 0.55);
   color: rgb(45, 45, 45);
   padding: 0.8em;
@@ -289,8 +280,6 @@ a {
   filter: saturate(55%);
 }
 .about__bot--dropdown__4 {
-  width: 11em;
-  font-size: 0.8rem;
   background-color: rgba(180, 50, 50, 0.35);
   color: rgb(45, 45, 45);
   padding: 0.8em;
@@ -308,8 +297,6 @@ a {
   filter: saturate(55%);
 }
 .about__bot--dropdown__5 {
-  width: 11em;
-  font-size: 0.8rem;
   background-color: rgba(180, 50, 50, 0.15);
   color: rgb(45, 45, 45);
   padding: 0.8em;
@@ -382,7 +369,7 @@ a {
 .js-open-dropdown:nth-child(1) {
   width: 13em;
   padding-bottom: 1.5em;
-  z-index: 1;
+  z-index: 5;
 }
 .js-open-dropdown:nth-child(1):hover {
   filter: none;
@@ -393,7 +380,7 @@ a {
 .js-open-dropdown:nth-child(2) {
   width: 13em;
   padding-bottom: 1.5em;
-  z-index: 1;
+  z-index: 5;
 }
 .js-open-dropdown:nth-child(2):hover {
   filter: none;
@@ -404,7 +391,7 @@ a {
 .js-open-dropdown:nth-child(3) {
   width: 13em;
   padding-bottom: 1.5em;
-  z-index: 1;
+  z-index: 5;
 }
 .js-open-dropdown:nth-child(3):hover {
   filter: none;
@@ -415,7 +402,7 @@ a {
 .js-open-dropdown:nth-child(4) {
   width: 13em;
   padding-bottom: 1.5em;
-  z-index: 1;
+  z-index: 5;
 }
 .js-open-dropdown:nth-child(4):hover {
   filter: none;
@@ -426,7 +413,7 @@ a {
 .js-open-dropdown:nth-child(5) {
   width: 13em;
   padding-bottom: 1.5em;
-  z-index: 1;
+  z-index: 5;
 }
 .js-open-dropdown:nth-child(5):hover {
   filter: none;
@@ -693,10 +680,10 @@ a {
   border: 0.3em solid white;
 }
 
-@media screen and (max-width: 425px) {
+@media only screen and (max-width: 425px) {
   /* main.scss */
   body {
-    left: 3em;
+    left: 2.5em;
   }
   header {
     position: relative !important;
@@ -843,32 +830,36 @@ a {
     transform: scale(0.7);
   }
 }
-@media screen and (min-width: 425px) {
+@media only screen and (min-width: 426px) and (max-width: 767px) {
   /* main.scss */
   body {
-    overflow-x: hidden;
-    left: 10px;
+    left: 2em;
+  }
+  .logo {
+    left: -2.25em;
   }
   nav {
     visibility: hidden;
   }
   .burger-btn {
+    margin-right: -0.5em;
     visibility: visible;
   }
   footer {
-    bottom: -29em;
+    margin-bottom: -4em;
+    bottom: -26em !important;
   }
   /* _about.scss */
   .about {
     top: 1em;
   }
   .about__top {
-    gap: 13em;
+    gap: 15em;
   }
   .about__top--slogan {
     top: -110px;
-    left: 30px;
-    transform: scale(0.5);
+    left: 2em;
+    transform: scale(0.45);
   }
   .about__top--slogan__running-man {
     font-size: 3.5rem;
@@ -887,41 +878,41 @@ a {
     right: 5em;
   }
   .about__top--accordion__1 {
-    width: 23em;
+    width: 18em;
     font-size: 0.6rem;
   }
   .about__top--accordion__2 {
-    width: 23em;
+    width: 18em;
     font-size: 0.6rem;
   }
   .about__top--accordion__3 {
-    width: 23em;
+    width: 18em;
     font-size: 0.6rem;
   }
   .about__top--accordion__4 {
-    width: 23em;
+    width: 18em;
     font-size: 0.6rem;
   }
   .about__top--accordion__5 {
-    width: 23em;
+    width: 18em;
     font-size: 0.6rem;
   }
   .about__bot--motto {
     font-size: 0.8rem;
     top: -60px;
-    right: 125px;
+    right: 105px;
   }
   .about__bot--dropdown__1 {
     top: -200px;
-    right: -160px;
+    right: -100px;
   }
   .about__bot--dropdown__2 {
     top: -120px;
-    right: -80px;
+    right: -40px;
   }
   .about__bot--dropdown__3 {
     top: -40px;
-    right: 0px;
+    right: 20px;
   }
   .about__bot--dropdown__4 {
     top: 40px;
@@ -929,18 +920,19 @@ a {
   }
   .about__bot--dropdown__5 {
     top: 120px;
-    right: 160px;
+    right: 140px;
   }
   .about__bot--drawing-2 {
-    width: 210px;
-    height: 210px;
+    width: 200px;
+    height: 200px;
     top: 275px;
-    left: 120px;
+    left: 110px;
   }
   /* _projects.scss */
   .projects {
     height: 1000px;
     top: 30em;
+    margin-top: 34em;
   }
   .projects__top {
     gap: 20px;
@@ -966,35 +958,36 @@ a {
     height: 225px;
   }
   .projects__bot {
-    width: 450px;
+    width: 350px;
     margin-top: 2em;
-    margin-bottom: 25em;
+    margin-bottom: 62em;
   }
   .projects__bot--6 {
     height: 250px;
   }
   .projects__bot--6 video {
-    width: 450px;
+    width: 350px;
     height: 215px;
   }
   /* _contact.scss */
   .contact {
     gap: 1em;
-    bottom: -20em;
     left: 1em;
-    transform: scale(0.7);
   }
   .contact img {
     visibility: hidden;
   }
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* main.scss */
   body {
-    overflow-x: hidden;
-    left: 10px;
+    left: 0px;
+  }
+  .logo {
+    left: 0em;
   }
   nav {
+    margin-right: 2em !important;
     visibility: visible;
   }
   nav a {
@@ -1004,7 +997,8 @@ a {
     visibility: hidden;
   }
   footer {
-    margin: 0 auto;
+    margin-bottom: -50em;
+    bottom: 50em !important;
   }
   /* _about.scss */
   .about {
@@ -1035,37 +1029,37 @@ a {
     right: 5em;
   }
   .about__top--accordion__1 {
-    width: 30em;
+    width: 28em;
     font-size: 0.8rem;
   }
   .about__top--accordion__2 {
-    width: 30em;
+    width: 28em;
     font-size: 0.8rem;
   }
   .about__top--accordion__3 {
-    width: 30em;
+    width: 28em;
     font-size: 0.8rem;
   }
   .about__top--accordion__4 {
-    width: 30em;
+    width: 28em;
     font-size: 0.8rem;
   }
   .about__top--accordion__5 {
-    width: 30em;
+    width: 28em;
     font-size: 0.8rem;
   }
   .about__bot--motto {
     font-size: 1rem;
     top: -20px;
-    right: 235px !important;
+    right: 200px !important;
   }
   .about__bot--dropdown__1 {
     top: -200px;
-    right: -250px;
+    right: -210px;
   }
   .about__bot--dropdown__2 {
     top: -120px;
-    right: -110px;
+    right: -90px;
   }
   .about__bot--dropdown__3 {
     top: -40px;
@@ -1073,23 +1067,22 @@ a {
   }
   .about__bot--dropdown__4 {
     top: 40px;
-    right: 170px;
+    right: 150px;
   }
   .about__bot--dropdown__5 {
     top: 120px;
-    right: 310px;
+    right: 270px;
   }
   .about__bot--drawing-2 {
     width: 250px;
     height: 250px;
     top: 280px;
-    left: 250px;
+    left: 210px;
   }
   /* _projects.scss */
   .projects {
-    height: 1000px;
     top: 25em;
-    margin-top: 18em;
+    margin-top: 40em;
   }
   .projects__top {
     gap: 20px;
@@ -1117,28 +1110,30 @@ a {
   .projects__bot {
     width: 550px;
     margin-top: 3em;
-    margin-bottom: 45em !important;
+    margin-bottom: 80em !important;
   }
   .projects__bot--6 {
-    height: 250px;
+    height: 385px;
   }
   .projects__bot--6 video {
     width: 550px;
-    height: 400px;
+    height: 350px;
   }
   /* _contact.scss */
   .contact {
     gap: 1em;
+    font-size: 0.8rem;
     margin-left: -1em;
   }
   .contact img {
     visibility: visible;
   }
 }
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
   /* main.scss */
   .logo {
     width: 8.5rem;
+    left: 1em;
   }
   nav {
     visibility: visible;
@@ -1151,7 +1146,7 @@ a {
   }
   footer {
     font-size: 0.7rem !important;
-    bottom: -37em !important;
+    bottom: -40em !important;
   }
   /* _about.scss */
   .about {
@@ -1281,31 +1276,19 @@ a {
     visibility: visible;
   }
 }
-@media screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
   /* main.scss */
-  nav {
-    visibility: visible;
-  }
   nav a {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   .burger-btn {
     visibility: hidden;
   }
-  footer {
-    bottom: -35em;
-  }
   /* _about.scss */
-  .about {
-    top: 3em;
-  }
-  .about__top {
-    gap: 8em;
-  }
   .about__top--slogan {
-    top: -90px;
-    left: 30px;
-    transform: scale(0.6);
+    top: -50px;
+    left: 50px;
+    transform: scale(0.8);
   }
   .about__top--slogan__running-man {
     font-size: 3.5rem;
@@ -1324,49 +1307,60 @@ a {
     right: 5em;
   }
   .about__top--accordion__1 {
-    width: 30em;
-    font-size: 0.8rem;
+    width: 35em;
+    font-size: 1rem;
   }
   .about__top--accordion__2 {
-    width: 30em;
-    font-size: 0.8rem;
+    width: 35em;
+    font-size: 1rem;
   }
   .about__top--accordion__3 {
-    width: 30em;
-    font-size: 0.8rem;
+    width: 35em;
+    font-size: 1rem;
   }
   .about__top--accordion__4 {
-    width: 30em;
-    font-size: 0.8rem;
+    width: 35em;
+    font-size: 1rem;
   }
   .about__top--accordion__5 {
-    width: 30em;
-    font-size: 0.8rem;
+    width: 35em;
+    font-size: 1rem;
   }
   .about__bot--motto {
-    font-size: 1rem;
-    top: -20px;
-    right: 230px;
+    width: 17em;
+    font-size: 1.5rem;
+    top: 3.2em;
+    right: 13em;
   }
   .about__bot--dropdown__1 {
-    top: -220px;
-    right: -345px;
+    width: 11em;
+    font-size: 1rem;
+    top: -12.5em;
+    right: -22.5em;
   }
   .about__bot--dropdown__2 {
-    top: -140px;
-    right: -165px;
+    width: 11em;
+    font-size: 1rem;
+    top: -6.25em;
+    right: -10em;
   }
   .about__bot--dropdown__3 {
-    top: -60px;
-    right: 15px;
+    width: 11em;
+    font-size: 1rem;
+    top: 0em;
+    right: 2.5em;
   }
   .about__bot--dropdown__4 {
-    top: 20px;
-    right: 195px;
+    width: 11em;
+    font-size: 1rem;
+    top: 6.25em;
+    right: 15em;
   }
   .about__bot--dropdown__5 {
-    top: 100px;
-    right: 375px;
+    width: 11em;
+    font-size: 1rem;
+    top: 12.5em;
+    right: 27.5em;
   }
   .about__bot--drawing-2 {
     width: 300px;
@@ -1376,8 +1370,7 @@ a {
   }
   /* _projects.scss */
   .projects {
-    max-height: 1000px;
-    margin-top: 5em;
+    margin-bottom: 5em;
     top: 40em;
   }
   .projects__top {
@@ -1401,7 +1394,6 @@ a {
   .projects__bot {
     width: 850px;
     margin-top: 5em;
-    margin-bottom: 45em;
   }
   .projects__bot--6 {
     height: 485px;
@@ -1413,7 +1405,6 @@ a {
   /* _contact.scss */
   .contact {
     gap: 1em;
-    bottom: -25em;
   }
   .contact img {
     visibility: visible;
@@ -1428,7 +1419,6 @@ body .bkgd {
   height: 100%;
   background: linear-gradient(to top, white, rgba(180, 50, 50, 0.2)), url(../img/bkgd/eng-draw.png);
   background-size: contain;
-  background-position: 400px 50%;
   filter: grayscale(20%);
   opacity: 0.3;
   z-index: -1;
@@ -1458,7 +1448,6 @@ body header nav {
   margin-right: 3em;
 }
 body header nav a {
-  font-size: 0.9rem;
   color: rgb(45, 45, 45);
   scroll-margin-top: 500px !important;
   transition: all 0.2s ease-in-out;
