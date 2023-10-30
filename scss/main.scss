@@ -34,7 +34,6 @@ body {
 
     .logo {
       max-width: 30%;
-      margin-left: 3rem;
     }
 
     nav {
@@ -67,6 +66,7 @@ body {
     }
 
     .burger-btn {
+      font-size: 0.8rem;
       background-color: rgba($primary-color, 0.4);
       color: $secondary-color;
       padding: 0.2rem;
@@ -85,9 +85,10 @@ body {
 
   footer {
     text-align: center;
-    // background-color: $primary-color;
-    color: $secondary-color;
+    background-color: $secondary-color;
+    color: $primary-color;
     padding: 0.5rem;
+    margin-top: 8em;
     position: absolute;
     right: 0;
     left: 0;

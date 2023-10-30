@@ -42,6 +42,10 @@ a {
     transition: all 0.2s ease-in-out;
 }
 
+@mixin responsive-style($size, $factor) { 
+
+}
+
 @mixin media-xs {
     @media only screen and (max-width: 425px) {
         @content;
