@@ -396,7 +396,7 @@ a {
 }
 .projects__top {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: center;
   gap: 3em;
 }
@@ -572,7 +572,7 @@ a {
 .projects__bot--6__indic button {
   background-color: rgb(45, 45, 45) !important;
   position: relative;
-  top: 0.6em;
+  top: 0.8em;
 }
 
 .contact {
@@ -614,221 +614,244 @@ a {
 
 @media only screen and (max-width: 425px) {
   /* main.scss */
+  .logo {
+    max-height: 1.5em;
+  }
+  nav a {
+    font-size: 0.5em;
+  }
+  footer {
+    font-size: 0.5em;
+  }
+  /* _about.scss */
+  .about {
+    min-height: 45em;
+  }
+  .about__top--accordion__1 {
+    width: 15em;
+    font-size: 0.575em;
+  }
+  .about__top--accordion__2 {
+    width: 15em;
+    font-size: 0.575em;
+  }
+  .about__top--accordion__3 {
+    width: 15em;
+    font-size: 0.575em;
+  }
+  .about__top--accordion__4 {
+    width: 15em;
+    font-size: 0.575em;
+  }
+  .about__top--accordion__5 {
+    width: 15em;
+    font-size: 0.575em;
+  }
+  .about__motto {
+    font-size: 0.5em;
+  }
+  .about__dropdown--1 {
+    width: 8em;
+    font-size: 0.575em;
+  }
+  .about__dropdown--2 {
+    width: 8em;
+    font-size: 0.575em;
+  }
+  .about__dropdown--3 {
+    width: 8em;
+    font-size: 0.575em;
+  }
+  .about__dropdown--4 {
+    width: 8em;
+    font-size: 0.575em;
+  }
+  .about__dropdown--5 {
+    width: 8em;
+    font-size: 0.575em;
+  }
+  .about__drawing-1 {
+    width: 7.5em;
+    height: 7.5em;
+  }
+  .about__drawing-2 {
+    width: 12.5em;
+    height: 12.5em;
+  }
+  /* _projects.scss */
+  .projects__top--1 {
+    width: 10em;
+    height: 8.5em;
+  }
+  .projects__top--1 img {
+    height: 7.5em;
+  }
+  .projects__top--1 h5 {
+    font-size: 0.9em;
+    bottom: 4.25em;
+    left: 4.5em;
+  }
+  .projects__top--1 p {
+    font-size: 0.7em;
+    top: 2em;
+    right: 1.375em;
+  }
+  .projects__top--2 {
+    width: 10em;
+    height: 8.5em;
+  }
+  .projects__top--2 img {
+    height: 7.5em;
+  }
+  .projects__top--2 h5 {
+    font-size: 0.9em;
+    bottom: 4.25em;
+    left: 4.5em;
+  }
+  .projects__top--2 p {
+    font-size: 0.7em;
+    top: 2em;
+    right: 1.375em;
+  }
+  .projects__top--3 {
+    width: 10em;
+    height: 8.5em;
+  }
+  .projects__top--3 img {
+    height: 7.5em;
+  }
+  .projects__top--3 h5 {
+    font-size: 0.9em;
+    bottom: 4.25em;
+    left: 4.5em;
+  }
+  .projects__top--3 p {
+    font-size: 0.7em;
+    top: 2em;
+    right: 1.375em;
+  }
+  .projects__top--4 {
+    width: 10em;
+    height: 8.5em;
+  }
+  .projects__top--4 img {
+    height: 7.5em;
+  }
+  .projects__top--4 h5 {
+    font-size: 0.9em;
+    bottom: 4.25em;
+    left: 4.5em;
+  }
+  .projects__top--4 p {
+    font-size: 0.7em;
+    top: 2em;
+    right: 1.375em;
+  }
+  .projects__top--5 {
+    width: 10em;
+    height: 8.5em;
+  }
+  .projects__top--5 img {
+    height: 7.5em;
+  }
+  .projects__top--5 h5 {
+    font-size: 0.9em;
+    bottom: 4.25em;
+    left: 4.5em;
+  }
+  .projects__top--5 p {
+    font-size: 0.7em;
+    top: 2em;
+    right: 1.375em;
+  }
+  .projects__bot {
+    width: 16em;
+  }
+  .projects__bot--6 {
+    height: 11em;
+  }
+  .projects__bot--6 video {
+    width: 16em;
+    height: 9em;
+  }
+  .projects__bot h5 {
+    font-size: 1.25em;
+    bottom: 6em;
+    left: 5.5em;
+  }
+  .projects__bot p {
+    font-size: 0.8em;
+    top: 1.5em;
+    left: 1.25em;
+  }
+  /* _contact.scss */
+  .contact {
+    font-size: 0.5em;
+  }
+  .contact i {
+    font-size: 1em;
+  }
+  /* main.scss */
   header {
     position: relative !important;
   }
   .logo {
-    max-height: 1.5rem;
     margin-left: 1rem;
   }
   nav {
     visibility: hidden;
   }
-  nav a {
-    font-size: 0.5rem;
-  }
   .burger-btn {
     visibility: visible;
   }
-  footer {
-    font-size: 0.5rem;
-  }
   /* _about.scss */
   .about {
-    min-height: 30rem;
     top: 2em;
   }
   .about__top {
-    margin-left: -2em;
+    margin-left: -2.5em;
   }
   .about__top--slogan {
-    margin-right: -2em;
-    top: -5em;
-    transform: scale(0.3);
-  }
-  .about__top--slogan__big-text {
-    width: 5.5em;
-  }
-  .about__top--accordion__1 {
-    width: 15em;
-    font-size: 0.5rem;
-  }
-  .about__top--accordion__2 {
-    width: 15em;
-    font-size: 0.5rem;
-  }
-  .about__top--accordion__3 {
-    width: 15em;
-    font-size: 0.5rem;
-  }
-  .about__top--accordion__4 {
-    width: 15em;
-    font-size: 0.5rem;
-  }
-  .about__top--accordion__5 {
-    width: 15em;
-    font-size: 0.5rem;
+    margin-right: -3em;
+    top: -5.75em;
+    transform: scale(0.275);
   }
   .about__motto {
-    font-size: 0.4rem;
-    top: -28em;
+    top: -40em;
     right: 0em;
   }
   .about__dropdown--1 {
-    width: 10em;
-    font-size: 0.4rem;
-    top: -18.75em;
-    right: -22em;
+    top: -11.75em;
+    right: -13em;
   }
   .about__dropdown--2 {
-    width: 10em;
-    font-size: 0.4rem;
-    top: -12.5em;
-    right: -16em;
+    top: -5.5em;
+    right: -9em;
   }
   .about__dropdown--3 {
-    width: 10em;
-    font-size: 0.4rem;
-    top: -6.25em;
-    right: -10em;
+    top: 0.75em;
+    right: -5em;
   }
   .about__dropdown--4 {
-    width: 10em;
-    font-size: 0.4rem;
-    top: 0em;
-    right: -4em;
+    top: 7em;
+    right: -1em;
   }
   .about__dropdown--5 {
-    width: 10em;
-    font-size: 0.4rem;
-    top: 6.25em;
-    right: 2em;
+    top: 13.25em;
+    right: 3em;
   }
   .about__drawing-1 img {
-    width: 4em;
-    height: 4em;
-    bottom: 4.5em;
-    right: 6em;
+    bottom: 8em;
+    right: 7em;
   }
   .about__drawing-2 img {
-    width: 6em;
-    height: 6em;
-    bottom: 0em;
-    left: -1em;
-  }
-  /* _projects.scss */
-  .projects__top--1 {
-    width: 15em;
-    height: 10em;
-  }
-  .projects__top--1 img {
-    height: 8.63em;
-  }
-  .projects__top--1 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--1 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--2 {
-    width: 15em;
-    height: 10em;
-  }
-  .projects__top--2 img {
-    height: 8.63em;
-  }
-  .projects__top--2 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--2 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--3 {
-    width: 15em;
-    height: 10em;
-  }
-  .projects__top--3 img {
-    height: 8.63em;
-  }
-  .projects__top--3 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--3 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--4 {
-    width: 15em;
-    height: 10em;
-  }
-  .projects__top--4 img {
-    height: 8.63em;
-  }
-  .projects__top--4 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--4 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--5 {
-    width: 15em;
-    height: 10em;
-  }
-  .projects__top--5 img {
-    height: 8.63em;
-  }
-  .projects__top--5 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--5 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__bot {
-    width: 15em;
-  }
-  .projects__bot--6 {
-    height: 10em;
-  }
-  .projects__bot--6 video {
-    width: 15em;
-    height: 8em;
-  }
-  .projects__bot--6 h5 {
-    font-size: 1.25rem;
-    bottom: 12em;
-    left: 11em;
-  }
-  .projects__bot--6 p {
-    font-size: 0.8rem;
-    top: 3em;
-    left: 2.5em;
+    bottom: -5em;
+    left: -2em;
   }
   /* _contact.scss */
   .contact {
-    font-size: 0.4rem;
-    margin-top: 1em;
-  }
-  .contact i {
-    font-size: 0.6rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
   }
   .contact__img {
     visibility: hidden;
@@ -836,220 +859,241 @@ a {
 }
 @media only screen and (min-width: 426px) and (max-width: 767px) {
   /* main.scss */
+  .logo {
+    max-height: 1.8em;
+  }
+  nav a {
+    font-size: 0.6em;
+  }
+  footer {
+    font-size: 0.6em;
+  }
+  /* _about.scss */
+  .about {
+    min-height: 54em;
+  }
+  .about__top--accordion__1 {
+    width: 18em;
+    font-size: 0.69em;
+  }
+  .about__top--accordion__2 {
+    width: 18em;
+    font-size: 0.69em;
+  }
+  .about__top--accordion__3 {
+    width: 18em;
+    font-size: 0.69em;
+  }
+  .about__top--accordion__4 {
+    width: 18em;
+    font-size: 0.69em;
+  }
+  .about__top--accordion__5 {
+    width: 18em;
+    font-size: 0.69em;
+  }
+  .about__motto {
+    font-size: 0.6em;
+  }
+  .about__dropdown--1 {
+    width: 9.6em;
+    font-size: 0.69em;
+  }
+  .about__dropdown--2 {
+    width: 9.6em;
+    font-size: 0.69em;
+  }
+  .about__dropdown--3 {
+    width: 9.6em;
+    font-size: 0.69em;
+  }
+  .about__dropdown--4 {
+    width: 9.6em;
+    font-size: 0.69em;
+  }
+  .about__dropdown--5 {
+    width: 9.6em;
+    font-size: 0.69em;
+  }
+  .about__drawing-1 {
+    width: 9em;
+    height: 9em;
+  }
+  .about__drawing-2 {
+    width: 15em;
+    height: 15em;
+  }
+  /* _projects.scss */
+  .projects__top--1 {
+    width: 12em;
+    height: 10.2em;
+  }
+  .projects__top--1 img {
+    height: 9em;
+  }
+  .projects__top--1 h5 {
+    font-size: 1.08em;
+    bottom: 5.1em;
+    left: 5.4em;
+  }
+  .projects__top--1 p {
+    font-size: 0.84em;
+    top: 2.4em;
+    right: 1.65em;
+  }
+  .projects__top--2 {
+    width: 12em;
+    height: 10.2em;
+  }
+  .projects__top--2 img {
+    height: 9em;
+  }
+  .projects__top--2 h5 {
+    font-size: 1.08em;
+    bottom: 5.1em;
+    left: 5.4em;
+  }
+  .projects__top--2 p {
+    font-size: 0.84em;
+    top: 2.4em;
+    right: 1.65em;
+  }
+  .projects__top--3 {
+    width: 12em;
+    height: 10.2em;
+  }
+  .projects__top--3 img {
+    height: 9em;
+  }
+  .projects__top--3 h5 {
+    font-size: 1.08em;
+    bottom: 5.1em;
+    left: 5.4em;
+  }
+  .projects__top--3 p {
+    font-size: 0.84em;
+    top: 2.4em;
+    right: 1.65em;
+  }
+  .projects__top--4 {
+    width: 12em;
+    height: 10.2em;
+  }
+  .projects__top--4 img {
+    height: 9em;
+  }
+  .projects__top--4 h5 {
+    font-size: 1.08em;
+    bottom: 5.1em;
+    left: 5.4em;
+  }
+  .projects__top--4 p {
+    font-size: 0.84em;
+    top: 2.4em;
+    right: 1.65em;
+  }
+  .projects__top--5 {
+    width: 12em;
+    height: 10.2em;
+  }
+  .projects__top--5 img {
+    height: 9em;
+  }
+  .projects__top--5 h5 {
+    font-size: 1.08em;
+    bottom: 5.1em;
+    left: 5.4em;
+  }
+  .projects__top--5 p {
+    font-size: 0.84em;
+    top: 2.4em;
+    right: 1.65em;
+  }
+  .projects__bot {
+    width: 19.2em;
+  }
+  .projects__bot--6 {
+    height: 13.2em;
+  }
+  .projects__bot--6 video {
+    width: 19.2em;
+    height: 10.8em;
+  }
+  .projects__bot h5 {
+    font-size: 1.5em;
+    bottom: 7.2em;
+    left: 6.6em;
+  }
+  .projects__bot p {
+    font-size: 0.96em;
+    top: 1.8em;
+    left: 1.5em;
+  }
+  /* _contact.scss */
+  .contact {
+    font-size: 0.6em;
+  }
+  .contact i {
+    font-size: 1.2em;
+  }
+  /* main.scss */
   header {
     position: relative !important;
   }
   .logo {
-    max-height: 1.75rem;
     margin-left: 1.5rem;
   }
   nav {
     visibility: hidden;
   }
-  nav a {
-    font-size: 0.7rem;
-  }
   .burger-btn {
     visibility: visible;
   }
-  footer {
-    font-size: 0.6rem;
-  }
   /* _about.scss */
-  .about {
-    min-height: 40rem;
-  }
   .about__top {
-    margin-left: -3.5em;
+    margin-left: -4em;
   }
   .about__top--slogan {
-    margin-right: -1em;
+    margin-right: -1.5em;
     top: -5em;
     transform: scale(0.35);
   }
   .about__top--slogan__big-text {
     width: 5.5em;
   }
-  .about__top--accordion__1 {
-    width: 16em;
-    font-size: 0.5rem;
-  }
-  .about__top--accordion__2 {
-    width: 16em;
-    font-size: 0.5rem;
-  }
-  .about__top--accordion__3 {
-    width: 16em;
-    font-size: 0.5rem;
-  }
-  .about__top--accordion__4 {
-    width: 16em;
-    font-size: 0.5rem;
-  }
-  .about__top--accordion__5 {
-    width: 16em;
-    font-size: 0.5rem;
-  }
   .about__motto {
-    font-size: 0.6rem;
-    top: -22em;
-    right: -4em;
+    top: -30em;
+    right: 0em;
   }
   .about__dropdown--1 {
-    width: 7em;
-    font-size: 0.6rem;
-    top: -18.75em;
-    right: -21em;
+    top: -8.75em;
+    right: -19em;
   }
   .about__dropdown--2 {
-    width: 7em;
-    font-size: 0.6rem;
-    top: -12.5em;
-    right: -15em;
+    top: -2.5em;
+    right: -13em;
   }
   .about__dropdown--3 {
-    width: 7em;
-    font-size: 0.6rem;
-    top: -6.25em;
-    right: -9em;
+    top: 3.75em;
+    right: -7em;
   }
   .about__dropdown--4 {
-    width: 7em;
-    font-size: 0.6rem;
-    top: 0em;
-    right: -3em;
+    top: 10em;
+    right: -1em;
   }
   .about__dropdown--5 {
-    width: 7em;
-    font-size: 0.6rem;
-    top: 6.25em;
-    right: 3em;
+    top: 16.25em;
+    right: 5em;
   }
   .about__drawing-1 img {
-    width: 5em;
-    height: 5em;
     bottom: 5em;
     right: 7em;
   }
   .about__drawing-2 img {
-    width: 9em;
-    height: 9em;
-    bottom: 0em;
+    bottom: -2em;
     left: -1em;
   }
-  /* _projects.scss */
-  .projects__top--1 {
-    width: 18em;
-    height: 15em;
-  }
-  .projects__top--1 img {
-    height: 13.63em;
-  }
-  .projects__top--1 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--1 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--2 {
-    width: 18em;
-    height: 15em;
-  }
-  .projects__top--2 img {
-    height: 13.63em;
-  }
-  .projects__top--2 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--2 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--3 {
-    width: 18em;
-    height: 15em;
-  }
-  .projects__top--3 img {
-    height: 13.63em;
-  }
-  .projects__top--3 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--3 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--4 {
-    width: 18em;
-    height: 15em;
-  }
-  .projects__top--4 img {
-    height: 13.63em;
-  }
-  .projects__top--4 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--4 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--5 {
-    width: 18em;
-    height: 15em;
-  }
-  .projects__top--5 img {
-    height: 13.63em;
-  }
-  .projects__top--5 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--5 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__bot {
-    width: 22em;
-  }
-  .projects__bot--6 {
-    height: 18em;
-  }
-  .projects__bot--6 video {
-    width: 22em;
-    height: 16em;
-  }
-  .projects__bot--6 h5 {
-    font-size: 1.25rem;
-    bottom: 12em;
-    left: 11em;
-  }
-  .projects__bot--6 p {
-    font-size: 0.8rem;
-    top: 3em;
-    left: 2.5em;
-  }
   /* _contact.scss */
-  .contact {
-    font-size: 0.6rem;
-  }
-  .contact i {
-    font-size: 0.6rem;
-  }
   .contact__img {
     visibility: hidden;
   }
@@ -1057,607 +1101,671 @@ a {
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* main.scss */
   .logo {
-    max-height: 1.75rem;
-    margin-left: 1.75rem;
+    max-height: 2.1em;
   }
   nav a {
-    font-size: 0.7rem;
+    font-size: 0.7em;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  /* _about.scss */
+  .about {
+    min-height: 63em;
+  }
+  .about__top--accordion__1 {
+    width: 21em;
+    font-size: 0.805em;
+  }
+  .about__top--accordion__2 {
+    width: 21em;
+    font-size: 0.805em;
+  }
+  .about__top--accordion__3 {
+    width: 21em;
+    font-size: 0.805em;
+  }
+  .about__top--accordion__4 {
+    width: 21em;
+    font-size: 0.805em;
+  }
+  .about__top--accordion__5 {
+    width: 21em;
+    font-size: 0.805em;
+  }
+  .about__motto {
+    font-size: 0.7em;
+  }
+  .about__dropdown--1 {
+    width: 11.2em;
+    font-size: 0.805em;
+  }
+  .about__dropdown--2 {
+    width: 11.2em;
+    font-size: 0.805em;
+  }
+  .about__dropdown--3 {
+    width: 11.2em;
+    font-size: 0.805em;
+  }
+  .about__dropdown--4 {
+    width: 11.2em;
+    font-size: 0.805em;
+  }
+  .about__dropdown--5 {
+    width: 11.2em;
+    font-size: 0.805em;
+  }
+  .about__drawing-1 {
+    width: 10.5em;
+    height: 10.5em;
+  }
+  .about__drawing-2 {
+    width: 17.5em;
+    height: 17.5em;
+  }
+  /* _projects.scss */
+  .projects__top--1 {
+    width: 14em;
+    height: 11.9em;
+  }
+  .projects__top--1 img {
+    height: 10.5em;
+  }
+  .projects__top--1 h5 {
+    font-size: 1.26em;
+    bottom: 5.95em;
+    left: 6.3em;
+  }
+  .projects__top--1 p {
+    font-size: 0.98em;
+    top: 2.8em;
+    right: 1.925em;
+  }
+  .projects__top--2 {
+    width: 14em;
+    height: 11.9em;
+  }
+  .projects__top--2 img {
+    height: 10.5em;
+  }
+  .projects__top--2 h5 {
+    font-size: 1.26em;
+    bottom: 5.95em;
+    left: 6.3em;
+  }
+  .projects__top--2 p {
+    font-size: 0.98em;
+    top: 2.8em;
+    right: 1.925em;
+  }
+  .projects__top--3 {
+    width: 14em;
+    height: 11.9em;
+  }
+  .projects__top--3 img {
+    height: 10.5em;
+  }
+  .projects__top--3 h5 {
+    font-size: 1.26em;
+    bottom: 5.95em;
+    left: 6.3em;
+  }
+  .projects__top--3 p {
+    font-size: 0.98em;
+    top: 2.8em;
+    right: 1.925em;
+  }
+  .projects__top--4 {
+    width: 14em;
+    height: 11.9em;
+  }
+  .projects__top--4 img {
+    height: 10.5em;
+  }
+  .projects__top--4 h5 {
+    font-size: 1.26em;
+    bottom: 5.95em;
+    left: 6.3em;
+  }
+  .projects__top--4 p {
+    font-size: 0.98em;
+    top: 2.8em;
+    right: 1.925em;
+  }
+  .projects__top--5 {
+    width: 14em;
+    height: 11.9em;
+  }
+  .projects__top--5 img {
+    height: 10.5em;
+  }
+  .projects__top--5 h5 {
+    font-size: 1.26em;
+    bottom: 5.95em;
+    left: 6.3em;
+  }
+  .projects__top--5 p {
+    font-size: 0.98em;
+    top: 2.8em;
+    right: 1.925em;
+  }
+  .projects__bot {
+    width: 22.4em;
+  }
+  .projects__bot--6 {
+    height: 15.4em;
+  }
+  .projects__bot--6 video {
+    width: 22.4em;
+    height: 12.6em;
+  }
+  .projects__bot h5 {
+    font-size: 1.75em;
+    bottom: 8.4em;
+    left: 7.7em;
+  }
+  .projects__bot p {
+    font-size: 1.12em;
+    top: 2.1em;
+    left: 1.75em;
+  }
+  /* _contact.scss */
+  .contact {
+    font-size: 0.7em;
+  }
+  .contact i {
+    font-size: 1.4em;
+  }
+  /* main.scss */
+  .logo {
+    margin-left: 1.75rem;
   }
   .burger-btn {
     visibility: hidden;
   }
-  footer {
-    font-size: 0.7rem;
-  }
   /* _about.scss */
-  .about {
-    min-height: 60rem;
-  }
   .about__top--slogan {
     top: -2em;
-    transform: scale(0.6);
-  }
-  .about__top--accordion__1 {
-    width: 22em;
-    font-size: 0.9rem;
-  }
-  .about__top--accordion__2 {
-    width: 22em;
-    font-size: 0.9rem;
-  }
-  .about__top--accordion__3 {
-    width: 22em;
-    font-size: 0.9rem;
-  }
-  .about__top--accordion__4 {
-    width: 22em;
-    font-size: 0.9rem;
-  }
-  .about__top--accordion__5 {
-    width: 22em;
-    font-size: 0.9rem;
+    transform: scale(0.8);
   }
   .about__motto {
-    font-size: 1rem;
     top: -14em;
     right: -1em;
   }
   .about__dropdown--1 {
-    width: 9em;
-    font-size: 0.9rem;
     top: -8.75em;
     right: -27em;
   }
   .about__dropdown--2 {
-    width: 9em;
-    font-size: 0.9rem;
     top: -2.5em;
     right: -19em;
   }
   .about__dropdown--3 {
-    width: 9em;
-    font-size: 0.9rem;
     top: 3.75em;
     right: -11em;
   }
   .about__dropdown--4 {
-    width: 9em;
-    font-size: 0.9rem;
     top: 10em;
     right: -3em;
   }
   .about__dropdown--5 {
-    width: 9em;
-    font-size: 0.9rem;
     top: 16.25em;
     right: 5em;
   }
   .about__drawing-1 img {
-    width: 10em;
-    height: 10em;
     top: 13em;
     left: -2em;
   }
   .about__drawing-2 img {
-    width: 14em;
-    height: 14em;
     top: 9.5em;
     left: 0em;
-  }
-  /* _projects.scss */
-  .projects__top--1 {
-    width: 25em;
-    height: 17em;
-  }
-  .projects__top--1 img {
-    height: 15.63em;
-  }
-  .projects__top--1 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--1 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--2 {
-    width: 25em;
-    height: 17em;
-  }
-  .projects__top--2 img {
-    height: 15.63em;
-  }
-  .projects__top--2 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--2 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--3 {
-    width: 25em;
-    height: 17em;
-  }
-  .projects__top--3 img {
-    height: 15.63em;
-  }
-  .projects__top--3 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--3 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--4 {
-    width: 25em;
-    height: 17em;
-  }
-  .projects__top--4 img {
-    height: 15.63em;
-  }
-  .projects__top--4 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--4 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__top--5 {
-    width: 25em;
-    height: 17em;
-  }
-  .projects__top--5 img {
-    height: 15.63em;
-  }
-  .projects__top--5 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--5 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.75em;
-  }
-  .projects__bot {
-    width: 40em;
-  }
-  .projects__bot--6 {
-    height: 26em;
-  }
-  .projects__bot--6 video {
-    width: 40em;
-    height: 24em;
-  }
-  .projects__bot--6 h5 {
-    font-size: 1.25rem;
-    bottom: 12em;
-    left: 11em;
-  }
-  .projects__bot--6 p {
-    font-size: 0.8rem;
-    top: 3em;
-    left: 2.5em;
-  }
-  /* _contact.scss */
-  .contact {
-    font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
   /* main.scss */
   .logo {
-    max-height: 2rem;
-    margin-left: 3rem;
+    max-height: 2.4em;
   }
   nav a {
-    font-size: 0.8rem;
+    font-size: 0.8em;
+  }
+  footer {
+    font-size: 0.8em;
+  }
+  /* _about.scss */
+  .about {
+    min-height: 72em;
+  }
+  .about__top--accordion__1 {
+    width: 24em;
+    font-size: 0.92em;
+  }
+  .about__top--accordion__2 {
+    width: 24em;
+    font-size: 0.92em;
+  }
+  .about__top--accordion__3 {
+    width: 24em;
+    font-size: 0.92em;
+  }
+  .about__top--accordion__4 {
+    width: 24em;
+    font-size: 0.92em;
+  }
+  .about__top--accordion__5 {
+    width: 24em;
+    font-size: 0.92em;
+  }
+  .about__motto {
+    font-size: 0.8em;
+  }
+  .about__dropdown--1 {
+    width: 12.8em;
+    font-size: 0.92em;
+  }
+  .about__dropdown--2 {
+    width: 12.8em;
+    font-size: 0.92em;
+  }
+  .about__dropdown--3 {
+    width: 12.8em;
+    font-size: 0.92em;
+  }
+  .about__dropdown--4 {
+    width: 12.8em;
+    font-size: 0.92em;
+  }
+  .about__dropdown--5 {
+    width: 12.8em;
+    font-size: 0.92em;
+  }
+  .about__drawing-1 {
+    width: 12em;
+    height: 12em;
+  }
+  .about__drawing-2 {
+    width: 20em;
+    height: 20em;
+  }
+  /* _projects.scss */
+  .projects__top--1 {
+    width: 16em;
+    height: 13.6em;
+  }
+  .projects__top--1 img {
+    height: 12em;
+  }
+  .projects__top--1 h5 {
+    font-size: 1.44em;
+    bottom: 6.8em;
+    left: 7.2em;
+  }
+  .projects__top--1 p {
+    font-size: 1.12em;
+    top: 3.2em;
+    right: 2.2em;
+  }
+  .projects__top--2 {
+    width: 16em;
+    height: 13.6em;
+  }
+  .projects__top--2 img {
+    height: 12em;
+  }
+  .projects__top--2 h5 {
+    font-size: 1.44em;
+    bottom: 6.8em;
+    left: 7.2em;
+  }
+  .projects__top--2 p {
+    font-size: 1.12em;
+    top: 3.2em;
+    right: 2.2em;
+  }
+  .projects__top--3 {
+    width: 16em;
+    height: 13.6em;
+  }
+  .projects__top--3 img {
+    height: 12em;
+  }
+  .projects__top--3 h5 {
+    font-size: 1.44em;
+    bottom: 6.8em;
+    left: 7.2em;
+  }
+  .projects__top--3 p {
+    font-size: 1.12em;
+    top: 3.2em;
+    right: 2.2em;
+  }
+  .projects__top--4 {
+    width: 16em;
+    height: 13.6em;
+  }
+  .projects__top--4 img {
+    height: 12em;
+  }
+  .projects__top--4 h5 {
+    font-size: 1.44em;
+    bottom: 6.8em;
+    left: 7.2em;
+  }
+  .projects__top--4 p {
+    font-size: 1.12em;
+    top: 3.2em;
+    right: 2.2em;
+  }
+  .projects__top--5 {
+    width: 16em;
+    height: 13.6em;
+  }
+  .projects__top--5 img {
+    height: 12em;
+  }
+  .projects__top--5 h5 {
+    font-size: 1.44em;
+    bottom: 6.8em;
+    left: 7.2em;
+  }
+  .projects__top--5 p {
+    font-size: 1.12em;
+    top: 3.2em;
+    right: 2.2em;
+  }
+  .projects__bot {
+    width: 25.6em;
+  }
+  .projects__bot--6 {
+    height: 17.6em;
+  }
+  .projects__bot--6 video {
+    width: 25.6em;
+    height: 14.4em;
+  }
+  .projects__bot h5 {
+    font-size: 2em;
+    bottom: 9.6em;
+    left: 8.8em;
+  }
+  .projects__bot p {
+    font-size: 1.28em;
+    top: 2.4em;
+    left: 2em;
+  }
+  /* _contact.scss */
+  .contact {
+    font-size: 0.8em;
+  }
+  .contact i {
+    font-size: 1.6em;
+  }
+  /* main.scss */
+  .logo {
+    margin-left: 3rem;
   }
   .burger-btn {
     visibility: hidden;
   }
-  footer {
-    font-size: 0.8rem;
-  }
   /* _about.scss */
-  .about {
-    min-height: 76rem;
-  }
   .about__top--slogan {
     transform: scale(0.8);
   }
-  .about__top--accordion__1 {
-    width: 26em;
-    font-size: 1.1rem;
-  }
-  .about__top--accordion__2 {
-    width: 26em;
-    font-size: 1.1rem;
-  }
-  .about__top--accordion__3 {
-    width: 26em;
-    font-size: 1.1rem;
-  }
-  .about__top--accordion__4 {
-    width: 26em;
-    font-size: 1.1rem;
-  }
-  .about__top--accordion__5 {
-    width: 26em;
-    font-size: 1.1rem;
-  }
   .about__motto {
-    font-size: 1.25rem;
     top: -10.5em;
     right: 2em;
   }
   .about__dropdown--1 {
-    width: 10em;
-    font-size: 1rem;
     top: -5.75em;
     right: -32em;
   }
   .about__dropdown--2 {
-    width: 10em;
-    font-size: 1rem;
     top: 0.5em;
     right: -22em;
   }
   .about__dropdown--3 {
-    width: 10em;
-    font-size: 1rem;
     top: 6.75em;
     right: -12em;
   }
   .about__dropdown--4 {
-    width: 10em;
-    font-size: 1rem;
     top: 13em;
     right: -2em;
   }
   .about__dropdown--5 {
-    width: 10em;
-    font-size: 1rem;
     top: 19.25em;
     right: 8em;
   }
   .about__drawing-1 img {
-    width: 12em;
-    height: 12em;
     top: 18em;
     left: -1em;
   }
   .about__drawing-2 img {
-    width: 18em;
-    height: 18em;
     top: 12.5em;
     left: 2em;
-  }
-  /* _projects.scss */
-  .projects__top--1 {
-    width: 25em;
-    height: 17em;
-  }
-  .projects__top--1 img {
-    height: 15.63em;
-  }
-  .projects__top--1 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--1 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.5em;
-  }
-  .projects__top--2 {
-    width: 25em;
-    height: 17em;
-  }
-  .projects__top--2 img {
-    height: 15.63em;
-  }
-  .projects__top--2 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--2 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.5em;
-  }
-  .projects__top--3 {
-    width: 25em;
-    height: 17em;
-  }
-  .projects__top--3 img {
-    height: 15.63em;
-  }
-  .projects__top--3 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--3 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.5em;
-  }
-  .projects__top--4 {
-    width: 25em;
-    height: 17em;
-  }
-  .projects__top--4 img {
-    height: 15.63em;
-  }
-  .projects__top--4 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--4 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.5em;
-  }
-  .projects__top--5 {
-    width: 25em;
-    height: 17em;
-  }
-  .projects__top--5 img {
-    height: 15.63em;
-  }
-  .projects__top--5 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9em;
-  }
-  .projects__top--5 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2.5em;
-  }
-  .projects__bot {
-    width: 53em;
-  }
-  .projects__bot--6 {
-    height: 30em;
-  }
-  .projects__bot--6 video {
-    width: 53em;
-    height: 28em;
-  }
-  .projects__bot--6 h5 {
-    font-size: 1.5rem;
-    bottom: 12em;
-    left: 12em;
-  }
-  .projects__bot--6 p {
-    font-size: 1rem;
-    top: 2em;
-    left: 2.5em;
-  }
-  /* _contact.scss */
-  .contact {
-    font-size: 1rem;
-  }
-  .contact i {
-    font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 1440px) {
   /* main.scss */
   .logo {
-    max-height: 2.25rem;
-    margin-left: 3rem;
+    max-height: 2.7em;
   }
   nav a {
-    font-size: 0.9rem;
+    font-size: 0.9em;
+  }
+  footer {
+    font-size: 0.9em;
+  }
+  /* _about.scss */
+  .about {
+    min-height: 81em;
+  }
+  .about__top--accordion__1 {
+    width: 27em;
+    font-size: 1.035em;
+  }
+  .about__top--accordion__2 {
+    width: 27em;
+    font-size: 1.035em;
+  }
+  .about__top--accordion__3 {
+    width: 27em;
+    font-size: 1.035em;
+  }
+  .about__top--accordion__4 {
+    width: 27em;
+    font-size: 1.035em;
+  }
+  .about__top--accordion__5 {
+    width: 27em;
+    font-size: 1.035em;
+  }
+  .about__motto {
+    font-size: 0.9em;
+  }
+  .about__dropdown--1 {
+    width: 14.4em;
+    font-size: 1.035em;
+  }
+  .about__dropdown--2 {
+    width: 14.4em;
+    font-size: 1.035em;
+  }
+  .about__dropdown--3 {
+    width: 14.4em;
+    font-size: 1.035em;
+  }
+  .about__dropdown--4 {
+    width: 14.4em;
+    font-size: 1.035em;
+  }
+  .about__dropdown--5 {
+    width: 14.4em;
+    font-size: 1.035em;
+  }
+  .about__drawing-1 {
+    width: 13.5em;
+    height: 13.5em;
+  }
+  .about__drawing-2 {
+    width: 22.5em;
+    height: 22.5em;
+  }
+  /* _projects.scss */
+  .projects__top--1 {
+    width: 18em;
+    height: 15.3em;
+  }
+  .projects__top--1 img {
+    height: 13.5em;
+  }
+  .projects__top--1 h5 {
+    font-size: 1.62em;
+    bottom: 7.65em;
+    left: 8.1em;
+  }
+  .projects__top--1 p {
+    font-size: 1.26em;
+    top: 3.6em;
+    right: 2.475em;
+  }
+  .projects__top--2 {
+    width: 18em;
+    height: 15.3em;
+  }
+  .projects__top--2 img {
+    height: 13.5em;
+  }
+  .projects__top--2 h5 {
+    font-size: 1.62em;
+    bottom: 7.65em;
+    left: 8.1em;
+  }
+  .projects__top--2 p {
+    font-size: 1.26em;
+    top: 3.6em;
+    right: 2.475em;
+  }
+  .projects__top--3 {
+    width: 18em;
+    height: 15.3em;
+  }
+  .projects__top--3 img {
+    height: 13.5em;
+  }
+  .projects__top--3 h5 {
+    font-size: 1.62em;
+    bottom: 7.65em;
+    left: 8.1em;
+  }
+  .projects__top--3 p {
+    font-size: 1.26em;
+    top: 3.6em;
+    right: 2.475em;
+  }
+  .projects__top--4 {
+    width: 18em;
+    height: 15.3em;
+  }
+  .projects__top--4 img {
+    height: 13.5em;
+  }
+  .projects__top--4 h5 {
+    font-size: 1.62em;
+    bottom: 7.65em;
+    left: 8.1em;
+  }
+  .projects__top--4 p {
+    font-size: 1.26em;
+    top: 3.6em;
+    right: 2.475em;
+  }
+  .projects__top--5 {
+    width: 18em;
+    height: 15.3em;
+  }
+  .projects__top--5 img {
+    height: 13.5em;
+  }
+  .projects__top--5 h5 {
+    font-size: 1.62em;
+    bottom: 7.65em;
+    left: 8.1em;
+  }
+  .projects__top--5 p {
+    font-size: 1.26em;
+    top: 3.6em;
+    right: 2.475em;
+  }
+  .projects__bot {
+    width: 28.8em;
+  }
+  .projects__bot--6 {
+    height: 19.8em;
+  }
+  .projects__bot--6 video {
+    width: 28.8em;
+    height: 16.2em;
+  }
+  .projects__bot h5 {
+    font-size: 2.25em;
+    bottom: 10.8em;
+    left: 9.9em;
+  }
+  .projects__bot p {
+    font-size: 1.44em;
+    top: 2.7em;
+    left: 2.25em;
+  }
+  /* _contact.scss */
+  .contact {
+    font-size: 0.9em;
+  }
+  .contact i {
+    font-size: 1.8em;
+  }
+  /* main.scss */
+  .logo {
+    margin-left: 3rem;
   }
   .burger-btn {
     visibility: hidden;
   }
-  footer {
-    font-size: 0.9rem;
-  }
   /* _about.scss */
-  .about {
-    min-height: 100rem;
-  }
-  .about__top--accordion__1 {
-    width: 35em;
-    font-size: 1.1rem;
-  }
-  .about__top--accordion__2 {
-    width: 35em;
-    font-size: 1.1rem;
-  }
-  .about__top--accordion__3 {
-    width: 35em;
-    font-size: 1.1rem;
-  }
-  .about__top--accordion__4 {
-    width: 35em;
-    font-size: 1.1rem;
-  }
-  .about__top--accordion__5 {
-    width: 35em;
-    font-size: 1.1rem;
+  .about__top--slogan {
+    transform: scale(1);
   }
   .about__motto {
-    font-size: 1.5rem;
     top: -10em;
     right: -1em;
   }
   .about__dropdown--1 {
-    width: 12em;
-    font-size: 1.25rem;
     top: -8.75em;
     right: -46.5em;
   }
   .about__dropdown--2 {
-    width: 12em;
-    font-size: 1.25rem;
     top: -2.5em;
     right: -34em;
   }
   .about__dropdown--3 {
-    width: 12em;
-    font-size: 1.25rem;
     top: 3.75em;
     right: -21.5em;
   }
   .about__dropdown--4 {
-    width: 12em;
-    font-size: 1.25rem;
     top: 10em;
     right: -9em;
   }
   .about__dropdown--5 {
-    width: 12em;
-    font-size: 1.25rem;
     top: 16.25em;
     right: 3.5em;
   }
   .about__drawing-1 img {
-    width: 25em;
-    height: 25em;
     top: 25em;
     left: -10em;
   }
   .about__drawing-2 img {
-    width: 33em;
-    height: 33em;
     top: 17em;
     left: -2em;
-  }
-  /* _projects.scss */
-  .projects__top--1 {
-    width: 26.25em;
-    height: 17em;
-  }
-  .projects__top--1 img {
-    height: 15.63em;
-  }
-  .projects__top--1 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9.5em;
-  }
-  .projects__top--1 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2em;
-  }
-  .projects__top--2 {
-    width: 26.25em;
-    height: 17em;
-  }
-  .projects__top--2 img {
-    height: 15.63em;
-  }
-  .projects__top--2 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9.5em;
-  }
-  .projects__top--2 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2em;
-  }
-  .projects__top--3 {
-    width: 26.25em;
-    height: 17em;
-  }
-  .projects__top--3 img {
-    height: 15.63em;
-  }
-  .projects__top--3 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9.5em;
-  }
-  .projects__top--3 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2em;
-  }
-  .projects__top--4 {
-    width: 26.25em;
-    height: 17em;
-  }
-  .projects__top--4 img {
-    height: 15.63em;
-  }
-  .projects__top--4 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9.5em;
-  }
-  .projects__top--4 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2em;
-  }
-  .projects__top--5 {
-    width: 26.25em;
-    height: 17em;
-  }
-  .projects__top--5 img {
-    height: 15.63em;
-  }
-  .projects__top--5 h5 {
-    font-size: 0.9rem;
-    bottom: 8.5em;
-    left: 9.5em;
-  }
-  .projects__top--5 p {
-    font-size: 0.7rem;
-    top: 4em;
-    right: 2em;
-  }
-  .projects__bot {
-    width: 53em;
-    margin-top: 5em;
-    margin-bottom: 5em;
-  }
-  .projects__bot--6 {
-    height: 30em;
-  }
-  .projects__bot--6 video {
-    width: 53em;
-    height: 28em;
-  }
-  .projects__bot--6 h5 {
-    font-size: 1.5rem;
-    bottom: 12em;
-    left: 12em;
-  }
-  .projects__bot--6 p {
-    font-size: 1rem;
-    top: 2em;
-    left: 2.5em;
-  }
-  /* _contact.scss */
-  .contact {
-    font-size: 1rem;
-  }
-  .contact i {
-    font-size: 0.9rem;
   }
 }
 body {
@@ -1666,7 +1774,7 @@ body {
 body .bkgd {
   background: linear-gradient(to top, white, rgba(180, 50, 50, 0.2)), url(../img/bkgd/eng-draw.png);
   background-size: contain;
-  filter: grayscale(20%);
+  filter: grayscale(50%);
   opacity: 0.3;
   z-index: -1;
   position: fixed;
@@ -1709,7 +1817,7 @@ body header nav.js-open-nav {
   padding: 0.5rem;
   position: fixed;
   top: 0.5rem;
-  right: 0.75rem;
+  right: 0;
   visibility: visible;
   transition: all 0.2s ease-in-out;
 }
@@ -1720,7 +1828,7 @@ body header .burger-btn {
   padding: 0.2rem;
   position: fixed;
   top: 0.85rem;
-  right: 1.8rem;
+  right: 1.25rem;
 }
 body header.js-header-bkgd {
   background-color: rgba(255, 255, 255, 0.8);

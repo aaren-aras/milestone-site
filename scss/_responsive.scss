@@ -1,241 +1,109 @@
 @include media-xs {
+    @include responsive-style(map-get($scaling-factors, xs));
+
     /* main.scss */ 
     header { position: relative !important; }
-    .logo { max-height: 1.5rem; margin-left: 1rem; }
+    .logo { margin-left: 1rem; }
     nav { visibility: hidden; }
-    nav a { font-size: 0.5rem; }
     .burger-btn { visibility: visible; }
-    footer { font-size: 0.5rem; }
 
     /* _about.scss */ 
-    .about { min-height: 30rem; top: 2em; }
-    .about__top { margin-left: -2em; }
-    .about__top--slogan { margin-right: -2em; top: -5em; transform: scale(0.3); }
-    .about__top--slogan__big-text { width: 5.5em; }
-
-    @for $i from 1 through 5 {
-        .about__top--accordion__#{$i} { 
-            width: 15em;
-            font-size: 0.5rem;
-        }
+    .about { top: 2em; }
+    .about__top { margin-left: -2.5em; }
+    .about__top--slogan {
+        margin-right: -3em; 
+        top: -5.75em; 
+        transform: scale(0.275); 
     }
 
     .about__motto {
-        font-size: 0.4rem;
-        top: -28em;
+        top: -40em;
         right: 0em;
     }
 
     @for $i from 1 through 5 {
         .about__dropdown--#{$i} { 
-            width: 10em;
-            font-size: 0.4rem;
-            $top: -25em + (6.25em * $i);
-            $right: -28em + (6em * $i);
+            $top: -18em + (6.25em * $i);
+            $right: -17em + (4em * $i);
             top: $top;
             right: $right;
         }
     }
 
     .about__drawing-1 img {
-        width: 4em;
-        height: 4em;
-        bottom: 4.5em;
-        right: 6em;
+        bottom: 8em;
+        right: 7em;
     }
 
     .about__drawing-2 img {
-        width: 6em;
-        height: 6em;
-        bottom: 0em;
-        left: -1em;
-    }
-
-    /* _projects.scss */
-    @for $i from 1 through 5 {
-        .projects__top--#{$i} {
-            width: 15em;
-            height: 10em;
-
-            img { height: 8.63em; }
-            h5 { 
-                font-size: 0.9rem; 
-                bottom: 8.5em;
-                left: 9em;
-            }
-
-            p {
-                font-size: 0.7rem;
-                top: 4em;
-                right: 2.75em;
-            }
-        }
-    }
-
-    .projects__bot {
-        width: 15em;
-
-        &--6 {
-            height: 10em;
-
-            video {
-                width: 15em;
-                height: 8em;
-            }
-
-            h5 { 
-                font-size: 1.25rem; 
-                bottom: 12em;
-                left: 11em;
-            }
-
-            p {
-                font-size: 0.8rem;
-                top: 3em;
-                left: 2.5em;
-            }
-        }
+        bottom: -5em;
+        left: -2em;
     }
 
     /* _contact.scss */
-    .contact { font-size: 0.4rem; margin-top: 1em; }
-    .contact i { font-size: 0.6rem; }
+    .contact { margin-top: 1rem; margin-left: 1rem; }
     .contact__img { visibility: hidden; }
 }
 
 @include media-sm {
+    @include responsive-style(map-get($scaling-factors, sm));
+
     /* main.scss */ 
     header { position: relative !important; }
-    .logo { max-height: 1.75rem; margin-left: 1.5rem; }
+    .logo { margin-left: 1.5rem; }
     nav { visibility: hidden; }
-    nav a { font-size: 0.7rem; }
     .burger-btn { visibility: visible; }
-    footer { font-size: 0.6rem; }
 
     /* _about.scss */ 
-    .about { min-height: 40rem; }
-    .about__top { margin-left: -3.5em; }
-    .about__top--slogan { margin-right: -1em; top: -5em; transform: scale(0.35);}
+    .about__top { margin-left: -4em; }
+    .about__top--slogan { margin-right: -1.5em; top: -5em; transform: scale(0.35); }
     .about__top--slogan__big-text { width: 5.5em; }
 
-    @for $i from 1 through 5 {
-        .about__top--accordion__#{$i} { 
-            width: 16em;
-            font-size: 0.5rem;
-        }
-    }
-
     .about__motto {
-        font-size: 0.6rem;
-        top: -22em;
-        right: -4em;
+        top: -30em;
+        right: 0em;
     }
 
     @for $i from 1 through 5 {
         .about__dropdown--#{$i} { 
-            width: 7em;
-            font-size: 0.6rem;
-            $top: -25em + (6.25em * $i);
-            $right: -27em + (6em * $i);
+            $top: -15em + (6.25em * $i);
+            $right: -25em + (6em * $i);
             top: $top;
             right: $right;
         }
     }
 
     .about__drawing-1 img {
-        width: 5em;
-        height: 5em;
         bottom: 5em;
         right: 7em;
     }
 
     .about__drawing-2 img {
-        width: 9em;
-        height: 9em;
-        bottom: 0em;
+        bottom: -2em;
         left: -1em;
     }
 
-    /* _projects.scss */
-    @for $i from 1 through 5 {
-        .projects__top--#{$i} {
-            width: 18em;
-            height: 15em;
-
-            img { height: 13.63em; }
-            h5 { 
-                font-size: 0.9rem; 
-                bottom: 8.5em;
-                left: 9em;
-            }
-
-            p {
-                font-size: 0.7rem;
-                top: 4em;
-                right: 2.75em;
-            }
-        }
-    }
-
-    .projects__bot {
-        width: 22em;
-
-        &--6 {
-            height: 18em;
-
-            video {
-                width: 22em;
-                height: 16em;
-            }
-
-            h5 { 
-                font-size: 1.25rem; 
-                bottom: 12em;
-                left: 11em;
-            }
-
-            p {
-                font-size: 0.8rem;
-                top: 3em;
-                left: 2.5em;
-            }
-        }
-    }
-
     /* _contact.scss */
-    .contact { font-size: 0.6rem; }
-    .contact i { font-size: 0.6rem; }
     .contact__img { visibility: hidden; }
 }
 
 @include media-md {
+    @include responsive-style(map-get($scaling-factors, md));
+
     /* main.scss */ 
-    .logo { max-height: 1.75rem; margin-left: 1.75rem }
-    nav a { font-size: 0.7rem; }
+    .logo { margin-left: 1.75rem }
     .burger-btn { visibility: hidden; }
-    footer { font-size: 0.7rem; }
 
     /* _about.scss */ 
-    .about { min-height: 60rem; }
-    .about__top--slogan { top: -2em; transform: scale(0.6); }
-
-    @for $i from 1 through 5 {
-        .about__top--accordion__#{$i} { 
-            width: 22em;
-            font-size: 0.9rem;
-        }
-    }
+    .about__top--slogan { top: -2em; transform: scale(0.8); }
 
     .about__motto {
-        font-size: 1rem;
         top: -14em;
         right: -1em;
     }
 
     @for $i from 1 through 5 {
         .about__dropdown--#{$i} { 
-            width: 9em;
-            font-size: 0.9rem;
             $top: -15em + (6.25em * $i);
             $right: -35em + (8em * $i);
             top: $top;
@@ -244,97 +112,33 @@
     }
 
     .about__drawing-1 img {
-        width: 10em;
-        height: 10em;
         top: 13em;
         left: -2em;
     }
 
     .about__drawing-2 img {
-        width: 14em;
-        height: 14em;
         top: 9.5em;
         left: 0em;
     }
-
-    /* _projects.scss */
-    @for $i from 1 through 5 {
-        .projects__top--#{$i} {
-            width: 25em;
-            height: 17em;
-
-            img { height: 15.63em; }
-            h5 { 
-                font-size: 0.9rem; 
-                bottom: 8.5em;
-                left: 9em;
-            }
-
-            p {
-                font-size: 0.7rem;
-                top: 4em;
-                right: 2.75em;
-            }
-        }
-    }
-
-    .projects__bot {
-        width: 40em;
-
-        &--6 {
-            height: 26em;
-
-            video {
-                width: 40em;
-                height: 24em;
-            }
-
-            h5 { 
-                font-size: 1.25rem; 
-                bottom: 12em;
-                left: 11em;
-            }
-
-            p {
-                font-size: 0.8rem;
-                top: 3em;
-                left: 2.5em;
-            }
-        }
-    }
-
-    /* _contact.scss */
-    .contact { font-size: 0.8rem; }
 }
 
 @include media-lg {
+    @include responsive-style(map-get($scaling-factors, lg));
+
     /* main.scss */ 
-    .logo { max-height: 2rem; margin-left: 3rem; }
-    nav a { font-size: 0.8rem; }
+    .logo { margin-left: 3rem; }
     .burger-btn { visibility: hidden; }
-    footer { font-size: 0.8rem; }
 
     /* _about.scss */ 
-    .about { min-height: 76rem; }
-    .about__top--slogan { transform: scale(0.8); }
-
-    @for $i from 1 through 5 {
-        .about__top--accordion__#{$i} { 
-            width: 26em;
-            font-size: 1.1rem;
-        }
-    }
+    .about__top--slogan { transform: scale(0.8); } 
 
     .about__motto {
-        font-size: 1.25rem;
         top: -10.5em;
         right: 2em;
     }
 
     @for $i from 1 through 5 {
         .about__dropdown--#{$i} { 
-            width: 10em;
-            font-size: 1rem;
             $top: -12em + (6.25em * $i);
             $right: -42em + (10em * $i);
             top: $top;
@@ -343,96 +147,33 @@
     }
 
     .about__drawing-1 img {
-        width: 12em;
-        height: 12em;
         top: 18em;
         left: -1em;
     }
 
     .about__drawing-2 img {
-        width: 18em;
-        height: 18em;
         top: 12.5em;
         left: 2em;
     }
-
-    /* _projects.scss */
-    @for $i from 1 through 5 {
-        .projects__top--#{$i} {
-            width: 25em;
-            height: 17em;
-
-            img { height: 15.63em; }
-            h5 { 
-                font-size: 0.9rem; 
-                bottom: 8.5em;
-                left: 9em;
-            }
-
-            p {
-                font-size: 0.7rem;
-                top: 4em;
-                right: 2.5em;
-            }
-        }
-    }
-
-    .projects__bot {
-        width: 53em;
-
-        &--6 {
-            height: 30em;
-
-            video {
-                width: 53em;
-                height: 28em;
-            }
-
-            h5 { 
-                font-size: 1.5rem; 
-                bottom: 12em;
-                left: 12em;
-            }
-
-            p {
-                font-size: 1rem;
-                top: 2em;
-                left: 2.5em;
-            }
-        }
-    }
-
-    /* _contact.scss */
-    .contact { font-size: 1rem; }
-    .contact i { font-size: 0.8rem; }	
 }
 
 @include media-xl {
+    @include responsive-style(map-get($scaling-factors, xl));
+
     /* main.scss */ 
-    .logo { max-height: 2.25rem; margin-left: 3rem; }
-    nav a { font-size: 0.9rem; }
+    .logo { margin-left: 3rem; }
     .burger-btn { visibility: hidden; }
-    footer { font-size: 0.9rem; }
 
     /* _about.scss */ 
-    .about { min-height: 100rem; }
-    @for $i from 1 through 5 {
-        .about__top--accordion__#{$i} { 
-            width: 35em;
-            font-size: 1.1rem;
-        }
-    }
+    .about__top--slogan { transform: scale(1); }
 
     .about__motto {
-        font-size: 1.5rem;
         top: -10em;
         right: -1em;
     }
 
     @for $i from 1 through 5 {
         .about__dropdown--#{$i} { 
-            width: 12em;
-            font-size: 1.25rem;
             $top: -15em + (6.25em * $i);
             $right: -59em + (12.5em * $i);
             top: $top;
@@ -441,68 +182,12 @@
     }
 
     .about__drawing-1 img {
-        width: 25em;
-        height: 25em;
         top: 25em;
         left: -10em;
     }
 
     .about__drawing-2 img {
-        width: 33em;
-        height: 33em;
         top: 17em;
         left: -2em;
     }
-
-    /* _projects.scss */
-    @for $i from 1 through 5 {
-        .projects__top--#{$i} {
-            width: 26.25em;
-            height: 17em;
-
-            img { height: 15.63em; }
-            h5 { 
-                font-size: 0.9rem; 
-                bottom: 8.5em;
-                left: 9.5em;
-            }
-
-            p {
-                font-size: 0.7rem;
-                top: 4em;
-                right: 2em;
-            }
-        }
-    }
-
-    .projects__bot {
-        width: 53em;
-        margin-top: 5em;
-        margin-bottom: 5em;
-
-        &--6 {
-            height: 30em;
-
-            video {
-                width: 53em;
-                height: 28em;
-            }
-
-            h5 { 
-                font-size: 1.5rem; 
-                bottom: 12em;
-                left: 12em;
-            }
-
-            p {
-                font-size: 1rem;
-                top: 2em;
-                left: 2.5em;
-            }
-        }
-    }
-
-    /* _contact.scss */
-    .contact { font-size: 1rem; }
-    .contact i { font-size: 0.9rem; }	
 }

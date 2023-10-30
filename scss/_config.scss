@@ -42,7 +42,97 @@ a {
     transition: all 0.2s ease-in-out;
 }
 
-@mixin responsive-style($size, $factor) { 
+$scaling-factors: (
+    xs: 0.5em,
+    sm: 0.6em,
+    md: 0.7em,
+    lg: 0.8em,
+    xl: 0.9em
+);
+
+@mixin responsive-style($factor) { 
+    /* main.scss */
+    .logo { max-height: 3 * $factor; }
+    nav a { font-size: $factor; }
+    footer { font-size: $factor; }
+
+    /* _about.scss */
+    .about { min-height: 90 * $factor; }
+
+    @for $i from 1 through 5 {
+        .about__top--accordion__#{$i} { 
+            width: 30 * $factor;
+            font-size: 1.15 * $factor;
+        }
+    }
+
+    .about__motto { font-size: 1 * $factor; }
+
+    @for $i from 1 through 5 {
+        .about__dropdown--#{$i} { 
+            width: 16 * $factor;
+            font-size: 1.15 * $factor;
+        }
+    }
+
+    .about__drawing-1 { 
+        width: 15 * $factor;
+        height: 15 * $factor;
+    }
+
+    .about__drawing-2 { 
+        width: 25 * $factor;
+        height: 25 * $factor;
+    }
+
+    /* _projects.scss */
+    @for $i from 1 through 5 {
+        .projects__top--#{$i} {    
+            width: 20 * $factor;
+            height: 17 * $factor;
+            img { height: 15 * $factor; }
+            h5 { 
+                font-size: 1.8 * $factor;
+                bottom: 8.5 * $factor;
+                left: 9 * $factor;
+            }
+        
+            p {
+                font-size: 1.4 * $factor;
+                top: 4 * $factor;
+                right: 2.75 * $factor;
+            }
+        }
+    }
+
+    .projects__bot { 
+        width: 32 * $factor;
+
+        &--6 {
+            height: 22 * $factor;
+
+            video {
+                width: 32 * $factor;
+                height: 18 * $factor;
+            }
+        }
+
+        h5 { 
+            font-size: 2.5 * $factor;
+            bottom: 12 * $factor;
+            left: 11 * $factor;
+        }
+
+        p { 
+            font-size: 1.6 * $factor;
+            top: 3 * $factor;
+            left: 2.5 * $factor;
+        }
+    }
+
+    /* _contact.scss */
+    .contact { font-size: 1 * $factor; }
+    .contact i { font-size: 2 * $factor; }
 
 }
 

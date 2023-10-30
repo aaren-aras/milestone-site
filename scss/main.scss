@@ -11,7 +11,7 @@ body {
     ), 
     url(../img/bkgd/eng-draw.png);
     background-size: contain;
-    filter: grayscale(20%);
+    filter: grayscale(50%);
     opacity: 0.3;
     z-index: -1;
     position: fixed;
@@ -59,7 +59,7 @@ body {
         padding: 0.5rem;
         position: fixed;
         top: 0.5rem;
-        right: 0.75rem; 
+        right: 0; 
         visibility: visible;
         @include transition-ease;
       }
@@ -72,7 +72,7 @@ body {
       padding: 0.2rem;
       position: fixed;
       top: 0.85rem;
-      right: 1.8rem;
+      right: 1.25rem;
     }
 
     &.js-header-bkgd {

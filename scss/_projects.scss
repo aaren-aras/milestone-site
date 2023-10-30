@@ -5,7 +5,7 @@
 
     &__top {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column;
         justify-content: center;
         gap: 3em;
 
@@ -71,7 +71,7 @@
             &__indic button {
                 background-color: $secondary-color !important;
                 position: relative;
-                top: 0.6em;
+                top: 0.8em;
             }
         }
     }
