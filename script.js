@@ -62,7 +62,7 @@ document.querySelector('.js-about').addEventListener('click', (e) => {
 
 document.querySelector('.js-projects').addEventListener('click', (e) => {
     e.preventDefault();
-    window.scrollTo(0, 900);
+    window.scrollTo(0, 1550);
 });
 
 document.querySelector('.js-contact').addEventListener('click', (e) => {
@@ -134,6 +134,23 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   });
 }); 
+
+/* Dynamic Footer Postioning */
+// window.addEventListener("resize", positionFooter);
+// positionFooter(); // Initial state
+
+// const footerElement = document.querySelector('footer');
+// footerElement.style.marginTop = document.body.offsetHeight + "px";
+
+// function positionFooter() {
+//   const mainElement = document.querySelector('main');
+//   const footerElement = document.querySelector('footer');
+
+//   if (window.innerHeight < document.body.scrollHeight) {
+//     let spacing = document.body.clientHeight - window.innerHeight;
+//     footerElement.style.marginTop = spacing + "px";
+//   } else footerElement.style.marginTop = "0";
+// }
 
 /* Footer Date Update */ 
 document.addEventListener('DOMContentLoaded', () => {

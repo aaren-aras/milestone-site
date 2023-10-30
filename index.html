@@ -29,7 +29,9 @@
     <script src="script.js" defer></script>
 
     <!-- TO-DO: 
-         - Go through entire codebase and clean everything up! *** 
+         - BIG CHANGE: MAKE PROJECT CAROUSEL LABELS AND DESCRIPTION TEXT ON LEFT AND RIGHT OF EACH CAROUSEL,
+         AND STACK CAROUSELS ON TOP OF EACH OTHER INSTEAD OF SIDE BY SIDE FOR ALL SCREEN SIZES ****
+         - Clean up script.js! and _config.scss? *** 
          - Clean up `_responsive.scss` from top to bottom (xs to xxl) ***
          - Download other fonts?
          - "View more" button in projects? links to projects.html?
@@ -69,7 +71,7 @@
          - give colours meaning (hover colours for "hidden" meaning?); accomplishing goals, etc
          - make staircase text same as burger text 
          - replace the two reds with bootstrap accordion and dropdown? not hover, but active?
-         - add stickman dragging (check chatgpt response)
+         - add stickman dragging to flag (check chatgpt response)
          - make projects section a grid layout so it doesnt spill into contact/footer? check chatgpt response  
          - try to avoid/remove !important, especially in non-responsive files 
          - add links to contact section 
@@ -78,6 +80,7 @@
          - use ::selection to change text selecting colour?
          - Rotatable 3D thing?
          - add stick man climbing up the dropdowns? or just walking on one? person-walking
+         - write mixins and funcs to make responsive.scss smaller?
 
          - Appa's comements: 
             - make accordion font size bigger after click
@@ -95,7 +98,7 @@
 <body>
     <div class="bkgd"></div>
     <header>
-        <img class="js-logo logo" src="img/logo-1.png" alt="Company Logo">
+        <img class="js-logo logo" src="img/logo.png" alt="Company Logo">
         <nav>
             <a class="js-about" href="">
                 <i class="fa-solid fa-users"></i>
@@ -122,7 +125,7 @@
                         <li>go</li>
                         <li>the</li>
                     </ol>
-                    <i class="fa-solid fa-person-running about__top--slogan__running-man"></i>
+                    <i class="fa-solid fa-person-running about__top--slogan__run-man"></i>
                     <i class="fa-solid fa-flag about__top--slogan__flag"></i>
                     <div class="about__top--slogan__line">
                         <div class="about__top--slogan__line--red"></div>
@@ -147,36 +150,34 @@
                     </div>
                 </div>
             </div>
-
-            <div class="about__bot">
-                <div class="about__bot--motto">
-                    "WE THE <span>WILLING</span> LED BY THE <span>UNKNOWING</span> ARE DOING THE IMPOSSIBLE FOR THE
-                    <span>UNSUSPECTING</span>. WE HAVE DONE SO MUCH FOR <span>SO LONG WITH SO LITTLE</span>, THAT WE ARE
-                    NOW QUALIFIED TO DO ALMOST <span>ANYTHING WITH ALMOST NOTHING.</span>"
+            <div class="about__motto">
+                "WE THE <span>WILLING</span> LED BY THE <span>UNKNOWING</span> ARE DOING THE
+                <span>IMPOSSIBLE</span> FOR THE <span>UNSUSPECTING</span>. WE HAVE DONE SO MUCH FOR
+                <span>SO LONG</span> WITH SO <span>LITTLE</span>, THAT WE ARE NOW <span>QUALIFIED</span> TO DO
+                ALMOST<span> ANYTHING</span> WITH ALMOST <span>NOTHING</span>."
+            </div>
+            <div class="about__dropdown">
+                <div class="js-dropdown about__dropdown--1">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                 </div>
-                <div class="about__bot--dropdown">
-                    <div class="js-dropdown about__bot--dropdown__1">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                    </div>
-                    <div class="js-dropdown about__bot--dropdown__2">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                    </div>
-                    <div class="js-dropdown about__bot--dropdown__3">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                    </div>
-                    <div class="js-dropdown about__bot--dropdown__4">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                    </div>
-                    <div class="js-dropdown about__bot--dropdown__5">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                    </div>
+                <div class="js-dropdown about__dropdown--2">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                 </div>
-                <!-- <div class="about__bot--drawing-1">
-                    <img src="" alt="Automated Machine 1">
-                </div> -->
-                <div class="about__bot--drawing-2">
-                    <img src="img/roboarm.png" alt="Automated Machine 2">
+                <div class="js-dropdown about__dropdown--3">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                 </div>
+                <div class="js-dropdown about__dropdown--4">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </div>
+                <div class="js-dropdown about__dropdown--5">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="about__drawing-1">
+                <img src="img/roboarm-1.png" alt="Automated Machine 1">
+            </div>
+            <div class="about__drawing-2">
+                <img src="img/roboarm-2.png" alt="Automated Machine 2">
             </div>
         </section>
 
@@ -605,13 +606,11 @@
                 </div>
             </div>
         </section>
-
-        <footer>
-            &copy; <span class="js-current-year"></span>
-            Milestone Automation Solutions Inc. — All rights reserved.
-        </footer>
     </main>
-
+    <footer>
+        &copy; <span class="js-current-year"></span>
+        Milestone Automation Solutions Inc. — All rights reserved.
+    </footer>
 </body>
 
 </html>

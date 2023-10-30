@@ -1,12 +1,9 @@
 @import 'config', 'about', 'projects', 'contact', 'responsive';
 
 body {
-  font-family: Anybody, Verdana, Arial, Helvetica, sans-serif;
-  position: relative;
+  font-family: Anybody, Verdana, Tahoma, sans-serif;
 
   .bkgd {
-    width: 100%;
-    height: 100%;
     background: linear-gradient(
       to top, 
       rgba($primary-color, 1), 
@@ -29,98 +26,74 @@ body {
 
   header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.2rem 0;
-    z-index: 5;
+    z-index: 10;
     position: sticky;
     top: 0.8rem;
 
     .logo {
       max-width: 30%;
-      max-height: 2.5em;
-      margin-left: 2em;
-      position: relative;
+      margin-left: 3rem;
     }
 
     nav {
       display: flex;
-      flex-direction: row;
-      gap: 2.2em;
-      margin-right: 3em;
+      gap: 2.5rem;
+      margin-right: 3rem;
 
       a {
         color: $secondary-color;
-        // padding: 0.5em;
-        // border: 1.5px solid $secondary-color;
-        scroll-margin-top: 500px !important;
+
+        &:hover { color: $accent-color; }
+        &:active { opacity: 0.5; }
         @include transition-ease;
 
-        i {
-          margin-right: 0.3em;
-        }
-
-        &:hover, &:focus-visible {
-          color: $accent-color;
-        }
-
-        &:active {
-          opacity: 0.5;
-        }
+        i { margin-right: 0.3em; }
       }
 
       &.js-open-nav {
         display: flex;
         flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 1.2em;
+        gap: 0.7rem;
         background-color: rgba($primary-color, 0.8);
-        padding: 0.8em;
+        padding: 0.5rem;
         position: fixed;
-        top: 1em;
-        right: 1.75em;
+        top: 0.5rem;
+        right: 0.75rem; 
         visibility: visible;
         @include transition-ease;
-
-        a:hover, a:focus-visible {
-          color: $accent-color;
-        } 
       }
     }
 
     .burger-btn {
       background-color: rgba($primary-color, 0.4);
       color: $secondary-color;
-      padding: 0.3em;
+      padding: 0.2rem;
       position: fixed;
-      top: 0.85em;
-      right: 1.8em;
-      cursor: pointer; 
+      top: 0.85rem;
+      right: 1.8rem;
     }
 
     &.js-header-bkgd {
       background-color: rgba($primary-color, 0.8);
-      padding: 0.5em;
+      padding: 0.3rem;
       top: 0;
       @include transition-ease;
-    
-      // a:hover, a:focus-visible {
-      //   color: $primary-color;
-      // } 
     }
   }
 
   footer {
-    font-size: 0.8rem;
     text-align: center;
     // background-color: $primary-color;
     color: $secondary-color;
+    padding: 0.5rem;
     position: absolute;
-    inset: auto 0 1rem 0;
+    right: 0;
+    left: 0;
   }
 }
+
 
 
 
