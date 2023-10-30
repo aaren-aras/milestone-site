@@ -1,161 +1,132 @@
-/* Navbar Responsive Menu */ 
-const burgerBtnElement = document.querySelector('.burger-btn');
-const navElement = document.querySelector('nav');
-const anchorTags = navElement.querySelectorAll('a');
-let showMenu = false;
+document.addEventListener('DOMContentLoaded', () => {
+  const screenWidth = window.innerWidth;
 
-if (window.innerWidth < 768) hideNav(); // Initial state 
+  /* Scrolling Header Background */
+  const headerElement = document.querySelector('header');
 
-burgerBtnElement.addEventListener('click', (e) => {
-  // Stops ln 19-24 when burger button is clicked 
-  e.stopPropagation();
-  toggleMenu();
-});
+  if (screenWidth >= 768) toggleHeaderBkgd(); // Initial state
+  window.addEventListener('resize', toggleHeaderBkgd);
+  
+  function toggleHeaderBkgd() {
+    window.addEventListener('scroll', () => {
+      if (screenWidth >= 768) {
+        if (window.scrollY >= 30) headerElement.classList.add('js-header-bkgd');
+        else headerElement.classList.remove('js-header-bkgd');
+      }
+    });    
+  } 
 
-document.body.addEventListener('click', () => {
-  // if (showMenu) toggleMenu();
-  if (showMenu) {
-    navElement.classList.remove('js-open-nav');
-    hideNav();
-    showMenu = false;
-  } else return;
-});
+  /* Responsive Nav */ 
+  const burgerBtnElement = document.querySelector('.burger-btn');
+  const navElement = document.querySelector('nav');
+  const anchorTags = navElement.querySelectorAll('a');
+  let showMenu = false;
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) {
+  if (screenWidth <= 767) hideNav(); // Initial state 
+
+  burgerBtnElement.addEventListener('click', (e) => {
+    // Stops `resize` event listener when burger button is clicked 
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  document.body.addEventListener('click', () => {
+    if (showMenu) toggleMenu();
+  });
+
+  window.addEventListener('resize', () => {
+      if (screenWidth >= 768) {
+        navElement.classList.remove('js-open-nav');
+        showMenu = false;
+      }
+  });
+
+  function toggleMenu() {
+    if (!showMenu) {
+      navElement.classList.add('js-open-nav');
+      showNav();
+      showMenu = true;
+    } 
+    else {
       navElement.classList.remove('js-open-nav');
-      // hideNav();
+      hideNav();
       showMenu = false;
     }
-});
-
-function toggleMenu() {
-  if (!showMenu) {
-    navElement.classList.add('js-open-nav');
-    showNav();
-    showMenu = true;
-  } 
-  else {
-    navElement.classList.remove('js-open-nav');
-    hideNav();
-    showMenu = false;
   }
-}
 
-function hideNav() {
-  anchorTags.forEach((anchor) => {
-    anchor.style.display = 'none';
+  function hideNav() {
+    anchorTags.forEach((anchor) => {
+      anchor.style.display = 'none';
+    });
+  }
+
+  function showNav() {
+    anchorTags.forEach((anchor) => {
+      anchor.style.display = 'flex';
+    });
+  }
+
+  /* Nav Jump Links */
+  document.querySelector('.js-about').addEventListener('click', (e) => {
+      // Removes HTML anchor tag effect 
+      e.preventDefault();
+      window.scrollTo({top: 0});
   });
-}
 
-function showNav() {
-  anchorTags.forEach((anchor) => {
-    anchor.style.display = 'flex';
+  document.querySelector('.js-projects').addEventListener('click', (e) => {
+      e.preventDefault();
+      if (screenWidth <= 425) window.scrollTo(0, 1550);
+      else if (426 <= screenWidth & screenWidth <= 767) window.scrollTo(0, 1650);
+      else if (768 <= screenWidth & screenWidth <= 1023) window.scrollTo(0, 1750);
+      else if (1024 <= screenWidth & screenWidth <= 1439) window.scrollTo(0, 1850);
+      else if (screenWidth >= 1440) window.scrollTo(0, 1950);
   });
-}
 
-/* Navbar Jump Links (JS alternative) */
-document.querySelector('.js-about').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({top: 0});
-});
+  document.querySelector('.js-contact').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({top: document.body.scrollHeight});
+  });
 
-document.querySelector('.js-projects').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo(0, 1550);
-});
-
-document.querySelector('.js-contact').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({top: document.body.scrollHeight});
-});
-
-/* Header Background (when scrolling) */
-addHeaderBkgd();
-window.addEventListener('resize', addHeaderBkgd);
-function addHeaderBkgd() {
-    if (window.innerWidth >= 768) {
-        const headerElement = document.querySelector('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY >= 30) headerElement.classList.add('js-header-bkgd');
-            else headerElement.classList.remove('js-header-bkgd');
-        });    
-    } else return;
-} 
-
-/* About Us - Accordion and Dropdowns */
-document.addEventListener('DOMContentLoaded', () => {
+  /* Accordion and Dropdown Behaviour */
   const accordionSections = document.querySelectorAll('.js-accordion');
   const dropdownSections = document.querySelectorAll('.js-dropdown');
 
   accordionSections.forEach((section) => {
     section.addEventListener('click', () => {
-      // Close other sections (if open)
-      accordionSections.forEach((otherSection) => {
-        if (otherSection !== section) {
-          otherSection.classList.remove('js-open-accordion');
-          const icon = otherSection.querySelector('i.fa-solid');
-          if (icon) {
-            icon.classList.remove('fa-chevron-down');
-            icon.classList.add('fa-chevron-right');
-          }
-        }
-      });
-
-      section.classList.toggle('js-open-accordion');
-      const icon = section.querySelector('i.fa-solid');
-      if (icon) {
-        icon.classList.toggle('fa-chevron-right');
-        icon.classList.toggle('fa-chevron-down');
-      }
-    })
+      toggleSection(section, accordionSections, 'js-open-accordion');
+    });
   });
 
   dropdownSections.forEach((section) => {
     section.addEventListener('click', () => {
-      // Close other sections (if open)
-      dropdownSections.forEach((otherSection) => {
-        if (otherSection !== section) {
-          otherSection.classList.remove('js-open-dropdown');
-          const icon = otherSection.querySelector('i.fa-solid');
-          if (icon) {
-            icon.classList.remove('fa-chevron-down');
-            icon.classList.add('fa-chevron-right');
-          }
-        }
-      });
-
-      section.classList.toggle('js-open-dropdown'); 
-      const icon = section.querySelector('i.fa-solid');
-      if (icon) {
-        icon.classList.toggle('fa-chevron-right');
-        icon.classList.toggle('fa-chevron-down');
-      }
-    })
+      toggleSection(section, dropdownSections, 'js-open-dropdown');
+    });
   });
-}); 
 
-/* Dynamic Footer Postioning */
-// window.addEventListener("resize", positionFooter);
-// positionFooter(); // Initial state
+  function toggleSection(section, sections, classToToggle) { 
+    // Closes other sections (if open)
+    sections.forEach((otherSection) => {
+      if (otherSection !== section) { 
+        otherSection.classList.remove(classToToggle);
+        const icon = otherSection.querySelector('i.fa-solid');
+        if (icon) {
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-right');
+        }
+      }
+    });
 
-// const footerElement = document.querySelector('footer');
-// footerElement.style.marginTop = document.body.offsetHeight + "px";
+    // Toggles current section
+    section.classList.toggle(classToToggle);
+    const icon = section.querySelector('i.fa-solid');
+    if (icon) {
+      icon.classList.toggle('fa-chevron-right');
+      icon.classList.toggle('fa-chevron-down');
+    }
+  }
 
-// function positionFooter() {
-//   const mainElement = document.querySelector('main');
-//   const footerElement = document.querySelector('footer');
-
-//   if (window.innerHeight < document.body.scrollHeight) {
-//     let spacing = document.body.clientHeight - window.innerHeight;
-//     footerElement.style.marginTop = spacing + "px";
-//   } else footerElement.style.marginTop = "0";
-// }
-
-/* Footer Date Update */ 
-document.addEventListener('DOMContentLoaded', () => {
+  /* Footer Date Auto-Update */ 
   const yearElement = document.querySelector('.js-current-year');
   const currentYear = new Date().getFullYear(); 
   yearElement.innerText = currentYear;
 });
-
