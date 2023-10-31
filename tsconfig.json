@@ -6,5 +6,5 @@
     "sourceMap": true,
     "outDir": "src/js",
   },
-  "include": ["src/**/*"]
+  "include": ["src/script.ts"]
 }
