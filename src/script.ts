@@ -1,5 +1,3 @@
-import fs from 'fs';
-
 document.addEventListener('DOMContentLoaded', () => {
   const screenWidth = window.innerWidth;
 
@@ -128,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Footer Date Auto-Update */ 
-  const yearElement = document.querySelector('.js-current-year');
+  const yearElement = document.querySelector('.js-current-year') as HTMLElement;
   const currentYear = new Date().getFullYear(); 
-  yearElement.innerText = currentYear;
+  yearElement.innerText = currentYear.toString();
 });

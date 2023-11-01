@@ -4,7 +4,7 @@
     "moduleResolution": "NodeNext",
     "target": "ES2020",
     "sourceMap": true,
-    "outDir": "src/js",
+    "outDir": "public/js",
   },
-  "include": ["src/script.ts"]
+  "include": ["src/**/*"]
 }
