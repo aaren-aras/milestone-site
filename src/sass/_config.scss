@@ -109,11 +109,11 @@ $scaling-factors: (
         width: 32 * $factor;
 
         &--6 {
-            height: 22 * $factor;
+            height: 26 * $factor;
 
             video {
-                width: 32 * $factor;
-                height: 18 * $factor;
+                width: 60 * $factor;
+                height: 22 * $factor;
             }
         }
 

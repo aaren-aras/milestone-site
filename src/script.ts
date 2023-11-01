@@ -126,7 +126,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Carousel Caption Positioning */
-  const carouselElements = [
+  interface CarouselEvent extends Event {
+    direction: string;
+    from: number;
+    to: number;
+  }
+
+  const carouselElements: string[] = [
     '#carouselExampleCaptions1',
     '#carouselExampleCaptions2',
     '#carouselExampleCaptions3',
@@ -135,40 +141,36 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   carouselElements.forEach((carouselElement) => {
-    const carousel = document.querySelector(carouselElement);
+    const carousel: HTMLElement | null = document.querySelector(carouselElement);
     const carouselInnerElement = carousel?.querySelector('.js-carousel-inner') as HTMLElement;
     const h5Elements = carousel?.querySelectorAll('.js-h5') as NodeListOf<HTMLElement>;
     const pElements = carousel?.querySelectorAll('.js-p') as NodeListOf<HTMLElement>;
-    let activeSlide = 0;
+    let activeSlide: number = 0;
 
     carouselInnerElement.style.overflow = 'visible'; // Initial state
-    // h5Elements[0].style.visibility = 'visible';
-    // pElements[0].style.visibility = 'visible';
 
+    // `slide.bs.carousel` fires immediately after `slide` instance is invoked (Bootstrap 5)
     carousel?.addEventListener('slide.bs.carousel', () => {
-      if (event.direction === 'right') activeSlide = event.from;
-      else if (event.direction === 'left') activeSlide = event.to;
+      const carouselEvent = event as CarouselEvent;
+
+      if (carouselEvent) {
+        if (carouselEvent.direction === 'right') activeSlide = carouselEvent.from;
+        else if (carouselEvent.direction === 'left') activeSlide = carouselEvent.to;
+      }
       if (activeSlide === 0) activeSlide = 4; // Edge case 
 
-      const activeH5 = h5Elements[activeSlide];
-      const activeP = pElements[activeSlide];
+      const activeH5: HTMLElement = h5Elements[activeSlide];
+      const activeP: HTMLElement = pElements[activeSlide];
 
       carouselInnerElement.style.overflow = 'hidden';
       activeH5.style.visibility = 'hidden';
       activeP.style.visibility = 'hidden';
 
+      // `slid.bs.carousel` fires when slide transition is completed (Bootstrap 5)
       carousel?.addEventListener('slid.bs.carousel', () => {
         carouselInnerElement.style.overflow = 'visible';
-        h5Elements.forEach((h5) => {
-          h5.style.visibility = 'visible';
-          h5.style.opacity = '1';
-        });
-        pElements.forEach((p) => {
-          p.style.visibility = 'visible';
-          p.style.opacity = '1';
-        });
-        // activeH5.style.visibility = 'visible';
-        // activeP.style.visibility = 'visible';
+        activeH5.style.visibility = 'visible';
+        activeP.style.visibility = 'visible';
       });
     });
   });
