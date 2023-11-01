@@ -17,17 +17,21 @@
 
                 img { object-fit: cover; }
 
+                .carousel-caption {
+                    // visibility: hidden;
+                }
+
                 h5 {
                     display: inline-block;
-                    background-color: rgba($primary-color, 0.8);
+                    // background-color: rgba($primary-color, 0.8);
                     color: $secondary-color;
                     padding: 0.3em;
                     position: relative;
                 }
 
                 p {
-                    width: max-content;
-                    background-color: rgba($primary-color, 0.8);
+                    width: 200px;
+                    // background-color: rgba($primary-color, 0.8);
                     color: $secondary-color;
                     padding: 0.3em;
                     position: relative;

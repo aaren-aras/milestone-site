@@ -88,19 +88,19 @@ $scaling-factors: (
     /* _projects.scss */
     @for $i from 1 through 5 {
         .projects__top--#{$i} {    
-            width: 20 * $factor;
-            height: 17 * $factor;
-            img { height: 15 * $factor; }
+            width: 35 * $factor;
+            height: 22 * $factor;
+            img { height: 20 * $factor; }
             h5 { 
                 font-size: 1.8 * $factor;
-                bottom: 8.5 * $factor;
-                left: 9 * $factor;
+                top: 5 * $factor;
+                right: 20 * $factor;
             }
         
             p {
                 font-size: 1.4 * $factor;
-                top: 4 * $factor;
-                right: 2.75 * $factor;
+                top: 0 * $factor;
+                left: 30 * $factor;
             }
         }
     }

@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Responsive Nav */
-  const burgerBtnElement: HTMLElement | null = document.querySelector('.burger-btn');
+  const burgerBtnElement = document.querySelector('.burger-btn') as HTMLElement;
   const navElement: HTMLElement | null = document.querySelector('nav');
-  const anchorTags: NodeListOf<HTMLAnchorElement> | null = navElement?.querySelectorAll('a');
+  const anchorTags = navElement?.querySelectorAll('a') as NodeListOf<HTMLAnchorElement>;
   let showMenu: boolean = false;
 
   if (screenWidth <= 767) hideNav(); // Initial state 
@@ -124,6 +124,54 @@ document.addEventListener('DOMContentLoaded', () => {
       icon.classList.toggle('fa-chevron-down');
     }
   }
+
+  /* Carousel Caption Positioning */
+  const carouselElements = [
+    '#carouselExampleCaptions1',
+    '#carouselExampleCaptions2',
+    '#carouselExampleCaptions3',
+    '#carouselExampleCaptions4',
+    '#carouselExampleCaptions5'
+  ];
+
+  carouselElements.forEach((carouselElement) => {
+    const carousel = document.querySelector(carouselElement);
+    const carouselInnerElement = carousel?.querySelector('.js-carousel-inner') as HTMLElement;
+    const h5Elements = carousel?.querySelectorAll('.js-h5') as NodeListOf<HTMLElement>;
+    const pElements = carousel?.querySelectorAll('.js-p') as NodeListOf<HTMLElement>;
+    let activeSlide = 0;
+
+    carouselInnerElement.style.overflow = 'visible'; // Initial state
+    // h5Elements[0].style.visibility = 'visible';
+    // pElements[0].style.visibility = 'visible';
+
+    carousel?.addEventListener('slide.bs.carousel', () => {
+      if (event.direction === 'right') activeSlide = event.from;
+      else if (event.direction === 'left') activeSlide = event.to;
+      if (activeSlide === 0) activeSlide = 4; // Edge case 
+
+      const activeH5 = h5Elements[activeSlide];
+      const activeP = pElements[activeSlide];
+
+      carouselInnerElement.style.overflow = 'hidden';
+      activeH5.style.visibility = 'hidden';
+      activeP.style.visibility = 'hidden';
+
+      carousel?.addEventListener('slid.bs.carousel', () => {
+        carouselInnerElement.style.overflow = 'visible';
+        h5Elements.forEach((h5) => {
+          h5.style.visibility = 'visible';
+          h5.style.opacity = '1';
+        });
+        pElements.forEach((p) => {
+          p.style.visibility = 'visible';
+          p.style.opacity = '1';
+        });
+        // activeH5.style.visibility = 'visible';
+        // activeP.style.visibility = 'visible';
+      });
+    });
+  });
 
   /* Footer Date Auto-Update */
   const yearElement = document.querySelector('.js-current-year') as HTMLElement;
