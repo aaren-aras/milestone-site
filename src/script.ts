@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Responsive Nav */
   const burgerBtnElement: HTMLElement | null = document.querySelector('.burger-btn');
   const navElement: HTMLElement | null = document.querySelector('nav');
-  const anchorTags: NodeListOf<HTMLAnchorElement> = navElement?.querySelectorAll('a') || [];
+  const anchorTags: NodeListOf<HTMLAnchorElement> | null = navElement?.querySelectorAll('a');
   let showMenu: boolean = false;
 
   if (screenWidth <= 767) hideNav(); // Initial state 
