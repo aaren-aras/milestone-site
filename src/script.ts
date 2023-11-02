@@ -80,7 +80,7 @@ namespace Main {
       else if (426 <= screenWidth && screenWidth <= 767) window.scrollTo(0, 1650);
       else if (768 <= screenWidth && screenWidth <= 1023) window.scrollTo(0, 1750);
       else if (1024 <= screenWidth && screenWidth <= 1439) window.scrollTo(0, 1850);
-      else if (screenWidth >= 1440) window.scrollTo(0, 1950);
+      else if (screenWidth >= 1440) window.scrollTo(0, 1250);
     });
 
     document.querySelector('.js-contact')?.addEventListener('click', (e) => {

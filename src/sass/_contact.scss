@@ -1,42 +1,40 @@
 .contact {
-    display: flex;  
-    // background-color: rgba($secondary-color, 0.95);
-    color: $secondary-color;
-    padding: 0.75rem; 
-    position: relative;
-    top: 5em;
+  display: flex;  
+  color: $secondary-color;
+  padding: 0.75rem; 
+  position: relative;
+  top: 5em;
 
-    &__left, &__right {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex: 1;
-        gap: 1em;
+  &__left, &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    gap: 1em;
 
-        &--phone, &--email, &--linkedin, &--address {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1em;
+    &--phone, &--email, &--linkedin, &--address {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
 
-            i {
-                font-size: 1.1rem;
-                margin-right: 0.5em;
-            }
+      i {
+        font-size: 1.1rem;
+        margin-right: 0.5em;
+      }
 
-            ul {
-                list-style-type: none; 
-                line-height: 1.25em;
-                padding: 0;
-                margin: 0 3em 0 0;
-            }
-            
-        }
-
-        &--phone, &--linkedin {
-            margin-right: 1.5em;
-        }
+      ul {
+        list-style-type: none; 
+        line-height: 1.25em;
+        padding: 0;
+        margin: 0 3em 0 0;
+      }
     }
 
-    &__img { border: 0.3em solid $primary-color; }
+    &--phone, &--linkedin {
+      margin-right: 1.5em;
+    }
+  }
+
+  &__img { border: 0.3em solid $primary-color; }
 }

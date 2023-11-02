@@ -1,82 +1,82 @@
 .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__top {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    gap: 3em;
 
-    &__top {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        gap: 3em;
-
-        @for $i from 1 through 5 {
-            &--#{$i} {
-                position: relative;
-                @include gradient-rect($i);
-                @include transition-ease;
-
-                img { object-fit: cover; }
-
-                .carousel-caption {
-                    // visibility: hidden;
-                }
-
-                h5 {
-                    display: inline-block;
-                    // background-color: rgba($primary-color, 0.8);
-                    color: $secondary-color;
-                    padding: 0.3em;
-                    position: relative;
-                }
-
-                p {
-                    width: 200px;
-                    // background-color: rgba($primary-color, 0.8);
-                    color: $secondary-color;
-                    padding: 0.3em;
-                    position: relative;
-                }
-
-                &__indic button {
-                    position: relative;
-                    top: 1em;
-                }
-            }
-        }
-    }
-
-    &__bot {
+    @for $i from 1 through 5 {
+      &--#{$i} {
         position: relative;
-        top: 3em;
+        @include gradient-rect($i);
+        @include transition-ease;
 
-        &--6 {
-            background-color: rgba($primary-color, 0.95);
+        img { object-fit: cover; }
 
-            video { object-fit: fill; }
+        h5 {
+          width: max-content;
+          color: $secondary-color;
+          // padding: 0.3em;
+          position: relative;
+          cursor: pointer;
 
-            h5 {
-                display: inline-block;
-                background-color: rgba($primary-color, 0.8);
-                color: $secondary-color;
-                padding: 0.3em;
-                position: relative;
-            }
-
-            p {
-                width: max-content;
-                background-color: rgba($primary-color, 0.8);
-                color: $secondary-color;
-                padding: 0.3em;
-                position: relative;
-            }
-
-            button { bottom: 1em; }
-
-            &__indic button {
-                background-color: $secondary-color !important;
-                position: relative;
-                top: 0.8em;
-            }
+          &:hover { @include gradient-text; }
+          @include transition-ease;
         }
+
+        p {
+          font-weight: 300;
+          color: $secondary-color;
+          // padding: 0.3em;
+          position: relative;
+          cursor: pointer;
+
+        }
+
+        &__indic button {
+          position: relative;
+          top: 1em;
+        }
+      }
     }
+  }
+
+  &__bot {
+    position: relative;
+    top: 3em;
+
+    &--6 {
+      background-color: rgba($primary-color, 0.95);
+
+      video { object-fit: fill; }
+
+      h5 {
+        display: inline-block;
+        background-color: rgba($primary-color, 0.8);
+        color: $secondary-color;
+        padding: 0.3em;
+        position: relative;
+      }
+
+      p {
+        width: max-content;
+        background-color: rgba($primary-color, 0.8);
+        color: $secondary-color;
+        padding: 0.3em;
+        position: relative;
+      }
+
+      button { bottom: 1em; }
+
+      &__indic button {
+        background-color: $secondary-color !important;
+        position: relative;
+        top: 0.8em;
+      }
+    }
+  }
 }
