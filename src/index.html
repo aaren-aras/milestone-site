@@ -30,7 +30,15 @@
 
     <!-- TO-DO: 
          - MAJOR:
+            - Fix video carousel styling ***
             - Add contact section links 
+            - Add more stick people (climbing drop downs, )
+            - Adjust `_responsive.scss` for final product (xs to xxl) ***
+            - Customize Bootstrap carousels (remove "bootstrap feel")
+                - Style carousel indicators and controls? Move out of carousel?
+                -   Red hover + active effects?
+            - SEO 
+            - Accessibility (colorblind friendly, etc.)
 
          - MINOR:
             - Add useful APIs?
@@ -38,13 +46,9 @@
             - Fix bug where using tab on headers when bkgd's active causes screen to scroll up a lil each time?
             - Add smooth css transition when h5 and p tags appear after carousel slide transition?
 
-         - BIG CHANGE: MAKE PROJECT CAROUSEL LABELS AND DESCRIPTION TEXT ON LEFT AND RIGHT OF EACH CAROUSEL,
-         AND STACK CAROUSELS ON TOP OF EACH OTHER INSTEAD OF SIDE BY SIDE FOR ALL SCREEN SIZES ****
-         - Clean up `_responsive.scss` from top to bottom (xs to xxl) ***
          - "View more" button in projects? links to projects.html?
          - add moving lines/squares in the background: https://www.youtube.com/watch?v=89vz08bOT_M (less fruity); https://www.youtube.com/watch?v=f5DFGbs8DbE
          - add parallax instead of animation? less lag? https://www.youtube.com/watch?v=mxHoPYFsTuk
-
          - how to add drink swipey thing with projects? besides scroller? https://www.youtube.com/watch?v=j0wCewl87ec
          - fun css hover effects?: https://www.youtube.com/watch?v=ceNMP-aQkQ4
          - use styling libraries to speed everything up??
@@ -53,19 +57,14 @@
          - make it obvious that things are hoverable
          - add cursor effects?
              - https://www.youtube.com/watch?v=nMGVwP3ww2M
-         - customize bootstrap carousels (remove "bootstrap feel")
-         - ensure website is colorblind friendly? and generally accessible to all disabilities, use cases?
          - give option to watch project vids in full screen?
          - get site on #1 search on google (search engine optimization)
          - get custom domain name (namecheap?)
 
          - give colours meaning (hover colours for "hidden" meaning?); accomplishing goals, etc
          - make staircase text same as burger text 
-         - try to avoid/remove !important, especially in non-responsive files 
-         - add links to contact section 
          - bold certain words within text in about section?
          - use ::selection to change text selecting colour?
-         - Rotatable 3D thing?
          - add stick man climbing up the dropdowns? or just walking on one? person-walking
          - write mixins and funcs to make responsive.scss smaller?
          - optimize img and video loading?
@@ -82,7 +81,6 @@
             - use as references:
                 - ATS website: https://investors.atsautomation.com/overview/default.aspx
                 - FESTO website: https://www.festo.com/ca/en/
-            - don't do carousel? talk about 5 projects extensively 
     -->
 </head>
 
@@ -173,390 +171,325 @@
         </section>
 
         <section class="projects">
-            <div class="projects__top">
-                <div id="carouselExampleCaptions1" class="carousel slide projects__top--1">
-                    <div class="carousel-indicators projects__top--1__indic">
-                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="4"
-                            aria-label="Slide 5"></button>
-                    </div>
-                    <div class="js-js-carousel-inner carousel-inner js-carousel-inner carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/img/carousel/gantry-system.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">First slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/carousel/lifter.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Second slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Third slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/carousel/stamping-press.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Fourth slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the fourth slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/carousel/tablet-press.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Fifth slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the fifth slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions1"
-                        data-bs-slide="prev">
-                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions1"
-                        data-bs-slide="next">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+            <div id="carouselExampleCaptions1" class="carousel slide projects__1">
+                <div class="carousel-indicators projects__1--indic">
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
                 </div>
-                <div id="carouselExampleCaptions2" class="carousel slide projects__top--2">
-                    <div class="carousel-indicators projects__top--2__indic">
-                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="4"
-                            aria-label="Slide 5"></button>
-                    </div>
-                    <div class="js-carousel-inner carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/img/carousel/gantry-system.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">First slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/carousel/lifter.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Second slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Third slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Fourth slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the fourth slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Fifth slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the fifth slide.</p>
-                            </div>
+                <div class="js-js-carousel-inner carousel-inner js-carousel-inner carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/carousel/gantry-system.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">First slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2"
-                        data-bs-slide="prev">
-                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2"
-                        data-bs-slide="next">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <div class="carousel-item">
+                        <img src="assets/img/carousel/lifter.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Second slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Third slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/carousel/stamping-press.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Fourth slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the fourth slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/carousel/tablet-press.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Fifth slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the fifth slide.</p>
+                        </div>
+                    </div>
                 </div>
-                <div id="carouselExampleCaptions3" class="carousel slide projects__top--3">
-                    <div class="carousel-indicators projects__top--3__indic">
-                        <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="4"
-                            aria-label="Slide 5"></button>
-                    </div>
-                    <div class="js-carousel-inner carousel-inner">
-                        <div class="carousel-item active ">
-                            <img src="assets/img/carousel/gantry-system.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">First slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/lifter.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Second slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Third slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Fourth slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the fourth slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Fifth slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the fifth slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions3"
-                        data-bs-slide="prev">
-                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions3"
-                        data-bs-slide="next">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <div id="carouselExampleCaptions4" class="carousel slide projects__top--4">
-                    <div class="carousel-indicators projects__top--4__indic">
-                        <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="4"
-                            aria-label="Slide 5"></button>
-                    </div>
-                    <div class="js-carousel-inner carousel-inner">
-                        <div class="carousel-item active ">
-                            <img src="assets/img/carousel/gantry-system.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">First slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/lifter.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Second slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Third slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Fourth slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the fourth slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Fifth slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the fifth slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions4"
-                        data-bs-slide="prev">
-                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions4"
-                        data-bs-slide="next">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <div id="carouselExampleCaptions5" class="carousel slide projects__top--5">
-                    <div class="carousel-indicators projects__top--5__indic">
-                        <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="4"
-                            aria-label="Slide 5"></button>
-                    </div>
-                    <div class="js-carousel-inner carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/img/carousel/gantry-system.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">First slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <img src="assets/img/carousel/lifter.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Second slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Third slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Fourth slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the fourth slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="js-h5">Fifth slide label</h5>
-                                <p class="js-p">Some representative placeholder content for the fifth slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions5"
-                        data-bs-slide="prev">
-                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions5"
-                        data-bs-slide="next">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+                <button class="projects__1--prev-btn carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
+                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="projects__1--next-btn carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleCaptions1" data-bs-slide="next">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="projects__bot">
-                <div id="carouselExampleCaptions6" class="carousel slide projects__bot--6">
-                    <div class="carousel-indicators projects__bot--6__indic">
-                        <button type="button" data-bs-target="#carouselExampleCaptions6" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions6" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions6" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions6" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions6" data-bs-slide-to="4"
-                            aria-label="Slide 5"></button>
-                    </div>
-                    <div class="js-carousel-inner carousel-inner">
-                        <div class="carousel-item active">
-                            <video autoplay muted loop>
-                                <source src="assets/video/dough-slicer.mp4" type="video/mp4">
-                                </source>
-                            </video>
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <video autoplay muted loop>
-                                <source src="assets/video/margarine-picker.mp4" type="video/mp4">
-                                </source>
-                            </video>
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <video autoplay muted loop>
-                                <source src="assets/video/dough-slicer.mp4" type="video/mp4">
-                                </source>
-                            </video>
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <video autoplay muted loop>
-                                <source src="assets/video/dough-slicer.mp4" type="video/mp4">
-                                </source>
-                            </video>
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Fourth slide label</h5>
-                                <p>Some representative placeholder content for the fourth slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <video autoplay muted loop>
-                                <source src="assets/video/dough-slicer.mp4" type="video/mp4">
-                                </source>
-                            </video>
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Fifth slide label</h5>
-                                <p>Some representative placeholder content for the fifth slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions6"
-                        data-bs-slide="prev">
-                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions6"
-                        data-bs-slide="next">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+            <div id="carouselExampleCaptions2" class="carousel slide projects__2">
+                <div class="carousel-indicators projects__2--indic">
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
                 </div>
+                <div class="js-carousel-inner carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/carousel/gantry-system.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">First slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/carousel/lifter.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Second slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Third slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Fourth slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the fourth slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Fifth slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the fifth slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="projects__2--prev-btn carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="projects__2--next-btn carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div id="carouselExampleCaptions3" class="carousel slide projects__3">
+                <div class="carousel-indicators projects__3--indic">
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="js-carousel-inner carousel-inner">
+                    <div class="carousel-item active ">
+                        <img src="assets/img/carousel/gantry-system.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">First slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="assets/img/carousel/lifter.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Second slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Third slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Fourth slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the fourth slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Fifth slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the fifth slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="projects__3--prev-btn carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleCaptions3" data-bs-slide="prev">
+                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="projects__3--next-btn carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleCaptions3" data-bs-slide="next">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div id="carouselExampleCaptions4" class="carousel slide projects__4">
+                <div class="carousel-indicators projects__4==indic">
+                    <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="js-carousel-inner carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/carousel/gantry-system.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">First slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/carousel/lifter.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Second slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Third slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Fourth slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the fourth slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="assets/img/carousel/robot-welder.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Fifth slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the fifth slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="projects__4--prev-btn carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleCaptions4" data-bs-slide="prev">
+                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="projects__4--next-btn carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleCaptions4" data-bs-slide="next">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div id="carouselExampleCaptions5" class="carousel slide projects__5">
+                <div class="carousel-indicators projects__5--indic">
+                    <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="js-carousel-inner carousel-inner">
+                    <div class="carousel-item active">
+                        <video autoplay muted loop>
+                            <source src="assets/video/dough-slicer.mp4" type="video/mp4">
+                            </source>
+                        </video>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">First slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="assets/video/margarine-picker.mp4" type="video/mp4">
+                            </source>
+                        </video>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Second slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="assets/video/dough-slicer.mp4" type="video/mp4">
+                            </source>
+                        </video>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Third slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="assets/video/dough-slicer.mp4" type="video/mp4">
+                            </source>
+                        </video>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Fourth slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the fourth slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="assets/video/dough-slicer.mp4" type="video/mp4">
+                            </source>
+                        </video>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="js-h5">Fifth slide label</h5>
+                            <p class="js-p">Some representative placeholder content for the fifth slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="projects__5--prev-btn carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleCaptions5" data-bs-slide="prev">
+                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="projects__5--next-btn carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleCaptions5" data-bs-slide="next">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
 

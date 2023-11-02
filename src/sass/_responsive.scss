@@ -132,7 +132,7 @@
 
   /* _projects.scss */
   @for $i from 1 through 5 {
-    .projects__top--#{$i} p {
+    .projects__#{$i} p {
       left: 23em;
     } 
   }

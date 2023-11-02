@@ -1,82 +1,78 @@
 .projects {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 3em;
 
-  &__top {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    gap: 3em;
+  @for $i from 1 through 5 {
+    &__#{$i} {
+      position: relative;
+      @include gradient-rect($i);
+      @include transition-ease;
 
-    @for $i from 1 through 5 {
-      &--#{$i} {
+      &--indic button { position: relative; }
+
+      img { object-fit: cover; }
+      video { 
+        object-fit: fill; 
+        width: 100%;
+        height: 100%;
+      }
+
+      h5, p { 
+        color: $secondary-color;
         position: relative;
-        @include gradient-rect($i);
+        cursor: pointer;
+
+        &:hover { @include gradient-text; }
         @include transition-ease;
-
-        img { object-fit: cover; }
-
-        h5 {
-          width: max-content;
-          color: $secondary-color;
-          // padding: 0.3em;
-          position: relative;
-          cursor: pointer;
-
-          &:hover { @include gradient-text; }
-          @include transition-ease;
-        }
-
-        p {
-          font-weight: 300;
-          color: $secondary-color;
-          // padding: 0.3em;
-          position: relative;
-          cursor: pointer;
-
-        }
-
-        &__indic button {
-          position: relative;
-          top: 1em;
-        }
-      }
-    }
-  }
-
-  &__bot {
-    position: relative;
-    top: 3em;
-
-    &--6 {
-      background-color: rgba($primary-color, 0.95);
-
-      video { object-fit: fill; }
-
-      h5 {
-        display: inline-block;
-        background-color: rgba($primary-color, 0.8);
-        color: $secondary-color;
-        padding: 0.3em;
-        position: relative;
       }
 
-      p {
-        width: max-content;
-        background-color: rgba($primary-color, 0.8);
-        color: $secondary-color;
-        padding: 0.3em;
-        position: relative;
-      }
+      h5 { width: max-content; }
 
-      button { bottom: 1em; }
+      &--prev-btn, &--next-btn { 
+        color: $secondary-color !important;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
 
-      &__indic button {
-        background-color: $secondary-color !important;
-        position: relative;
-        top: 0.8em;
+        &:hover { color: $accent-color !important; }
+        &:active { opacity: 0.5; }
+        @include transition-ease;
       }
     }
   }
 }
+
+// &__bot {
+//   position: relative;
+//   top: 3em;
+
+//   &--6 {
+//     background-color: rgba($primary-color, 0.95);
+
+//     video { object-fit: fill; }
+
+//     h5 {
+//       color: $secondary-color;
+//       // padding: 0.3em;
+//       position: relative;
+//     }
+
+//     p {
+//       width: max-content;
+//       color: $secondary-color;
+//       // padding: 0.3em;
+//       position: relative;
+//     }
+
+//     // button { bottom: 1em; }
+
+//     &__indic button {
+//       background-color: $secondary-color !important;
+//       position: relative;
+//       top: 0.8em;
+//     }
+//   }
+// }
