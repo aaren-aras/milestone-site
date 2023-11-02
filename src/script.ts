@@ -1,14 +1,11 @@
 const screenWidth: number = window.innerWidth;
 
 namespace Main {
-  export const initMain = () => {
+  export const initMain = (): void => {
     /* Scrolling Header Background */
     const headerElement: HTMLElement | null = document.querySelector('header');
 
-    if (screenWidth >= 768) toggleHeaderBkgd(); // Initial state
-    window.addEventListener('resize', toggleHeaderBkgd);
-
-    function toggleHeaderBkgd() {
+    const toggleHeaderBkgd = (): void => {
       window.addEventListener('scroll', () => {
         if (screenWidth >= 768) {
           if (window.scrollY >= 30) headerElement?.classList.add('js-header-bkgd');
@@ -17,11 +14,39 @@ namespace Main {
       });
     }
 
+    if (screenWidth >= 768) toggleHeaderBkgd(); // Initial state
+    window.addEventListener('resize', toggleHeaderBkgd);
+
     /* Responsive Nav */
     const burgerBtnElement = document.querySelector('.burger-btn') as HTMLElement;
     const navElement: HTMLElement | null = document.querySelector('nav');
     const anchorTags = navElement?.querySelectorAll('a') as NodeListOf<HTMLAnchorElement>;
     let showMenu: boolean = false;
+
+    const toggleMenu = (): void => {
+      if (!showMenu) {
+        navElement?.classList.add('js-open-nav');
+        showNav();
+        showMenu = true;
+      }
+      else {
+        navElement?.classList.remove('js-open-nav');
+        hideNav();
+        showMenu = false;
+      }
+    }
+
+    const hideNav = (): void => {
+      anchorTags.forEach((anchor) => {
+        anchor.style.display = 'none';
+      });
+    }
+
+    const showNav = (): void => {
+      anchorTags.forEach((anchor) => {
+        anchor.style.display = 'flex';
+      });
+    }
 
     if (screenWidth <= 767) hideNav(); // Initial state 
 
@@ -41,31 +66,6 @@ namespace Main {
         showMenu = false;
       }
     });
-
-    function toggleMenu() {
-      if (!showMenu) {
-        navElement?.classList.add('js-open-nav');
-        showNav();
-        showMenu = true;
-      }
-      else {
-        navElement?.classList.remove('js-open-nav');
-        hideNav();
-        showMenu = false;
-      }
-    }
-
-    function hideNav() {
-      anchorTags.forEach((anchor) => {
-        anchor.style.display = 'none';
-      });
-    }
-
-    function showNav() {
-      anchorTags.forEach((anchor) => {
-        anchor.style.display = 'flex';
-      });
-    }
 
     /* Nav Jump Links */
     document.querySelector('.js-about')?.addEventListener('click', (e) => {
@@ -92,29 +92,20 @@ namespace Main {
     const yearElement = document.querySelector('.js-current-year') as HTMLElement;
     const currentYear: number = new Date().getFullYear();
     yearElement.innerText = currentYear.toString();
-
   }
 }
 
 namespace About {
-  export const initAbout = () => {
+  export const initAbout = (): void => {
     /* Accordion and Dropdown Behaviour */
     const accordionSections: NodeListOf<HTMLElement> = document.querySelectorAll('.js-accordion');
     const dropdownSections: NodeListOf<HTMLElement> = document.querySelectorAll('.js-dropdown');
 
-    accordionSections.forEach((section) => {
-      section.addEventListener('click', () => {
-        toggleSection(section, accordionSections, 'js-open-accordion');
-      });
-    });
-
-    dropdownSections.forEach((section) => {
-      section.addEventListener('click', () => {
-        toggleSection(section, dropdownSections, 'js-open-dropdown');
-      });
-    });
-
-    function toggleSection(section: HTMLElement, sections: NodeListOf<HTMLElement>, classToToggle: string) {
+    const toggleSection = (
+      section: HTMLElement,
+      sections: NodeListOf<HTMLElement>,
+      classToToggle: string
+    ): void => {
       // Closes other sections (if open)
       sections.forEach((otherSection) => {
         if (otherSection !== section) {
@@ -135,6 +126,18 @@ namespace About {
         icon.classList.toggle('fa-chevron-down');
       }
     }
+
+    accordionSections.forEach((section) => {
+      section.addEventListener('click', () => {
+        toggleSection(section, accordionSections, 'js-open-accordion');
+      });
+    });
+
+    dropdownSections.forEach((section) => {
+      section.addEventListener('click', () => {
+        toggleSection(section, dropdownSections, 'js-open-dropdown');
+      });
+    });
   }
 }
 
@@ -155,7 +158,7 @@ namespace Projects {
       '#carouselExampleCaptions5'
     ];
 
-    carouselElements.forEach((carouselElement) => {
+    const initCarousel = (carouselElement: string): void => {
       const carousel: HTMLElement | null = document.querySelector(carouselElement);
       const carouselInnerElement = carousel?.querySelector('.js-carousel-inner') as HTMLElement;
       const h5Elements = carousel?.querySelectorAll('.js-h5') as NodeListOf<HTMLElement>;
@@ -188,6 +191,10 @@ namespace Projects {
           activeP.style.visibility = 'visible';
         });
       });
+    }
+
+    carouselElements.forEach((carouselElement) => {
+      initCarousel(carouselElement);
     });
   }
 }
