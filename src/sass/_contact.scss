@@ -36,5 +36,9 @@
     }
   }
 
-  &__img { border: 0.3em solid $primary-color; }
+  &__img { 
+    border: 0.3em solid $primary-color; 
+    @include light-hover;
+    @include transition-ease;
+  }
 }

@@ -110,20 +110,20 @@ namespace About {
       sections.forEach((otherSection) => {
         if (otherSection !== section) {
           otherSection.classList.remove(classToToggle);
-          const icon: Element | null = otherSection.querySelector('i.fa-solid');
-          if (icon) {
-            icon.classList.remove('fa-chevron-down');
-            icon.classList.add('fa-chevron-right');
+          const chevronIcon: Element | null = otherSection.querySelector('.js-chevron');
+          if (chevronIcon) {
+            chevronIcon.classList.remove('fa-chevron-down');
+            chevronIcon.classList.add('fa-chevron-right');
           }
         }
       });
 
       // Toggles current section
       section.classList.toggle(classToToggle);
-      const icon: Element | null = section.querySelector('i.fa-solid');
-      if (icon) {
-        icon.classList.toggle('fa-chevron-right');
-        icon.classList.toggle('fa-chevron-down');
+      const chevronIcon: Element | null = section.querySelector('.js-chevron');
+      if (chevronIcon) {
+        chevronIcon.classList.toggle('fa-chevron-right');
+        chevronIcon.classList.toggle('fa-chevron-down');
       }
     }
 

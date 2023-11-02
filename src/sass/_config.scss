@@ -38,6 +38,10 @@ a {
   background-color: rgba($accent-color, $alpha);
 }
 
+@mixin light-hover {
+  &:hover { opacity: 0.85; } 
+}
+
 @mixin transition-ease {
   transition: all 0.2s ease-in-out;
 }
@@ -110,31 +114,6 @@ $scaling-factors: (
       &--next-btn { right: -4 * $factor; }
     }
   }
-
-  // .projects__bot { 
-  //   width: 32 * $factor;
-
-  //   &--6 {
-  //     height: 26 * $factor;
-
-  //     video {
-  //       width: 60 * $factor;
-  //       height: 22 * $factor;
-  //     }
-  //   }
-
-  //   h5 { 
-  //     font-size: 2.5 * $factor;
-  //     bottom: 12 * $factor;
-  //     left: 11 * $factor;
-  //   }
-
-  //   p { 
-  //     font-size: 1.6 * $factor;
-  //     top: 3 * $factor;
-  //     left: 2.5 * $factor;
-  //   }
-  // }
 
   /* _contact.scss */
   .contact { font-size: 1 * $factor; }

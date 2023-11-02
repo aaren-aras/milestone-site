@@ -34,6 +34,9 @@ body {
 
     .logo {
       max-width: 30%;
+
+      @include light-hover;
+      @include transition-ease
     }
 
     nav {
@@ -91,5 +94,8 @@ body {
     position: absolute;
     right: 0;
     left: 0;
+
+    @include light-hover;
+    @include transition-ease;
   }
 }
