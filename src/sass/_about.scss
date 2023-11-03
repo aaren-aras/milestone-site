@@ -83,9 +83,18 @@
     &--accordion {
       position: relative;
       @for $i from 1 through 5 {
+        $accordion-header-content: (
+          'Who are we?',
+          'Not familiar?',
+          'What do we do?',
+          'Why though?',
+          'How though?'
+        );
+
         &__#{$i} {
           color: $secondary-color;
           padding: 1em;
+          border: 1px groove rgba($accent-color, 0.95 - (0.2 * ($i - 1)));
           margin-bottom: 0.2em;
           cursor: pointer;
           @include gradient-rect($i);
@@ -95,15 +104,21 @@
 
           i {
             color: $primary-color;
-            margin: 0 0.75em;
+            margin: 0 0.75em 0 0.5em;
+          }
+
+          &::after { 
+            content: nth($accordion-header-content, $i); 
+            background-color: rgba($primary-color, 0.5);
+            padding: 0.4em;
           }
         }
       }
 
       .js-open-accordion {
-        $accordion-content: (
+        $accordion-inner-content: (
           'Let us become your supplier of Industrial Controls and Special Purpose Equipment!',
-          'Not familiar with our company? First contact with us is online? We would be pleased to hear from you! Let us know your needs and questions, we are more than happy to help.',
+          'First contact with us is online? We would be pleased to hear from you! Let us know your needs and questions, we are more than happy to help.',
           'We can supply you with turn-key equipment or modify existing equipment, based on your needs and preferences.',
           "Service is a significant part of our business. We provide service for most common brands of PLC's, CNC's, and hard-wired equipment.",
           'We also have an in-house machine shop, which allows us to manufacture spare/consumable parts quickly, while maintaining high quality at low prices.'
@@ -112,7 +127,11 @@
         @for $i from 1 through 5 {
           &:nth-child(#{$i}) { padding-bottom: 1.5em; }
           &:nth-child(#{$i}):hover { filter: none; }
-          &:nth-child(#{$i})::after { content: nth($accordion-content, $i); }
+          &:nth-child(#{$i})::after { 
+            content: nth($accordion-inner-content, $i); 
+            background-color: rgba($primary-color, 0); 
+            padding: 0.2em;
+          }
         }
       }
     }
@@ -139,6 +158,65 @@
   &__dropdown {
     position: relative;
 
+    @for $i from 1 through 5 {
+      $dropdown-header-content: (
+        '5',
+        '4',
+        '3',
+        '2',
+        '1'
+      );
+
+      &--#{$i} {
+        color: $secondary-color;
+        padding: 0.8em;
+        border: 1px groove rgba($accent-color, 0.95 - (0.2 * ($i - 1)));
+        z-index: 1;
+        position: absolute;
+        cursor: pointer;
+        @include gradient-rect($i);
+
+        &:hover { filter: grayscale(20%) saturate(50%); }
+        @include transition-ease;
+
+        i {
+          color: $primary-color;
+          margin: 0 0.75em 0 0.5em;
+        }
+
+        &::after { 
+          content: nth($dropdown-header-content, $i); 
+          background-color: rgba($primary-color, 0.5);
+          padding: 0.3em;
+        }
+      }
+    }
+
+    .js-open-dropdown {
+      $dropdown-inner-content: (
+        'If you are in the market to have equipment fabricated, or controls retrofitted on existing equipment, it would be our pleasure to assist you with your requirements.',
+        'Our activities can be summarized by a plaque found at the train station in Kleinburg, Ontario. It has been accepted as the company motto.',
+        'Our efforts in the fabrication of dedicated industrial equipment have increased our scope of customers to include almost all industrial sectors.',
+        'Over the years, our customer base evolved to industries ranging from automotive to pharmaceutical.',
+        'Milestone Automation Solutions Inc. was incorporated in 2000.'
+      );
+
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          width: 13em;
+          padding-bottom: 1.5em;
+          z-index: 5;
+        }
+
+        &:nth-child(#{$i}):hover { filter: none; }
+        &:nth-child(#{$i})::after { 
+          content: nth($dropdown-inner-content, $i); 
+          background-color: rgba($primary-color, 0);
+          padding: 0.2em;
+        }
+      }
+    }
+
     &--pull-men, &--fall-man, &--reach-man {
       font-size: 2.5em;
       color: $secondary-color;
@@ -161,46 +239,6 @@
     &--reach-man {
       top: -4.7em;
       left: 16em;
-    }
-
-    @for $i from 1 through 5 {
-      &--#{$i} {
-        color: $secondary-color;
-        padding: 0.8em;
-        z-index: 1;
-        position: absolute;
-        cursor: pointer;
-        @include gradient-rect($i);
-
-        &:hover { filter: grayscale(20%) saturate(50%); }
-        @include transition-ease;
-
-        i {
-          color: $primary-color;
-          margin: 0 0.75em;
-        }
-      }
-    }
-
-    .js-open-dropdown {
-      $dropdown-content: (
-        'If you are in the market to have equipment fabricated, or controls retrofitted on existing equipment, it would be our pleasure to assist you with your requirements.',
-        'Our activities can be summarized by a plaque found at the train station in Kleinburg, Ontario. It has been accepted as the company motto.',
-        'Our efforts in the fabrication of dedicated industrial equipment have increased our scope of customers to include almost all industrial sectors.',
-        'Over the years, our customer base evolved to industries ranging from automotive to pharmaceutical.',
-        'Milestone Automation Solutions Inc. was incorporated in 2000.'
-      );
-
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          width: 13em;
-          padding-bottom: 1.5em;
-          z-index: 5;
-        }
-
-        &:nth-child(#{$i}):hover { filter: none; }
-        &:nth-child(#{$i})::after { content: nth($dropdown-content, $i); }
-      }
     }
   }
 

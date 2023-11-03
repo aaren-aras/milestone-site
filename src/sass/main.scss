@@ -32,6 +32,13 @@ body {
     position: sticky;
     top: 0.8rem;
 
+    &.js-header-bkgd {
+      background-color: rgba($primary-color, 0.8);
+      padding: 0.3rem;
+      top: 0;
+      @include transition-ease;
+    }
+
     .logo {
       max-width: 30%;
 
@@ -76,13 +83,6 @@ body {
       position: fixed;
       top: 0.85rem;
       right: 1.25rem;
-    }
-
-    &.js-header-bkgd {
-      background-color: rgba($primary-color, 0.8);
-      padding: 0.3rem;
-      top: 0;
-      @include transition-ease;
     }
   }
 

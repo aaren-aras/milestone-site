@@ -7,7 +7,7 @@
 
   @for $i from 1 through 5 {
     &__#{$i} {
-      border: 0.5px groove rgba($accent-color, 0.95 - (0.2 * ($i - 1)));
+      border: 4px groove rgba($accent-color, 0.95 - (0.2 * ($i - 1)));
       position: relative;
       @include gradient-rect($i);
       @include transition-ease;
