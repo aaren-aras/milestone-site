@@ -16,10 +16,8 @@
     &--slogan {
       display: flex;
       flex-direction: column;
-      // gap: 0.5em;
       max-width: 35%;
       position: relative;
-      // inset: 3rem;
 
       &__small-text {
         display: flex;
@@ -103,7 +101,6 @@
       }
 
       .js-open-accordion {
-
         $accordion-content: (
           'Let us become your supplier of Industrial Controls and Special Purpose Equipment!',
           'Not familiar with our company? First contact with us is online? We would be pleased to hear from you! Let us know your needs and questions, we are more than happy to help.',
@@ -151,14 +148,14 @@
     }
 
     &--pull-men {
-      top: 5.65em;
+      top: 5.6em;
       right: 4em;
     }
 
     &--fall-man {
       top: 1.6em;
-      left: 8.55em;
-      // transform: scaleX(-1);
+      left: 8.97em;
+      transform: scaleX(-1);
     }
 
     &--reach-man {
