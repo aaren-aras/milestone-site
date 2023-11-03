@@ -21,13 +21,8 @@
     right: 0em;
   }
 
-  @for $i from 1 through 5 {
-    .about__dropdown--#{$i} {
-      $top: -18em + (6.25em * $i);
-      $right: -17em + (4em * $i);
-      top: $top;
-      right: $right;
-    }
+  .about__dropdown {
+    transform: scale(0.4);
   }
 
   .about__drawing-1 img {
@@ -70,15 +65,10 @@
     right: 0em;
   }
 
-  @for $i from 1 through 5 {
-    .about__dropdown--#{$i} {
-      $top: -15em + (6.25em * $i);
-      $right: -25em + (6em * $i);
-      top: $top;
-      right: $right;
-    }
+  .about__dropdown {
+    transform: scale(0.6);
   }
-
+ 
   .about__drawing-1 img {
     bottom: 5em;
     right: 7em;
@@ -111,13 +101,8 @@
     right: -1em;
   }
 
-  @for $i from 1 through 5 {
-    .about__dropdown--#{$i} {
-      $top: -15em + (6.25em * $i);
-      $right: -35em + (8em * $i);
-      top: $top;
-      right: $right;
-    }
+  .about__dropdown {
+    transform: scale(0.6);
   }
 
   .about__drawing-1 img {
@@ -153,13 +138,8 @@
     right: 2em;
   }
 
-  @for $i from 1 through 5 {
-    .about__dropdown--#{$i} {
-      $top: -12em + (6.25em * $i);
-      $right: -42em + (10em * $i);
-      top: $top;
-      right: $right;
-    }
+  .about__dropdown { 
+    transform: scale(0.8);
   }
 
   .about__drawing-1 img {
@@ -188,14 +168,7 @@
     right: -1em;
   }
 
-  @for $i from 1 through 5 {
-    .about__dropdown--#{$i} {
-      $top: -15em + (6.25em * $i);
-      $right: -59em + (12.5em * $i);
-      top: $top;
-      right: $right;
-    }
-  }
+  .about__dropdown { transform: scale(1); }
 
   .about__drawing-1 img {
     top: 25em;

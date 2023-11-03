@@ -76,6 +76,10 @@ $scaling-factors: (
     .about__dropdown--#{$i} { 
       width: 16 * $factor;
       font-size: 1.15 * $factor;
+      $top: (-16.7 * $factor) + ((6.9 * $factor) * $i);
+      $right: (-66.7 * $factor) + ((13.9 * $factor) * $i);
+      top: $top;
+      right: $right;
     }
   }
 
