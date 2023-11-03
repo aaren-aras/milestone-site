@@ -117,11 +117,11 @@
 
       .js-open-accordion {
         $accordion-inner-content: (
-          'Let us become your supplier of Industrial Controls and Special Purpose Equipment!',
+          'Let us become your supplier of industrial controls and special purpose equipment!',
           'First contact with us is online? We would be pleased to hear from you! Let us know your needs and questions, we are more than happy to help.',
           'We can supply you with turn-key equipment or modify existing equipment, based on your needs and preferences.',
           "Service is a significant part of our business. We provide service for most common brands of PLC's, CNC's, and hard-wired equipment.",
-          'We also have an in-house machine shop, which allows us to manufacture spare/consumable parts quickly, while maintaining high quality at low prices.'
+          'We have an in-house machine shop, which allows us to manufacture spare/consumable parts quickly while maintaining high quality at low prices.'
         );
 
         @for $i from 1 through 5 {
@@ -194,7 +194,7 @@
 
     .js-open-dropdown {
       $dropdown-inner-content: (
-        'If you are in the market to have equipment fabricated, or controls retrofitted on existing equipment, it would be our pleasure to assist you with your requirements.',
+        'In the market to have equipment fabricated or controls retrofitted on existing equipment? It would be our pleasure to assist you with your requirements.',
         'Our activities can be summarized by a plaque found at the train station in Kleinburg, Ontario. It has been accepted as the company motto.',
         'Our efforts in the fabrication of dedicated industrial equipment have increased our scope of customers to include almost all industrial sectors.',
         'Over the years, our customer base evolved to industries ranging from automotive to pharmaceutical.',

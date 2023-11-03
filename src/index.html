@@ -35,51 +35,44 @@
             - Customize Bootstrap carousels (remove "bootstrap feel")
                 - Style carousel indicators and controls? Move out of carousel?
                 -   Red hover + active effects?
-            - SEO 
-            - Accessibility (colorblind friendly, etc.)
+            - Implement SEO 
+            - Implement accessibility (colorblind friendly, etc.)
             - Clean up index.html?
 
          - MINOR:
-            - Add useful APIs?
+            - Make text in about section bigger, or bold some?
+            - Give option to view project images/vids in full screen?
             - Make run-man horizontally draggable w/ small fireworks effect (audio?) when dragged over flag?
+            - Fix bug where clicking b/w two carousel slides w/ indicators too fast breaks transition?
+            - Remove weird text select when rapidly clicking about section inner text?
             - Fix bug where using tab on headers when bkgd's active causes screen to scroll up a lil each time?
             - Add smooth css transition when h5 and p tags appear after carousel slide transition?
+            - Use styling libraries for speedy future design work?
+            - Implement more scalability and reactivity (JS framework: React, Vue)? 
+                - Image optimization: https://www.youtube.com/watch?v=0fONene3OIA
+                - Add common/useful APIs?
+                - Add serverless funcs for contact forms, etc. w/ Netlify? Or write backend w/ Node.js?
 
-         - "View more" button in projects? links to projects.html?
+         - REFERENCES:
+            - https://investors.atsautomation.com/overview/default.aspx
+            - https://www.festo.com/ca/en/
+
          - add moving lines/squares in the background: https://www.youtube.com/watch?v=89vz08bOT_M (less fruity); https://www.youtube.com/watch?v=f5DFGbs8DbE
          - add parallax instead of animation? less lag? https://www.youtube.com/watch?v=mxHoPYFsTuk
          - how to add drink swipey thing with projects? besides scroller? https://www.youtube.com/watch?v=j0wCewl87ec
          - fun css hover effects?: https://www.youtube.com/watch?v=ceNMP-aQkQ4
-         - use styling libraries to speed everything up??
 
-         - add scalability and reactivity?
-         - make it obvious that things are hoverable
          - add cursor effects?
              - https://www.youtube.com/watch?v=nMGVwP3ww2M
-         - give option to watch project vids in full screen?
          - get site on #1 search on google (search engine optimization)
          - get custom domain name (namecheap?)
 
          - give colours meaning (hover colours for "hidden" meaning?); accomplishing goals, etc
          - make staircase text same as burger text 
-         - bold certain words within text in about section?
          - use ::selection to change text selecting colour?
-         - add stick man climbing up the dropdowns? or just walking on one? person-walking
-         - write mixins and funcs to make responsive.scss smaller?
-         - optimize img and video loading?
-            https://www.youtube.com/watch?v=0fONene3OIA
+
          - use netlify for production hosting (free https/ssl w/ custom domain, FREE)
             https://www.youtube.com/watch?v=i9qCmQ2EeUA&t=186s
-
-         - Appa's comements: 
-            - Add links in contact section 
-            - make accordion font size bigger after click
-            - add "keyword" or subtitle/title on top of each accordion section as a sort of precusor for what text is shown after section is clicked; maybe phrased as questions, then content inside is answer
-
-         - Chris's comments:
-            - use as references:
-                - ATS website: https://investors.atsautomation.com/overview/default.aspx
-                - FESTO website: https://www.festo.com/ca/en/
     -->
 </head>
 
@@ -362,7 +355,7 @@
                 </button>
             </div>
             <div id="carouselExampleCaptions4" class="carousel slide projects__4">
-                <div class="carousel-indicators projects__4==indic">
+                <div class="carousel-indicators projects__4--indic">
                     <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="1"

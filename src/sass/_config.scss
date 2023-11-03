@@ -70,7 +70,7 @@ $scaling-factors: (
     }
   }
 
-  .about__motto { font-size: 1 * $factor; }
+  .about__motto { font-size: 1.25 * $factor; }
 
   @for $i from 1 through 5 {
     .about__dropdown--#{$i} { 
@@ -97,19 +97,19 @@ $scaling-factors: (
   @for $i from 1 through 5 {
     .projects__#{$i} {    
       width: 35 * $factor;
-      height: 22 * $factor;
-      &--indic button { top: 1.5 * $factor; }
+      height: 22.5 * $factor;
+      &--indic button { top: 1.2   * $factor; }
       img, video { height: 20 * $factor; }
       h5 { 
         font-size: 2 * $factor;
-        top: 2.5 * $factor;
+        top: 3 * $factor;
         right: 16 * $factor;
       }
   
       p {
         width: 15 * $factor;
         font-size: 1.4 * $factor;
-        top: -1 * $factor;
+        top: -1.2 * $factor;
         left: 30 * $factor;
       }
 
