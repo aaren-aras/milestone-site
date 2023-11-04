@@ -36,7 +36,7 @@
     margin-top: 1rem;
     margin-left: 1rem;
   }
-  .contact__img { visibility: hidden; }
+  .contact__info--img { visibility: hidden; }
 }
 
 @include media-sm {
@@ -72,7 +72,7 @@
   }
 
   /* _contact.scss */
-  .contact__img { visibility: hidden; }
+  // .contact__info--img { visibility: hidden; }
 }
 
 @include media-md {

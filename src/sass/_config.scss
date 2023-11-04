@@ -10,8 +10,11 @@ $accent-color: rgb(180, 50, 50);
   scroll-behavior: smooth;
 }
 
-*:focus-visible {
-  outline: 2px solid $accent-color;
+*:focus-visible { outline: 2px solid $accent-color; }
+
+::selection { 
+  background-color: $accent-color; 
+  color: $primary-color;
 }
 
 img, picture, svg, video {
@@ -122,6 +125,8 @@ $scaling-factors: (
   /* _contact.scss */
   .contact { font-size: 1 * $factor; }
   .contact i { font-size: 2 * $factor; }
+  .contact__cta { font-size: 2.5 * $factor; }
+  .contact__info--img img { width: 10 * $factor; }
 }
 
 @mixin media-xs {

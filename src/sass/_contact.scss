@@ -1,44 +1,60 @@
 .contact {
   display: flex;  
+  flex-direction: column;
+  align-items: center;
   color: $secondary-color;
   padding: 0.75rem; 
   position: relative;
-  top: 5em;
+  top: 4em;
 
-  &__left, &__right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    gap: 1.25em;
+  &__cta {
+    width: 22em;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 1em;
 
-    &--phone, &--email, &--linkedin, &--address {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1em;
-
-      i {
-        font-size: 1.1rem;
-        margin-right: 0.5em;
-      }
-
-      ul {
-        list-style-type: none; 
-        line-height: 1.25em;
-        padding: 0;
-        margin: 0 3em 0 0;
-      }
-    }
-
-    &--phone, &--linkedin {
-      margin-right: 1.5em;
-    }
+    &:hover { @include gradient-text; }
+    @include transition-ease;
   }
 
-  &__img { 
-    border: 1.6px double $accent-color; 
-    @include light-hover;
-    @include transition-ease;
+  &__info {
+    display: flex;
+    gap: 5em;
+
+    &--left, &--right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      gap: 1.25em;
+  
+      &__phone, &__email, &__linkedin, &__address {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+  
+        i {
+          font-size: 1.1rem;
+          margin-right: 0.5em;
+        }
+  
+        ul {
+          list-style-type: none; 
+          line-height: 1.25em;
+          padding: 0;
+          margin: 0 3em 0 0;
+        }
+      }
+  
+      &__phone, &__linkedin { margin-right: 1.5em; }
+      &__linkedin, &__address { margin-bottom: 0.5em; }
+    }
+  
+    &--img { 
+      border: 1.6px double $accent-color; 
+      @include light-hover;
+      @include transition-ease;
+    }
   }
 }

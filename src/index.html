@@ -29,17 +29,21 @@
     <script src="js/script.js" defer></script>
 
     <!-- TO-DO: 
-         - MAJOR:
+        - MAJOR:
             - Add contact section links 
+                - Add hover effects ($accent-color for most clickable stuff)
             - Adjust `_responsive.scss` for final product (xs to xxl) ***
+                - Contact section a little off center? Add margin in responsive 
             - Customize Bootstrap carousels (remove "bootstrap feel")
                 - Style carousel indicators and controls? Move out of carousel?
                 -   Red hover + active effects?
             - Implement SEO 
             - Implement accessibility (colorblind friendly, etc.)
-            - Clean up index.html?
+            - Clean up index.html
+            - Web hosting (Namecheap domain + Netlify instead of IPOWER?) *** 
+                - https://www.youtube.com/watch?v=i9qCmQ2EeUA&t=186s (free http w/ custom domain)
 
-         - MINOR:
+        - MINOR:
             - Make text in about section bigger, or bold some?
             - Give option to view project images/vids in full screen?
             - Make run-man horizontally draggable w/ small fireworks effect (audio?) when dragged over flag?
@@ -53,26 +57,9 @@
                 - Add common/useful APIs?
                 - Add serverless funcs for contact forms, etc. w/ Netlify? Or write backend w/ Node.js?
 
-         - REFERENCES:
+        - REFERENCES:
             - https://investors.atsautomation.com/overview/default.aspx
             - https://www.festo.com/ca/en/
-
-         - add moving lines/squares in the background: https://www.youtube.com/watch?v=89vz08bOT_M (less fruity); https://www.youtube.com/watch?v=f5DFGbs8DbE
-         - add parallax instead of animation? less lag? https://www.youtube.com/watch?v=mxHoPYFsTuk
-         - how to add drink swipey thing with projects? besides scroller? https://www.youtube.com/watch?v=j0wCewl87ec
-         - fun css hover effects?: https://www.youtube.com/watch?v=ceNMP-aQkQ4
-
-         - add cursor effects?
-             - https://www.youtube.com/watch?v=nMGVwP3ww2M
-         - get site on #1 search on google (search engine optimization)
-         - get custom domain name (namecheap?)
-
-         - give colours meaning (hover colours for "hidden" meaning?); accomplishing goals, etc
-         - make staircase text same as burger text 
-         - use ::selection to change text selecting colour?
-
-         - use netlify for production hosting (free https/ssl w/ custom domain, FREE)
-            https://www.youtube.com/watch?v=i9qCmQ2EeUA&t=186s
     -->
 </head>
 
@@ -494,39 +481,42 @@
         </section>
 
         <section class="contact">
-            <div class="contact__left">
-                <div class="contact__left--phone">
-                    <i class="fa-solid fa-phone"></i>
-                    <ul>
-                        <li>Phone: (905) 696-9199</li>
-                        <li>Service: (416) 989-8071</li>
-                        <li>Fax: (905) 696-7992</li>
-                    </ul>
-                </div>
-                <div class="contact__left--email">
-                    <i class="fa-solid fa-envelope"></i>
-                    info@milestoneautomation.com
-                </div>
+            <div class="contact__cta">
+                Let us become your supplier of industrial controls and special purpose equipment
             </div>
-
-            <div class="contact__img">
-                <img src="assets/img/logo-icon.png" alt="Logo Icon">
-            </div>
-
-            <div class="contact__right">
-                <div class="contact__right--linkedin">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                    <ul>
-                        <li>linkedin.com/company/</li>
-                        <li>milestone-automation</li>
-                    </ul>
+            <div class="contact__info">
+                <div class="contact__info--left">
+                    <div class="contact__info--left__phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <ul>
+                            <li>Phone: (905) 696-9199</li>
+                            <li>Service: (416) 989-8071</li>
+                            <li>Fax: (905) 696-7992</li>
+                        </ul>
+                    </div>
+                    <div class="contact__info--left__email">
+                        <i class="fa-solid fa-envelope"></i>
+                        info@milestoneautomation.com
+                    </div>
                 </div>
-                <div class="contact__right--address">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <ul>
-                        <li>438 Gibraltor Dr., Unit #14</li>
-                        <li>Mississauga, ON L57 202</li>
-                    </ul>
+                <div class="contact__info--img">
+                    <img src="assets/img/logo-icon.png" alt="Logo Icon">
+                </div>
+                <div class="contact__info--right">
+                    <div class="contact__info--right__linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <ul>
+                            <li>linkedin.com/company/</li>
+                            <li>milestone-automation</li>
+                        </ul>
+                    </div>
+                    <div class="contact__info--right__address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <ul>
+                            <li>438 Gibraltor Dr., Unit #14</li>
+                            <li>Mississauga, ON L57 202</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
