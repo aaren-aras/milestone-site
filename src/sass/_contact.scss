@@ -59,9 +59,8 @@
           position: relative;
           left: 3.5em;
 
-          &:hover + i { color: $accent-color; }
-          &:active + i { opacity: 0.5; }
-          a:hover { color: $accent-color; }
+          &:hover + i, a:hover { color: $accent-color; }
+          &:active + i, a:active { opacity: 0.5; }
           a, & + i { @include transition-ease; }
         }
       }
