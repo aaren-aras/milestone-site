@@ -27,28 +27,44 @@
       justify-content: center;
       flex: 1;
       gap: 1.25em;
-  
+      position: relative;      
+
       &__phone, &__email, &__linkedin, &__address {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: max-content;
         gap: 1em;
-  
+        line-height: 1.25em;
+        cursor: pointer;
+
+        i { margin-right: 0.75em; }
+      }
+
+      &__email, &__linkedin, &__address {
+        &:hover { color: $accent-color; } 
+        &:active { opacity: 0.5; }
+        @include transition-ease;
+      }
+
+      &__phone {
         i {
-          font-size: 1.1rem;
-          margin-right: 0.5em;
+          position: absolute;
+          left: 0;
         }
-  
-        ul {
-          list-style-type: none; 
-          line-height: 1.25em;
-          padding: 0;
-          margin: 0 3em 0 0;
+
+        &--wrap {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          left: 3.5em;
+
+          &:hover + i { color: $accent-color; }
+          &:active + i { opacity: 0.5; }
+          a:hover { color: $accent-color; }
+          a, & + i { @include transition-ease; }
         }
       }
-  
-      &__phone, &__linkedin { margin-right: 1.5em; }
-      &__linkedin, &__address { margin-bottom: 0.5em; }
     }
   
     &--img { 

@@ -28,6 +28,11 @@ a {
   color: inherit;
 }
 
+@keyframes bg-animation {
+  0% { background-position: bottom; }
+  100% { background-position: top; }
+}
+
 @mixin gradient-text { 
   background-image: 
       linear-gradient(90deg, $accent-color, $primary-color);
@@ -124,7 +129,7 @@ $scaling-factors: (
 
   /* _contact.scss */
   .contact { font-size: 1 * $factor; }
-  .contact i { font-size: 2 * $factor; }
+  .contact i { font-size: 1.8 * $factor; }
   .contact__cta { font-size: 2.5 * $factor; }
   .contact__info--img img { width: 10 * $factor; }
 }

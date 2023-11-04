@@ -16,12 +16,7 @@ body {
     z-index: -1;
     position: fixed;
     inset: 0;
-    animation: bg-animation 100s infinite alternate; 
-  }
-
-  @keyframes bg-animation {
-    0% { background-position: bottom; }
-    100% { background-position: top; }
+    // animation: bg-animation 100s infinite alternate; 
   }
 
   header {
