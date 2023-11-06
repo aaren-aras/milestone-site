@@ -19,7 +19,9 @@
 
   &__info {
     display: flex;
+    align-items: center;
     gap: 5em;
+    margin-left: 1.25em;
 
     &--left, &--right {
       display: flex;
@@ -27,7 +29,7 @@
       justify-content: center;
       flex: 1;
       gap: 1.25em;
-      position: relative;      
+      position: relative;    
 
       &__phone, &__email, &__linkedin, &__address {
         display: flex;

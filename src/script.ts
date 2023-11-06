@@ -186,9 +186,11 @@ namespace Projects {
 
         // `slid.bs.carousel` fires when slide transition is completed (Bootstrap 5)
         carousel?.addEventListener('slid.bs.carousel', () => {
-          carouselInnerElement.style.overflow = 'visible';
-          activeH5.style.visibility = 'visible';
-          activeP.style.visibility = 'visible';
+          if (screenWidth >= 1024) {
+            carouselInnerElement.style.overflow = 'visible';
+            activeH5.style.visibility = 'visible';
+            activeP.style.visibility = 'visible';
+          }
         });
       });
     }
