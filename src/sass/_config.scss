@@ -78,6 +78,7 @@ $scaling-factors: (
     margin-bottom: 2 * $factor;
   }
   .about__top { gap: 14 * $factor; }
+  .about__top--slogan__small-text { width: 4 * $factor; }
 
   @for $i from 1 through 5 {
     .about__top--accordion__#{$i} { 
