@@ -86,7 +86,7 @@ $scaling-factors: (
     }
   }
 
-  .about__motto { font-size: 1.5 * $factor; }
+  .about__motto { font-size: 1.45 * $factor; }
 
   @for $i from 1 through 5 {
     .about__dropdown--#{$i} { 
@@ -104,18 +104,18 @@ $scaling-factors: (
   .about__dropdown--reach-man { font-size: 2.8 * $factor; }
 
   .about__dropdown--pull-men {
-    top: 8.2 * $factor;
-    right: 4.44 * $factor;
+    top: 6.2 * $factor;
+    right: 1 * $factor;
   }
 
   .about__dropdown--fall-man {
-    top: 2.8em;
-    left: 8.9em;
+    top: 4.2 * $factor;
+    left: 6.5 * $factor;
   }
 
   .about__dropdown--reach-man {
-    top: -4.4em;
-    left: 18em;
+    top: -5.75 * $factor;
+    left: 15 * $factor;
   } 
 
   .about__drawing-1 { 
@@ -165,13 +165,13 @@ $scaling-factors: (
 }
 
 @mixin media-xs {
-  @media only screen and (max-width: 423px) {
+  @media only screen and (max-width: 414px) {
     @content;
   }
 }
 
 @mixin media-sm {
-  @media only screen and (min-width: 424px) and (max-width: 595px) {
+  @media only screen and (min-width: 415px) and (max-width: 595px) {
     @content;
   }
 }

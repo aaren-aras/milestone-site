@@ -25,12 +25,12 @@ namespace Main {
 
     const toggleMenu = (): void => {
       if (!showMenu) {
-        navElement?.classList.add('js-open-nav');
+        navElement?.classList.add('js-burger-nav');
         showNav();
         showMenu = true;
       }
       else {
-        navElement?.classList.remove('js-open-nav');
+        navElement?.classList.remove('js-burger-nav');
         hideNav();
         showMenu = false;
       }
@@ -48,7 +48,7 @@ namespace Main {
       });
     }
 
-    if (screenWidth <= 767) hideNav(); // Initial state 
+    if (screenWidth <= 767) hideNav(); // Initial state   
 
     burgerBtnElement.addEventListener('click', (e) => {
       // Stops `resize` event listener when burger button is clicked 
@@ -62,7 +62,8 @@ namespace Main {
 
     window.addEventListener('resize', () => {
       if (screenWidth >= 768) {
-        navElement?.classList.remove('js-open-nav');
+        navElement?.classList.remove('js-burger-nav');
+        showNav();
         showMenu = false;
       }
     });
@@ -75,12 +76,16 @@ namespace Main {
     });
 
     document.querySelector('.js-projects')?.addEventListener('click', (e) => {
+      // Recalculating for each event listened for responsiveness 
+      const screenWidth: number = window.innerWidth;
+
       e.preventDefault();
-      if (screenWidth <= 425) window.scrollTo(0, 1550);
-      else if (426 <= screenWidth && screenWidth <= 767) window.scrollTo(0, 1650);
-      else if (768 <= screenWidth && screenWidth <= 1023) window.scrollTo(0, 1750);
-      else if (1024 <= screenWidth && screenWidth <= 1439) window.scrollTo(0, 1850);
-      else if (screenWidth >= 1440) window.scrollTo(0, 1250);
+      if (screenWidth <= 414) window.scrollTo(0, 675);
+      else if (415 <= screenWidth && screenWidth <= 595) window.scrollTo(0, 725);
+      else if (596 <= screenWidth && screenWidth <= 767) window.scrollTo(0, 875);
+      else if (768 <= screenWidth && screenWidth <= 1023) window.scrollTo(0, 1000);
+      else if (1024 <= screenWidth && screenWidth <= 1439) window.scrollTo(0, 1150);
+      else if (screenWidth >= 1440) window.scrollTo(0, 1300);
     });
 
     document.querySelector('.js-contact')?.addEventListener('click', (e) => {

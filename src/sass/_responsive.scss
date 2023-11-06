@@ -19,13 +19,14 @@
   }
 
   .about__motto {
+    font-size: 0.55rem;
     right: 3em;
-    bottom: 14em;
+    bottom: 18em;
   }
 
   .about__dropdown {
     top: 1em;
-    right: 4em;
+    right: 2em;
   }
 
   .about__drawing-1 img {
@@ -34,7 +35,7 @@
   }
 
   .about__drawing-2 img {
-    bottom: 2em;
+    bottom: 0.75em;
     left: 6em;
   }
 
@@ -46,10 +47,6 @@
   }
 
   /* _contact.scss */
-  .contact {
-    top: 2rem;
-    margin-left: 1rem;
-  }
   .contact__cta { margin-bottom: 2em; }
   .contact__info { gap: 1em; }
   .contact__info--img { visibility: hidden; }
@@ -74,7 +71,7 @@
 
   .about__dropdown {
     top: 20em;
-    right: 17em;
+    right: 15em;
   }
 
   .about__drawing-1 img {
@@ -171,12 +168,12 @@
   }
 
   .about__drawing-1 img {
-    top: 13em;
+    top: 16em;
     left: -2em;
   }
 
   .about__drawing-2 img {
-    top: 7.5em;
+    top: 11em;
     left: 0em;
   }
 
@@ -206,12 +203,12 @@
   }
 
   .about__drawing-1 img {
-    top: 16.5em;
+    top: 18em;
     left: -1em;
   }
 
   .about__drawing-2 img {
-    top: 11em;
+    top: 13em;
     left: 2em;
   }
 }

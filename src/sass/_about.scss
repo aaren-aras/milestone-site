@@ -218,26 +218,12 @@
     }
 
     &--pull-men, &--fall-man, &--reach-man {
+      // font-size: 1.75em;
       color: $secondary-color;
       position: absolute;
       @include light-hover;
       @include transition-ease;
     }
-
-    &--pull-men {
-      top: 7.4em;
-      right: 4em;
-    }
-  
-    &--fall-man {
-      top: 2.8em;
-      left: 8.9em;
-    }
-  
-    &--reach-man {
-      top: -4.4em;
-      left: 10em !important;
-    } 
 
     &--fall-man { transform: scaleX(-1); }
   }
