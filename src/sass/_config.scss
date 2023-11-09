@@ -66,7 +66,7 @@ $scaling-factors: (
 @mixin responsive-style($factor) { 
   /* main.scss */
   .logo { 
-    max-height: 2.75 * $factor; 
+    max-height: 3 * $factor; 
     margin-left: 3.33 * $factor;
   }
   nav a { font-size: $factor; }
