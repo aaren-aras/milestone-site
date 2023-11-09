@@ -99,8 +99,8 @@
           cursor: pointer;
           @include gradient-rect($i);
 
-          &:hover { @include gradient-rect-hover($i); }
-          // &:hover { filter: grayscale(20%) saturate(50%); }
+          // &:hover { @include gradient-rect-hover($i); }
+          &:hover { filter: grayscale(20%) saturate(50%); }
           @include transition-ease;
 
           i {
