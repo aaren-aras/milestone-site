@@ -3022,7 +3022,7 @@ body header.js-header-bkgd {
   transition: all 0.2s ease-in-out;
 }
 body header .logo {
-  max-width: 30%;
+  max-width: 50%;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
