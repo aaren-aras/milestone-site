@@ -60,11 +60,11 @@
         @include light-hover;
         @include transition-ease;
 
-        &--red::after {
+        &--extra::after {
           width: 10%;
           height: 100%;
           content: '';
-          background-color: $accent-color;
+          background-color: rgba(rgb(89, 142, 89), 0.5);
           position: absolute;
           right: 0;
         }
