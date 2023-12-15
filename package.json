@@ -1,5 +1,5 @@
 {
-  "name": "milestone-site",
+  "name": "milestone-site-1",
   "version": "1.0.0",
   "description": "Milestone Automation Solutions is a leading provider of cutting-edge automation and industrial control solutions. Explore our website to discover innovative products and services for optimizing your industrial processes.",
   "main": "script.js",
@@ -25,15 +25,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaren-aras/milestone-site.git"
+    "url": "git+https://github.com/aaren-aras/milestone-site-1.git"
   },
   "keywords": [],
   "author": "Aaren Arasaratnam",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aaren-aras/milestone-site/issues"
+    "url": "https://github.com/aaren-aras/milestone-site-1/issues"
   },
-  "homepage": "https://github.com/aaren-aras/milestone-site#readme",
+  "homepage": "https://github.com/aaren-aras/milestone-site-1#readme",
   "devDependencies": {
     "@types/node": "^20.8.10",
     "autoprefixer": "^10.4.2",
