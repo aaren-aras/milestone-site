@@ -20,7 +20,7 @@ $ cd milestone-site-1
 # Install dependencies
 $ npm install
 
-# Start development server
+# Start development server (http://localhost:3000)
 $ npm run start
 
 # Build for production
