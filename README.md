@@ -6,7 +6,7 @@ This website was designed as part of an **Engineering Assistant co-op** at Miles
 
 ![Website Screenshot](site-screenshot.png)
 
-## Getting Started
+## Setup
 
 Follow these steps for setting the project up on your local machine.
 
