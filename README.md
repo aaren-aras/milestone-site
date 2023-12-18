@@ -8,7 +8,7 @@ This website was designed as part of an **Engineering Assistant co-op** at Miles
 
 ## Getting Started
 
-Follow these steps for setting this up on your local machine.
+Follow these steps for setting the project up on your local machine.
 
 ```bash
 # Clone repository 
