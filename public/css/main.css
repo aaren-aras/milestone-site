@@ -928,7 +928,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 5em;
-  margin-right: 2.85em;
+  margin-right: 2.25em;
 }
 .contact__info--left, .contact__info--right {
   display: -webkit-box;
