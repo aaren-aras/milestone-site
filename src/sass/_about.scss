@@ -146,7 +146,7 @@
     @include light-hover;
 
     span {
-      background: linear-gradient(90deg, $accent-color, $primary-color)
+      background: linear-gradient(90deg, $secondary-color, $primary-color)
         no-repeat left bottom;
       background-size: 0% 5px;
       cursor: default;
