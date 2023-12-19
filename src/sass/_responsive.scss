@@ -218,7 +218,7 @@
   /* _projects.scss */
   @for $i from 1 through 5 {
     .projects__#{$i} h5 { top: 4.5em !important; } 
-    .projects__#{$i} p { top: 1em !important; } 
+    .projects__#{$i} p { top: 0.75em !important; } 
   }
 }
 
