@@ -214,6 +214,12 @@
     top: 13em;
     left: 2em;
   }
+
+  /* _projects.scss */
+  @for $i from 1 through 5 {
+    .projects__#{$i} h5 { top: 4.5em !important; } 
+    .projects__#{$i} p { top: 1em !important; } 
+  }
 }
 
 @include media-xxl {
@@ -238,5 +244,11 @@
   .about__drawing-2 img {
     top: 17em;
     left: 7em;
+  }
+
+  /* _projects.scss */
+  @for $i from 1 through 5 {
+    .projects__#{$i} h5 { top: 3.15em !important; } 
+    .projects__#{$i} p { top: -0.75em !important; } 
   }
 }
