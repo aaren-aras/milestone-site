@@ -26,7 +26,11 @@
     "type": "git",
     "url": "git+https://github.com/aaren-aras/milestone-site.git"
   },
-  "keywords": ["static-site", "company-site", "portfolio-site"],
+  "keywords": [
+    "static-site",
+    "company-site",
+    "portfolio-site"
+  ],
   "author": "Aaren Arasaratnam",
   "bugs": {
     "url": "https://github.com/aaren-aras/milestone-site/issues"
@@ -46,6 +50,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@types/bootstrap": "^5.2.8"
+    "@types/bootstrap": "^5.2.8",
+    "rimraf": "^5.0.5"
   }
 }
