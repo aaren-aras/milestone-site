@@ -2,4 +2,4 @@
   base = "/"
   command = "npm run build"
   publish = "public"
-  ignore = ["!public/assets/img/**/*"]
+  ignore = "!public/assets/img/**/*"
