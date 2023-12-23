@@ -6,7 +6,7 @@
   "browserslist": "last 2 versions, > 0.5%",
   "scripts": {
     "copy": "npm-run-all --parallel copy:*",
-    "copy:assets": "rimraf public/assets && copyfiles -u 1 ./src/assets/**/* --exclude ./src/assets/sass/**/* public",
+    "copy:assets": "rm -rf public/assets && copyfiles -u 1 ./src/assets/**/* --exclude ./src/assets/sass/**/* public",
     "copy:html": "copyfiles -u 1 ./src/*.html public",
     "watch": "npm-run-all --parallel watch:*",
     "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
@@ -46,7 +46,6 @@
     "onchange": "^7.1.0",
     "postcss": "^8.4.31",
     "postcss-cli": "^9.1.0",
-    "rimraf": "^5.0.5",
     "sass": "^1.49.8",
     "typescript": "^5.2.2"
   },
