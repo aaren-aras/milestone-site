@@ -1,7 +1,7 @@
 {
   "name": "milestone-site",
   "version": "1.0.0",
-  "description": "Milestone Automation Solutions is a leading provider of cutting-edge automation and industrial control solutions. Explore our website to discover innovative products and services for optimizing your industrial processes.",
+  "description": "Milestone Automation Solutions Inc. is a leading provider of cutting-edge automation and industrial control solutions in Ontario. Discover innovative products and services for optimizing your industrial processes.",
   "main": "public/js/script.js",
   "browserslist": "last 2 versions, > 0.5%",
   "scripts": {
