@@ -6,7 +6,7 @@
   "browserslist": "last 2 versions, > 0.5%",
   "scripts": {
     "build:sass": "sass src/assets/sass:public/css",
-    "copy:assets": "copyfiles -u 1 ./src/assets/**/* public --exclude ./src/assets/sass/**/* public",
+    "copy:assets": "copyfiles -u 1 ./src/assets/**/* --exclude ./src/assets/sass/**/* public",
     "copy:html": "copyfiles -u 1 ./src/*.html public",
     "copy": "npm-run-all --parallel copy:*",
     "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
