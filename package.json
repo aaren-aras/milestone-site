@@ -15,12 +15,12 @@
     "watch:sass": "sass --watch src/assets/sass:public/css",
     "watch:typescript": "tsc -w",
     "autoprefixer": "postcss public/css/*.css -u autoprefixer -r",
-    "serve": "browser-sync start --server public --files public",
-    "start": "npm-run-all copy --parallel watch serve",
     "build": "npm-run-all copy build:*",
     "build:sass": "sass src/assets/sass:public/css",
     "build:typescript": "tsc",
-    "postbuild": "npm run autoprefixer && postcss public/css/*.css -u cssnano -r --no-map"
+    "postbuild": "npm run autoprefixer && postcss public/css/*.css -u cssnano -r --no-map",
+    "serve": "browser-sync start --server public --files public",
+    "start": "npm-run-all copy --parallel watch serve"
   },
   "repository": {
     "type": "git",
