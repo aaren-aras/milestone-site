@@ -6,7 +6,7 @@ www.milestoneautomation.com
 
 ![Netlify Status](https://api.netlify.com/api/v1/badges/94615e46-7f1a-47a8-90a3-7a7b11110db0/deploy-status)
 
-![Milestone Site](milestone-site.gif)
+https://github.com/aaren-aras/milestone-site/assets/89285583/5545024f-71d1-4177-9ea7-20820de36664
 
 ## Setup
 
