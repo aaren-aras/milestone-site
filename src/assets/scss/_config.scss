@@ -3,6 +3,15 @@ $secondary-color: rgb(45, 45, 45);
 $accent-color: rgb(145, 122, 95);
 // $accent-color: rgb(180, 50, 50);
 
+$scaling-factors: (
+  xs: 0.45em,
+  sm: 0.5em,
+  md: 0.6em,
+  lg: 0.7em,
+  xl: 0.8em,
+  xxl: 0.9em
+);
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -55,14 +64,41 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
-$scaling-factors: (
-  xs: 0.45em,
-  sm: 0.5em,
-  md: 0.6em,
-  lg: 0.7em,
-  xl: 0.8em,
-  xxl: 0.9em
-);
+@mixin media-xs {
+  @media only screen and (max-width: 414px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media only screen and (min-width: 415px) and (max-width: 595px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media only screen and (min-width: 596px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
 
 @mixin responsive-style($factor) { 
   /* main.scss */
@@ -164,40 +200,4 @@ $scaling-factors: (
   .contact__cta { font-size: 3 * $factor; }
   .contact__info--img img { width: 9 * $factor; }
   .contact__info--left__email a { margin-left: -0.66 * $factor; }
-}
-
-@mixin media-xs {
-  @media only screen and (max-width: 414px) {
-    @content;
-  }
-}
-
-@mixin media-sm {
-  @media only screen and (min-width: 415px) and (max-width: 595px) {
-    @content;
-  }
-}
-
-@mixin media-md {
-  @media only screen and (min-width: 596px) and (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin media-lg {
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    @content;
-  }
-}
-
-@mixin media-xl {
-  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-    @content;
-  }
-}
-
-@mixin media-xxl {
-  @media only screen and (min-width: 1440px) {
-    @content;
-  }
 }
