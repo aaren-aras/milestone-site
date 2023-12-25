@@ -44,7 +44,7 @@
 
   /* _projects.scss */
   @for $i from 1 through 5 {
-    .projects__#{$i}--indic button { top: 1em !important; }
+    .projects__#{$i}--indic button { top: 1.2em !important; }
     .projects__#{$i}--prev-btn { left: -3em; }
     .projects__#{$i}--next-btn { right: -3em; }
   }
