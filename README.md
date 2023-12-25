@@ -8,9 +8,15 @@ www.milestoneautomation.com
 https://github.com/aaren-aras/milestone-site/assets/89285583/5545024f-71d1-4177-9ea7-20820de36664
 
 ## Prerequisites
- - [Node.js](https://nodejs.org/en/download/)
- - [npm](https://www.npmjs.com/get-npm)
- - [Git](https://git-scm.com/downloads)
+This project relies on **Node.js** and **npm** for its runtime and package management. To install, visit https://nodejs.org/en/download/ and download the appropriate installer for your operating system. 
+
+```bash
+# Check if Node.js is installed
+$ node -v
+
+# Check if npm is installed
+$ npm -v
+```
 
 ## Setup
 ```bash
