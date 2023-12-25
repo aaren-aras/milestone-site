@@ -7,29 +7,32 @@ www.milestoneautomation.com
 
 https://github.com/aaren-aras/milestone-site/assets/89285583/5545024f-71d1-4177-9ea7-20820de36664
 
-## Setup
-Follow these steps for setting the project up on your local machine.
+## Prerequisites
+ - [Node.js](https://nodejs.org/en/download/)
+ - [npm](https://www.npmjs.com/get-npm)
+ - [Git](https://git-scm.com/downloads)
 
+## Setup
 ```bash
 # Clone repository 
-$ git clone https://github.com/aaren-aras/milestone-site-1.git
+$ git clone https://github.com/aaren-aras/milestone-site.git
 
 # Navigate into project directory
-$ cd milestone-site-1
+$ cd milestone-site
 
 # Install dependencies
 $ npm install
 
+# Build production files
+$ npm run build
+
 # Start development server 
 $ npm run start
-
-# Build for production
-$ npm run build
 ```
 
-## Retrospectives
- - Consider using CSS frameworks (Bootstrap, Tailwind CSS) or SSGs (Astro, Gatsby) to speed up styling
- - Maybe use JavaScript frameworks (React.js, Vue.js) for easier DOM manipulation
- - Opt for GitHub issues and pull requests instead of pushing straight to main for better Git workflow
+## Retrospective
+ - Consider CSS frameworks (**Bootstrap**, **Tailwind CSS**) or SSGs (**Astro**, **Gatsby**) to speed up styling
+ - Maybe use JavaScript frameworks (**React.js**, **Vue.js**) for easier DOM manipulation
+ - Opt for **GitHub issues** and **pull requests** instead of pushing straight to main for better Git workflow
 
 © 2023 Milestone Automation Solutions Inc. — All rights reserved.
