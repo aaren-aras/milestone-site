@@ -1,7 +1,7 @@
 # Milestone Automation Solutions Inc. 
 This website was designed as part of an **Engineering Assistant co-op** at Milestone Automation Solutions. Since its inception in 2005, the company has rapidly evolved into a foremost provider of **automation and industrial control solutions** in Ontario, solidifying itself as a reliable partner for a client base spanning several industries.
 
-milestoneautomation.netlify.app
+www.milestoneautomation.netlify.app
 
 ![Netlify Status](https://api.netlify.com/api/v1/badges/94615e46-7f1a-47a8-90a3-7a7b11110db0/deploy-status)
 
