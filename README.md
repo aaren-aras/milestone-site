@@ -41,4 +41,4 @@ $ npm run start
  - Maybe use JavaScript frameworks (**React.js**, **Vue.js**) for easier DOM manipulation
  - Opt for **GitHub issues** and **pull requests** instead of pushing straight to main for better Git workflow
 
-© 2023 Milestone Automation Solutions Inc. — All rights reserved.
+© 2024 Milestone Automation Solutions Inc. — All rights reserved.
